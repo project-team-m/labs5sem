@@ -21,8 +21,8 @@ CREATE TABLE IF NOT EXISTS components(
 CREATE TABLE IF NOT EXISTS clients(
     id SERIAL PRIMARY KEY,
     name VARCHAR(30),
-    phone_number INTEGER,
-    discount_card INTEGER,
+    phone_number VARCHAR(11),
+    discount_card VARCHAR(9),
     login VARCHAR(32) UNIQUE ,
     password VARCHAR(32)
 );
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS workers(
     id SERIAL PRIMARY KEY,
     name VARCHAR(30),
     address VARCHAR(50),
-    phone_number INTEGER,
+    phone_number VARCHAR(11),
     id_position INTEGER REFERENCES positions(id),
     email VARCHAR(30),
     date_employment DATE
