@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2555f98-8f43-46e9-9b03-6c267672ff03" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lub2++/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lub2++/main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="a2555f98-8f43-46e9-9b03-6c267672ff03" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +62,7 @@
       <workItem from="1572188164643" duration="164000" />
       <workItem from="1572188372326" duration="3002000" />
       <workItem from="1572291614106" duration="618000" />
-      <workItem from="1573229729239" duration="925000" />
+      <workItem from="1573229729239" duration="1526000" />
     </task>
     <servers />
   </component>
