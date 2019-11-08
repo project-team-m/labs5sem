@@ -155,38 +155,40 @@ Singleton &n = Singleton::init();
 }*/
 
 
-class singleton2
+class Singleton2
 {
-    static singleton2* ptr;
+    static Singleton2* ptr;
 
-    singleton2()
+    Singleton2()
     {
         cout << "const" << endl;
     }
 
-    singleton2(int x)
+    Singleton2(int x)
     {
         cout << "const" << endl;
         s = x;
     }
 
-    singleton2(singleton2& obj)
+    Singleton2(Singleton2& obj)
     {
         cout << "const" << endl;
     }
 
-    singleton2 operator= (singleton2);
+    Singleton2 operator= (Singleton2);
 
-    ~singleton2() {}
+    ~Singleton2() {
+        cout << "Destructor" << endl;
+    }
 
 public:
-    static singleton2* getInstance(int n)
+    static Singleton2* getInstance(int n)
     {
         // Если не существует, то создается новый обьект instance
         // Иначе возвращается указатель на старый обьект instance
         if (ptr == nullptr)
         {
-            ptr = new singleton2(n);
+            ptr = new Singleton2(n);
         }
         return ptr;
     }
@@ -196,23 +198,25 @@ public:
         // Если сущестует, то удаление обьекта instance
         if (ptr != nullptr)
         {
-            cout << "Удаление обьекта " << endl;
+            cout << "Delete obj " << endl;
             delete ptr;
             ptr = nullptr;
         }
-        else { cout << "Обьект  не существует" << endl; }
+        else { cout << "Object does not exist" << endl; }
     }
     int s;
 };
 
-singleton2* singleton2::ptr = nullptr;
+Singleton2* Singleton2::ptr = nullptr;
 
 
 int main()
 {
-    singleton2* a = singleton2::getInstance(10);
+    Singleton2* a = Singleton2::getInstance(10);
     cout << a->s << endl;
-
-    singleton2* b = singleton2::getInstance(11);
+    a->del();
+    Singleton2* b = Singleton2::getInstance(11);
     cout << b->s << endl;
+    Singleton2 * d = Singleton2::getInstance(13);
+    cout << d->s << endl;
 }
