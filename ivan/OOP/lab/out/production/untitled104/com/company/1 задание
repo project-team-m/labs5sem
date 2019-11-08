@@ -1,0 +1,84 @@
+package com.company;
+
+class List {
+    public int data;
+    public List next;
+}
+
+class STEK {
+    private List head;
+
+    public void push(int data) {
+        List a = new List();
+        a.data = data;
+        if (head == null) {
+            head = a;
+        } else {
+            List t = head;
+            while (t.next != null) {
+                t = t.next;
+            }
+            t.next = a;
+        }
+    }
+
+    public int pop() {
+        List t = head;
+        while (t.next.next != null) {
+            t = t.next;
+        }
+        int a = t.next.data;
+        t.next = null;
+        return a;
+    }
+
+    public void out() {
+        List t = head;
+        while (t != null) {
+            System.out.print(t.data + " ");
+            t = t.next;
+        }
+        System.out.println();
+    }
+
+    public void proverka() {
+        STEK chet = new STEK();
+        STEK nchet = new STEK();
+        List t = head;
+        while (t != null) {
+            if (t.data % 2 == 0) {
+                chet.push(t.data);
+                t = t.next;
+            } else {
+                nchet.push(t.data);
+                t = t.next;
+            }
+        }
+        chet.out();
+        nchet.out();
+    }
+}
+
+public class Main {
+
+    public static int[] fib(int n) {
+        int[] array = new int[n];
+        array[0] = 1;
+        array[1] = 2;
+        for (int i = 2; i < n; i++) {
+            array[i] = array[i - 1] + array[i - 2];
+        }
+        return array;
+    }
+
+    public static void main(String[] args) {
+        STEK a = new STEK();
+        for (int i : fib(15)) {
+            a.push(i);
+        }
+        a.pop();
+        a.out();
+        a.proverka();
+
+    }
+}
