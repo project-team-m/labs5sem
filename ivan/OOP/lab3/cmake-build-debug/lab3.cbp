@@ -84,12 +84,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/paket/Project/labs5sem/ivan/OOP/lab3/class2.cpp">
-			<Option target="lab3"/>
-		</Unit>
-		<Unit filename="/home/paket/Project/labs5sem/ivan/OOP/lab3/class2.h">
-			<Option target="lab3"/>
-		</Unit>
 		<Unit filename="/home/paket/Project/labs5sem/ivan/OOP/lab3/main.cpp">
 			<Option target="lab3"/>
 		</Unit>
