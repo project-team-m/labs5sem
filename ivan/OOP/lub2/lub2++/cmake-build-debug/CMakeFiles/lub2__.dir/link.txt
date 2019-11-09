@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/lub2__.dir/main.cpp.o  -o lub2__ 
