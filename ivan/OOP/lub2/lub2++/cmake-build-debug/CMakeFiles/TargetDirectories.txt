@@ -1,3 +1,0 @@
-/home/paket/Project/labs5sem/ivan/OOP/lub2/lub2++/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/paket/Project/labs5sem/ivan/OOP/lub2/lub2++/cmake-build-debug/CMakeFiles/lub2__.dir
-/home/paket/Project/labs5sem/ivan/OOP/lub2/lub2++/cmake-build-debug/CMakeFiles/edit_cache.dir

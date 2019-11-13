@@ -19,13 +19,13 @@ public:
     }
 };
 
-Student *test(Student &s) {
-    return &s;
+Student test(Student s) {
+    return s;
 }
 
 int main() {
 
-    Student *a = new Student();
-    test(*a);
+    Student a;
+    test(a);
     return 0;
 }
