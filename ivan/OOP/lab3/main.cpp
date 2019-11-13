@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-
+/*
 class Class1 {
     static int count;
 public:
@@ -24,8 +24,10 @@ public:
         --count;
     }
 };
+int Class1::count = 0;
 
-/*int main() {
+
+int main() {
     Class1 c1, c2;
     Class1 *c3 = new Class1;
     cout << "Amount objects: " << Class1::get_count() << "\n" << endl;
@@ -36,7 +38,7 @@ public:
     delete c3;
     cout << "Amount objects: " << Class1::get_count() << "\n" << endl;
     return 0;
-}*/
+}
 
 class Class2 {
     Class2() {
@@ -69,7 +71,7 @@ public:
 
 };
 
-/*int main() {
+int main() {
     Class2 *n1 = Class2::Ini();
     Class2 *n2 = Class2::Ini();
     cout << "Amount: " << Class2::count2 << endl;
@@ -78,10 +80,11 @@ public:
     Class2::Destr(n2);
     cout << "Amount: " << Class2::count2 << endl;
     return 0;
-}*/
+}
 
 class Class3 {
     static Class3*obj;
+    static int count;
 
     Class3() {
         cout << "Constructor creation" << endl;
@@ -102,7 +105,6 @@ public:
 
     friend void DestroyObj(Class3*);
 
-    static int count;
 };
 
 Class3* NewObj() {
@@ -116,7 +118,7 @@ void DestroyObj(Class3 *obj) {
 
 int Class3::count;
 
-/*int main() {
+int main() {
     Class3 *c1 = NewObj();
     Class3 *c2 = NewObj();
     cout << "Amount " << Class3::count << endl;
@@ -143,7 +145,7 @@ public:
 
 Singleton &n = Singleton::init();
 
-/*int main() {
+int main() {
     Singleton &n = Singleton::init();
     cout << &n << endl;
     Singleton &n1 = Singleton::init();
@@ -152,10 +154,10 @@ Singleton &n = Singleton::init();
     cout << &n2 << endl;
 
     return 0;
-}*/
+}
 
 
-class Singleton2
+/*class Singleton2
 {
     static Singleton2* ptr;
 
@@ -219,4 +221,4 @@ int main()
     cout << b->s << endl;
     Singleton2 * d = Singleton2::getInstance(13);
     cout << d->s << endl;
-}
+}*/

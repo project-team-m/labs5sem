@@ -1,39 +1,55 @@
 package com.company;
 
 
+
 class OC {
-    void ini(int[] ram, int[] rom) {
+    int[] ram = {1, 2, 3, 4, 5, 6, 7, 8};
+    int[] rom = {9, 10, 11, 12, 13, 14, 15, 16};
+
+    public int[] cd(int ind) {
+        int save = ram[ind];
+        int[] ram_new = new int[8];
+        int sc = 0;
         for (int i = 0; i < 8; i++) {
-            ram[i] = 0;
+            if(i != ind) {
+                ram_new[sc] = ram[i];
+                sc++;
+            }
         }
-        for (int i = 0; i < 8; i++) {
-            rom[i] = 0;
-        }
+        ram_new[7] = save;
+        return ram_new;
     }
 
-    void swap(int[] ram, int[] rom, int num) {
-        if (num % 8 != 0) {
-            rom[num] = ram[0];
-            ram[0] = rom[num];
-        }
+    public void swap(int num) {
+        rom[num] = rom[num] + ram[0];
+        ram[0] = rom[num] - ram[0];
+        rom[num] = rom[num] - ram[0];
+        ram = cd(0);
     }
 
-    void read(int num, int[] ram) {
-        if (num / 8 != 0) {
+    void read(int num) {
+        if (num / 8 > 0) {
             num = num % 8;
+            swap(num % 8);
+            System.out.println("В позиции " + num + " находится " + ram[7]);
+        } else {
+            ram = cd(num);
+            System.out.println("В позиции " + num + " находится " + ram[7]);
         }
-        System.out.println("В позиции " + num + " находится " + ram[num]);
     }
 
-    void zap(int[] ram, int[] rom, int num, int digit) {
-        if (num / 8 != 0) {
-            swap(ram, rom, num % 8);
+    void write(int num, int digit) {
+        if (num / 8 > 0) {
             num = num % 8;
+            swap(num % 8);
+        } else {
+            ram = cd(num);
         }
-        ram[num] = digit;
+        ram[7] = digit;
+        System.out.println("Готово!");
     }
 
-    void output(int[] ram, int[] rom) {
+    void output() {
         System.out.print("RAM: ");
         for (int i = 0; i < 8; i++) {
             System.out.print(ram[i] + " ");
@@ -50,20 +66,11 @@ class OC {
 public class Main {
 
     public static void main(String[] args) {
-        int[] ram = new int[8];
-        int[] rom = new int[8];
         OC a = new OC();
-        a.ini(ram, rom);
-        a.zap(ram, rom, 0, 1);
-        a.zap(ram, rom, 1, 2);
-        a.zap(ram, rom, 2, 3);
-        a.zap(ram, rom, 3, 4);
-        a.zap(ram, rom, 4, 5);
-        a.zap(ram, rom, 5, 6);
-        a.zap(ram, rom, 6, 7);
-        a.zap(ram, rom, 7, 8);
-        //a.zap(ram, rom, 9, 200);
-        a.output(ram, rom);
-        a.read(3, ram);
+        a.read(13);
+        a.output();
+        a.write(1,27);
+        a.output();
+
     }
 }
