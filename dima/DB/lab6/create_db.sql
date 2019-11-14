@@ -74,22 +74,23 @@ INSERT INTO heir_1(id, text)
 VALUES
 (3, 'f');
 
-create or replace FUNCTION solid_heir_2 ( firsts varchar , second varchar , separator varchar  )
-     RETURNS varchar as $solid_heir_2$
-  DECLARE
-    new_str varchar ;
+create or replace FUNCTION solid_heir_2 (old varchar , new varchar)
+     RETURNS varchar as $$
  begin
-    new_str:= firsts ||  separator || second;
-
-    --RETURN substring( new_str from 2 for length(new_str) );
-    RETURN new_str ;
+    IF OLD = ' ' THEN
+        RETURN new;
+    ELSE
+        RETURN old || '|' || new;
+    end if;
  end;
-$solid_heir_2$   LANGUAGE 'plpgsql';
+$$   LANGUAGE 'plpgsql';
 
 
-CREATE AGGREGATE print (varchar(30) , varchar(30)  )
+CREATE AGGREGATE print (varchar)
 (
     sfunc = solid_heir_2,
     stype = varchar,
     initcond = ' '
 );
+
+CREATE INDEX ind ON heir_2 (id , time_create);
