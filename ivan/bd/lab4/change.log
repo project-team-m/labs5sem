@@ -1,0 +1,91 @@
+CREATE TABLE IF NOT EXISTS Addresses(
+id serial PRIMARY KEY,
+city VARCHAR (30),
+street VARCHAR (30),
+house_number VARCHAR (30),
+apartment VARCHAR (30),
+indexx INTEGER
+);
+
+CREATE TABLE IF NOT EXISTS Person(
+id serial PRIMARY KEY,
+surname VARCHAR (30),
+name VARCHAR (30),
+patronymic VARCHAR (30),
+gender VARCHAR (1),
+number_phone VARCHAR (12),
+date_of_birth INTEGER,
+addresses_id INTEGER,
+FOREIGN KEY (addresses_id) REFERENCES Addresses (id)
+);
+
+CREATE TABLE IF NOT EXISTS Employee(
+id serial PRIMARY KEY,
+person_id INTEGER,
+FOREIGN KEY (person_id) REFERENCES Person (id),
+name_position VARCHAR (30)
+);
+
+CREATE TABLE IF NOT EXISTS GOST(
+id serial PRIMARY KEY,
+name_GOST VARCHAR (20)
+);
+
+CREATE TABLE IF NOT EXISTS Culture_parameters(
+id serial PRIMARY KEY,
+name_of_culture VARCHAR (10),
+type_of_culture VARCHAR (10)
+);
+
+CREATE TABLE IF NOT EXISTS Delivery(
+id serial PRIMARY KEY,
+car_make VARCHAR (10),
+car_number VARCHAR (10),
+person_id INTEGER,
+FOREIGN KEY (person_id) REFERENCES Person(id)
+);
+
+CREATE TABLE IF NOT EXISTS Organization(
+id serial PRIMARY KEY,
+name_organization VARCHAR (20),
+inn INTEGER,
+ogrn INTEGER,
+addresses_id INTEGER,
+FOREIGN KEY (addresses_id) REFERENCES Addresses(id),
+delivery_id INTEGER,
+FOREIGN KEY (delivery_id) REFERENCES Delivery(id)
+);
+
+CREATE TABLE IF NOT EXISTS Laboratory_analysis (
+id serial PRIMARY KEY,
+protein INTEGER,
+gluten INTEGER,
+weediness INTEGER,
+humidity INTEGER,
+final_class VARCHAR (10),
+gost_id INTEGER,
+FOREIGN KEY (gost_id) REFERENCES GOST (id),
+employee_id INTEGER,
+FOREIGN KEY (employee_id) REFERENCES Employee (id)
+);
+
+CREATE TABLE IF NOT EXISTS Waybill(
+id serial PRIMARY KEY,
+data DATE,
+weight INTEGER,
+culture_id INTEGER,
+FOREIGN KEY (culture_id) REFERENCES Culture_parameters (id),
+organization_id INTEGER,
+FOREIGN KEY (organization_id) REFERENCES Organization (id),
+analysis_id INTEGER,
+FOREIGN KEY (analysis_id) REFERENCES Laboratory_analysis
+);
+
+CREATE TABLE IF NOT EXISTS Stock(
+waybill_id INTEGER,
+FOREIGN KEY (waybill_id) REFERENCES Waybill (id),
+cargo_weight INTEGER,
+silo_number INTEGER,
+residue INTEGER,
+total_capacity INTEGER
+);
