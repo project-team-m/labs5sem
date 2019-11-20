@@ -20,7 +20,7 @@ public:
     
     void str() {
         if (!n) {
-            cout << "象耱�" << endl;
+            cout << "Empty" << endl;
             return;
         }
         for (int i = 0; i < n; i++) cout << arr[i] << "  ";
@@ -42,7 +42,7 @@ public:
 
     void operator <<(int index) {
         if (index<0 || index>n) {
-            cout << "软溴犟 恹� 玎 镳邃咫� 爨耨桠�" << endl;
+            cout << "Index out of range" << endl;
             return;
         }
         while (index < n - 1) {

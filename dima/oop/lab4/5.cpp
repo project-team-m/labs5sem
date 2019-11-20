@@ -16,7 +16,6 @@ public:
     }
 
     Complex operator-(Complex right) {
-
         return Complex(Real_p - right.Real_p, Imaginary_p - right.Imaginary_p);
     }
 
@@ -25,8 +24,9 @@ public:
     friend ostream& operator<<(ostream&, Complex&);
     friend istream& operator>>(istream&, Complex&);
     friend Complex operator+(float, Complex);
-    friend Complex&
-    operator+(Complex&, float&);
+    friend Complex operator-(float, Complex);
+    friend Complex& operator+(Complex&, float&);
+    friend Complex& operator-(Complex&, float&);
 
 };
 
@@ -52,6 +52,11 @@ Complex operator+(float l, Complex r)
     return Complex(l + r.Real_p, r.Imaginary_p);
 }
 
+Complex operator-(float l, Complex r)
+{
+    return Complex(l - r.Real_p, -r.Imaginary_p);
+}
+
 
 
 int main5() {
@@ -60,7 +65,7 @@ int main5() {
     Complex W;
     Complex D = X - Y;
     cout << D << endl;
-    W = 9 + X;
+    W = 9 - X;
     cout << W << endl;
     Complex Z;
     cin >> Z;
