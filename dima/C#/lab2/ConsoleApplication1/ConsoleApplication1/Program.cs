@@ -1,164 +1,172 @@
 ﻿﻿using System;
 
-namespace ConsoleApp2
-{
-    class Program
-    {
-        public class Cabinet
-        {
-            public string Name;
-            public Cabinet(string name)
-            {
-                this.Name = name;
+namespace ConsoleApplication1 {
+    class Program {
+        public class Workplace {
+            public string type;
+            public Workplace(string type) {
+                this.type = type;
             }
-            public void PrintName()
+            public void PrintType()
             {
-                Console.Write("Name :" + this.Name);
+                Console.WriteLine("Type: " + this.type);
             }
         }
         
-        public class Workplace: Cabinet
-        {
+        public class Cabinet : Workplace {
             public string Name;
-            public Workplace(string name, string type) : base(name)
-            {
+            public Cabinet(string type, string name) : base(type) {
                 this.Name = name;
             }
-            public void PrintName()
-            {
-                Console.Write("Name :" + this.Name);
-            }
-        }
-        
-        public class Human
-        {
-            public string Name;
-            public Human(string name)
-            {
-                this.Name = name;
-            }
-            public void PrintName()
-            {
-                Console.Write("Name :" + this.Name);
+            public void PrintName() {
+                Console.WriteLine("Name: " + this.Name);
             }
         }
 
-        public class Employees : Human
-        {
+        public class Human {
+            public string Name;
+            public Human(string name) {
+                this.Name = name;
+            }
+            public void PrintName() {
+                Console.WriteLine("Name: " + this.Name);
+            }
+        }
+
+        public class Employees : Human {
             public string Position;
-            public Employees(string name, string position) : base(name)
-            {
+            public Employees(string name, string position) : base(name) {
                  this.Position = position;
             }
             
-            public virtual void PrintColor()
-            {
-                Console.Write("Position :" + this.Position);
+            public virtual void PrintPosition() {
+                Console.WriteLine("Position: " + this.Position);
             }
         }
 
-        public class Worker : Employees
-        {
-            public int Year;
-            public Worker(string name, string color, int year) : base(name, color)
-            {
-                this.Year = year;
+        public class Employee : Employees {
+            public string specialization;
+            public Employee(string name, string position, string specialization) : base(name, position) {
+                this.specialization = specialization;
             }
-            public void PrintYear()
-            {
-                Console.Write("Age :" + this.Year);
+            public Employee(string name, string specialization) : base(name, null) {
+                this.specialization = specialization;
             }
-        }
-        public class Fish : Animals
-        {
-            public string WhereLive;
-            public Fish(string name, string live) : base(name)
-            {
-                this.WhereLive = live;
+            public override void PrintPosition() {
+                Console.WriteLine("Position override: " + base.Position);
             }
-            public void PrintWhereLive()
-            {
-                Console.Write("Habitat:");
-                Console.WriteLine(this.WhereLive);
+            public void PrintSpecialization() {
+                Console.WriteLine("Specialization: " + this.specialization);
             }
         }
-        public class Spiders : Animals
-        {
-            public string Markwool;
-            public Spiders(string name, string mark) : base(name)
-            {
-                this.Markwool = mark;
+        public class Worker : Employees {
+            public string type;
+            public Worker(string name, string position, string type) : base(name, position) {
+                this.type = type;
             }
-            public void PrintMarkwool()
-            {
-                Console.Write("Silkiness :");
-                Console.WriteLine(this.Markwool);
+            public void PrintType() {
+                Console.WriteLine("Type: " + this.type);
             }
         }
-        public class Dogs : Mammals
-        {
-            public string Breed;
+        public class Student : Human {
+            public string group;
+            public Student(string name, string group) : base(name) {
+                this.group = group;
+            }
+            public void PrintGroup() {
+                Console.WriteLine("Group: " + this.group);
+            }
+        }
+        public class Librarian : Employees {
+            public string address;
+            public Librarian(string name, string position, string address):base(name, position) {
+                this.address = address;
+            }
+            public void PrintAddress() {
+                Console.WriteLine("Address: " + this.address);
+            }
+        }
+        public class Director : Employees {
+            public int age;
+            public Director(string name, string position, int age) : base(name, position) {
+                this.age = age;
+            }
+            public void PrintAge() {
+                Console.WriteLine("Age: " + this.age);
+            }
+        }
+        public class Security : Employees {
+            public int access_level;
+            public Security(string name, string position, int access_level) : base(name, position) {
+                this.access_level = access_level;
+            }
+            public void PrintAccessLevel() {
+                Console.WriteLine("Access level: " + this.access_level);
+            }
+        }
+        public class Cashier : Employees {
+            public int cashbox_number;
+            public Cashier(string name, string position, int cashbox_number) : base(name, position) {
+                this.cashbox_number = cashbox_number;
+            }
+            public void PrintCashboxNumber() {
+                Console.WriteLine("Cashbox Number: " + this.cashbox_number);
+            }
+        }
+        private static void Main(string[] args) {
+            Console.WriteLine();
+            Console.WriteLine("Cabinet: ");
+            var cabinet = new Cabinet("Meeting room", "Meet");
+            cabinet.PrintType();
+            cabinet.PrintName();
             
-            public Dogs(string name,string breed):base(name,"null")
-            {
-                this.Breed = breed;
+            Console.WriteLine();
+            Console.WriteLine("Employees: ");
+            var employee = new Employee("Dasha", "Translator", "Meeting");
+            employee.PrintName();
+            employee.PrintPosition();
+            employee.PrintSpecialization();
             
-            }
+            Console.WriteLine();
+            Console.WriteLine("Workers: ");
+            var worker = new Worker("Vasya", "plant", "carpenter");
+            worker.PrintName();
+            worker.PrintPosition();
+            worker.PrintType();
             
-            public override void PrintColor()
-            {
-                Console.Write("Usualy Color Breed :");
-                Console.WriteLine(base.Color);
-            }
-            public void PrintBreed()
-            {
-                Console.Write("Breed :");
-                Console.WriteLine(this.Breed);
-            }
-        }
-        public class Crocodile : Animals
-        {
-            public int Tooth;
-            public Crocodile(string name, int tooth) : base(name)
-            {
-                this.Tooth = tooth;
-            }
-            public void PrintTooth()
-            {
-                Console.Write("Number of teeth:");
-                Console.WriteLine(this.Tooth);
-            }
-        }
-        private static void Main(string[] args)
-        {
-            Console.WriteLine("--------------------------");
-            Console.WriteLine("Dogs : ");
-            var Dogs = new Dogs("Reks", "ovcharka");
-            Dogs.PrintName();
-            Dogs.PrintColor();
-            Dogs.PrintBreed();
-            Console.WriteLine("--------------------------");
-            Console.WriteLine("Crocodile : ");
-            var Crocodile = new Crocodile("Dasha", 40);
-            Crocodile.PrintName();
-            Crocodile.PrintTooth();
-            Console.WriteLine("--------------------------");
-            Console.WriteLine("Horses : ");
-            var Horses = new Horses("Veter", "grey", 10);
-            Horses.PrintName();
-            Horses.PrintColor();
-            Horses.PrintYear();
-            Console.WriteLine("--------------------------");
-            Console.WriteLine("Spiders : ");
-            var Spiders = new Spiders("Neo", "small");
-            Spiders.PrintName();
-            Spiders.PrintMarkwool();
-            Console.WriteLine("--------------------------");
-            Console.WriteLine("Fish : ");
-            var Fish = new Fish("Dark Dragon", "Brazil");
-            Fish.PrintName();
-            Fish.PrintWhereLive();
-            Console.WriteLine("--------------------------");
+            Console.WriteLine();
+            Console.WriteLine("Students: ");
+            var student = new Student("Ivan", "VPR31");
+            student.PrintName();
+            student.PrintGroup();
+            
+            Console.WriteLine();
+            Console.WriteLine("Librarians: ");
+            var librarian = new Librarian("Zoya", "librarian", "Tekycheva 1");
+            librarian.PrintName();
+            librarian.PrintPosition();
+            librarian.PrintAddress();
+            
+            Console.WriteLine();
+            Console.WriteLine("Directors: ");
+            var director = new Director("Genyadiy", "GenDir", 56);
+            director.PrintName();
+            director.PrintPosition();
+            director.PrintAge();
+            
+            Console.WriteLine();
+            Console.WriteLine("Securities: ");
+            var security = new Security("Petya", "Security", 0);
+            security.PrintName();
+            security.PrintPosition();
+            security.PrintAccessLevel();
+            
+            Console.WriteLine();
+            Console.WriteLine("Cashiers: ");
+            var cashier = new Cashier("Tanya", "Cashier", 12);
+            cashier.PrintName();
+            cashier.PrintPosition();
+            cashier.PrintCashboxNumber();
            
         }
     }
