@@ -23,11 +23,12 @@ public:
             cout << "Empty" << endl;
             return;
         }
-        for (int i = 0; i < n; i++) cout << arr[i] << "  ";
+        for (int i = 0; i < n; i++) cout << arr[i] << " ";
     };
 
     int & operator [] (int i) {
         if ((i >= 0) && (i < n)) return arr[i];
+        throw 0;
     }
 
     void operator >>(int val) {
@@ -53,7 +54,7 @@ public:
     }
 };
 
-int main() {
+int main6() {
     Array mas;
     mas.str();
     mas >> 1;
@@ -61,6 +62,11 @@ int main() {
     mas >> 3;
     mas >> 4;
     mas >> 5;
+    try {
+        cout << mas[30] <<endl;
+    } catch(int) {
+        cout << "out of range" << endl;
+    }
     mas.str();
     cout << endl << mas[0] << endl;
     mas << 0;
