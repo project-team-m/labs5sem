@@ -3,8 +3,8 @@ package com.company;
 
 
 class OC {
-    int[] ram = {1, 2, 3, 4, 5, 6, 7, 8};
-    int[] rom = {9, 10, 11, 12, 13, 14, 15, 16};
+    int[] ram = {0,0,0,0,0,0,0,0};
+    int[] rom = {0,0,0,0,0,0,0,0};
 
     public int[] cd(int ind) {
         int save = ram[ind];
@@ -46,7 +46,12 @@ class OC {
             ram = cd(num);
         }
         ram[7] = digit;
+        System.out.println("-----------------------------------");
+        output();
+        System.out.println("-----------------------------------");
+        System.out.println("Позиция " + num + " Число " + digit);
         System.out.println("Готово!");
+        System.out.println("-----------------------------------");
     }
 
     void output() {
@@ -55,22 +60,24 @@ class OC {
             System.out.print(ram[i] + " ");
         }
         System.out.println();
-        System.out.print("ROM: ");
+        System.out.print("HDD: ");
         for (int i = 0; i < 8; i++) {
             System.out.print(rom[i] + " ");
         }
         System.out.println();
     }
+
+
 }
 
 public class Main {
 
     public static void main(String[] args) {
         OC a = new OC();
-        a.read(13);
         a.output();
         a.write(1,27);
         a.output();
-
+        a.write(15,27);
+        a.output();
     }
 }
