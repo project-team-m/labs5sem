@@ -4,6 +4,8 @@ namespace ConsoleApplication1 {
     class Program {
         public class Workplace {
             public string type;
+            public Workplace() {
+            }
             public Workplace(string type) {
                 this.type = type;
             }
@@ -14,38 +16,46 @@ namespace ConsoleApplication1 {
         }
         
         public class Cabinet : Workplace {
-            public string Name;
+            public string name;
+            public Cabinet() : base(null) {
+            }
             public Cabinet(string type, string name) : base(type) {
-                this.Name = name;
+                this.name = name;
             }
             public void PrintName() {
-                Console.WriteLine("Name: " + this.Name);
+                Console.WriteLine("Name: " + this.name);
             }
         }
 
         public class Human {
-            public string Name;
+            public string name;
+            public Human() {
+            }
             public Human(string name) {
-                this.Name = name;
+                this.name = name;
             }
             public void PrintName() {
-                Console.WriteLine("Name: " + this.Name);
+                Console.WriteLine("Name: " + this.name);
             }
         }
 
         public class Employees : Human {
-            public string Position;
+            public string position;
+            public Employees() : base(null) {
+            }
             public Employees(string name, string position) : base(name) {
-                 this.Position = position;
+                 this.position = position;
             }
             
             public virtual void PrintPosition() {
-                Console.WriteLine("Position: " + this.Position);
+                Console.WriteLine("Position: " + this.position);
             }
         }
 
         public class Employee : Employees {
             public string specialization;
+            public Employee() : base(null, null) {
+            }
             public Employee(string name, string position, string specialization) : base(name, position) {
                 this.specialization = specialization;
             }
@@ -61,6 +71,8 @@ namespace ConsoleApplication1 {
         }
         public class Worker : Employees {
             public string type;
+            public Worker() : base(null, null) {
+            }
             public Worker(string name, string position, string type) : base(name, position) {
                 this.type = type;
             }
@@ -70,6 +82,8 @@ namespace ConsoleApplication1 {
         }
         public class Student : Human {
             public string group;
+            public Student() : base(null) {
+            }
             public Student(string name, string group) : base(name) {
                 this.group = group;
             }
@@ -79,6 +93,8 @@ namespace ConsoleApplication1 {
         }
         public class Librarian : Employees {
             public string address;
+            public Librarian():base(null, null) {
+            }
             public Librarian(string name, string position, string address):base(name, position) {
                 this.address = address;
             }
@@ -88,6 +104,8 @@ namespace ConsoleApplication1 {
         }
         public class Director : Employees {
             public int age;
+            public Director() : base(null, null) {
+            }
             public Director(string name, string position, int age) : base(name, position) {
                 this.age = age;
             }
@@ -97,6 +115,8 @@ namespace ConsoleApplication1 {
         }
         public class Security : Employees {
             public int access_level;
+            public Security() : base(null, null) {
+            }
             public Security(string name, string position, int access_level) : base(name, position) {
                 this.access_level = access_level;
             }
@@ -106,6 +126,8 @@ namespace ConsoleApplication1 {
         }
         public class Cashier : Employees {
             public int cashbox_number;
+            public Cashier() : base(null, null) {
+            }
             public Cashier(string name, string position, int cashbox_number) : base(name, position) {
                 this.cashbox_number = cashbox_number;
             }
