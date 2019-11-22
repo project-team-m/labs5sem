@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/lab32.dir/main.cpp.o CMakeFiles/lab32.dir/1.cpp.o CMakeFiles/lab32.dir/2.cpp.o CMakeFiles/lab32.dir/3.cpp.o CMakeFiles/lab32.dir/4.cpp.o CMakeFiles/lab32.dir/4.2.cpp.o  -o lab32 
