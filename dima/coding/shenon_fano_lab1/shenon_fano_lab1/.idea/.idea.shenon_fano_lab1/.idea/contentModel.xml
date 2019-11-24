@@ -1,11 +1,13 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\darkd\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\darkd\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_shenon_fano_lab1.894104860.00" t="ExcludeRecursive" />
-    <e p="D:\Projects\labs5sem\dima\coding\shenon_fano_lab1\shenon_fano_lab1" t="IncludeFlat">
+    <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_shenon_fano_lab1.1002291655.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="shenon_fano_lab1" t="IncludeRecursive">
+        <e p="Program.cs" t="Include" />
+        <e p="Text.txt" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -14,9 +16,7 @@
             </e>
           </e>
         </e>
-        <e p="Program.cs" t="Include" />
         <e p="shenon_fano_lab1.csproj" t="IncludeRecursive" />
-        <e p="Text.txt" t="Include" />
       </e>
       <e p="shenon_fano_lab1.sln" t="IncludeFlat" />
     </e>

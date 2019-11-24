@@ -1,29 +1,38 @@
 ﻿﻿using System;
+ using System.Collections.Generic;
+ using System.Linq;
+ using System.Xml.XPath;
 
-namespace ConsoleApplication1 {
+ namespace ConsoleApplication1 {
     class Program {
         public class Workplace {
-            public string type;
-            public Workplace() {
-            }
-            public Workplace(string type) {
-                this.type = type;
-            }
-            public void PrintType()
+            public Employee human;
+            public Workplace()
             {
-                Console.WriteLine("Type: " + this.type);
+                this.human = new Employee();
+            }
+            public Workplace(Employee human) {
+                this.human = human;
+            }
+            public void PrintSpecialization()
+            {
+                human.PrintSpecialization();
             }
         }
         
-        public class Cabinet : Workplace {
-            public string name;
-            public Cabinet() : base(null) {
+        public class Cabinet
+        {
+            public List<Workplace> per = new List<Workplace>();
+            public Cabinet() {
             }
-            public Cabinet(string type, string name) : base(type) {
-                this.name = name;
+            public Cabinet(Workplace per) {
+                this.per.Add(per);
             }
-            public void PrintName() {
-                Console.WriteLine("Name: " + this.name);
+            public void PrintAll() {
+                for(int i; i < this.per.Count; i++)
+                {
+                    Console.Write("Type: " + this.per[i].ToString());
+                }
             }
         }
 
@@ -39,37 +48,46 @@ namespace ConsoleApplication1 {
             }
         }
 
-        public class Employees : Human {
-            public string position;
-            public Employees() : base(null) {
+        public class Employees {
+            public List<Employee> a1;
+            public Employees(List<Employee> a1)
+            {
+                this.a1 = a1;
             }
-            public Employees(string name, string position) : base(name) {
-                 this.position = position;
+            public Employees()
+            {
+                this.a1 = new List<Employee>();
+            }
+
+            public void add_emp(Employee a1)
+            {
+                this.a1.Add(a1);
+            }
+            public Employees(Employee a1)
+            {
+                this.add_emp(a1);
             }
             
             public virtual void PrintPosition() {
-                Console.WriteLine("Position: " + this.position);
+                foreach (Employee i in this.a1)
+                {
+                    i.PrintSpecialization();
+                }
             }
         }
 
-        public class Employee : Employees {
+        public class Employee {
             public string specialization;
-            public Employee() : base(null, null) {
+            public Employee() {
             }
-            public Employee(string name, string position, string specialization) : base(name, position) {
+            public Employee(string specialization) {
                 this.specialization = specialization;
-            }
-            public Employee(string name, string specialization) : base(name, null) {
-                this.specialization = specialization;
-            }
-            public override void PrintPosition() {
-                Console.WriteLine("Position override: " + base.Position);
             }
             public void PrintSpecialization() {
                 Console.WriteLine("Specialization: " + this.specialization);
             }
         }
-        public class Worker : Employees {
+        public class Worker : Human {
             public string type;
             public Worker() : base(null, null) {
             }
