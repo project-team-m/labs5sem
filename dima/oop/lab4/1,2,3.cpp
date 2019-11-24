@@ -20,7 +20,7 @@ void fun(Test*obj) {
     obj->Z();
 }
 
-int main1() {
+int main() {
     Test obj1;
     fun(&obj1);
     return 0;

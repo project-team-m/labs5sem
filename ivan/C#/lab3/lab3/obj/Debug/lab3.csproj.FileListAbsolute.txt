@@ -3,3 +3,8 @@
 /home/paket/C#/lab3/lab3/obj/Debug/lab3.csprojAssemblyReference.cache
 /home/paket/C#/lab3/lab3/obj/Debug/lab3.exe
 /home/paket/C#/lab3/lab3/obj/Debug/lab3.pdb
+/home/paket/Project/labs5sem/ivan/C#/lab3/lab3/bin/Debug/lab3.exe
+/home/paket/Project/labs5sem/ivan/C#/lab3/lab3/bin/Debug/lab3.pdb
+/home/paket/Project/labs5sem/ivan/C#/lab3/lab3/obj/Debug/lab3.csprojAssemblyReference.cache
+/home/paket/Project/labs5sem/ivan/C#/lab3/lab3/obj/Debug/lab3.exe
+/home/paket/Project/labs5sem/ivan/C#/lab3/lab3/obj/Debug/lab3.pdb

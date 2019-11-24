@@ -31,7 +31,7 @@ public:
         throw 0;
     }
 
-    void operator >>(int val) {
+    void operator <<(int val) {
         n++;
         int *tmp = new int[n];
         for (int i = 0; i < n - 1; i++)
@@ -41,10 +41,10 @@ public:
         arr = tmp;
     }
 
-    void operator <<(int index) {
-        if (index<0 || index>n) {
+    void operator >>(int index) {
+        if (index<0 || index>=n) {
             cout << "Index out of range" << endl;
-            return;
+            throw 0 ;
         }
         while (index < n - 1) {
             arr[index] = arr[index + 1];
@@ -54,14 +54,14 @@ public:
     }
 };
 
-int main6() {
+int main() {
     Array mas;
     mas.str();
-    mas >> 1;
-    mas >> 2;
-    mas >> 3;
-    mas >> 4;
-    mas >> 5;
+    mas << 1;
+    mas << 2;
+    mas << 3;
+    mas << 4;
+    mas << 5;
     try {
         cout << mas[30] <<endl;
     } catch(int) {
@@ -69,10 +69,10 @@ int main6() {
     }
     mas.str();
     cout << endl << mas[0] << endl;
-    mas << 0;
+    mas >> 0;
     mas.str();
     cout << endl;
-    mas << 1;
+    mas >> 1;
     mas.str();
     cout << endl;
     return 0;

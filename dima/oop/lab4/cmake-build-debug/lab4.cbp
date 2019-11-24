@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug"/>
+				<Option working_dir="/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug"/>
+				<Option working_dir="/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="lab4">
-				<Option output="/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/lab4" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug"/>
+				<Option output="/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/lab4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -44,15 +44,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab4"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab4"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="lab4/fast">
-				<Option output="/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/lab4" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug"/>
+				<Option output="/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/lab4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -67,39 +67,39 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab4/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab4/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug"/>
+				<Option working_dir="/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/dekeyel/Projects/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/dekeyel/Projects/labs5sem/dima/oop/lab4/1,2,3.cpp">
+		<Unit filename="/home/paket/Project/labs5sem/dima/oop/lab4/1,2,3.cpp">
 			<Option target="lab4"/>
 		</Unit>
-		<Unit filename="/home/dekeyel/Projects/labs5sem/dima/oop/lab4/4.cpp">
+		<Unit filename="/home/paket/Project/labs5sem/dima/oop/lab4/4.cpp">
 			<Option target="lab4"/>
 		</Unit>
-		<Unit filename="/home/dekeyel/Projects/labs5sem/dima/oop/lab4/5.cpp">
+		<Unit filename="/home/paket/Project/labs5sem/dima/oop/lab4/5.cpp">
 			<Option target="lab4"/>
 		</Unit>
-		<Unit filename="/home/dekeyel/Projects/labs5sem/dima/oop/lab4/6.cpp">
+		<Unit filename="/home/paket/Project/labs5sem/dima/oop/lab4/6.cpp">
 			<Option target="lab4"/>
 		</Unit>
-		<Unit filename="/home/dekeyel/Projects/labs5sem/dima/oop/lab4/main.cpp">
+		<Unit filename="/home/paket/Project/labs5sem/dima/oop/lab4/main.cpp">
 			<Option target="lab4"/>
 		</Unit>
-		<Unit filename="/home/dekeyel/Projects/labs5sem/dima/oop/lab4/CMakeLists.txt">
+		<Unit filename="/home/paket/Project/labs5sem/dima/oop/lab4/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

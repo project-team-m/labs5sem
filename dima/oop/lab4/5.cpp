@@ -25,8 +25,6 @@ public:
     friend istream& operator>>(istream&, Complex&);
     friend Complex operator+(float, Complex);
     friend Complex operator-(float, Complex);
-    //friend Complex& operator+(Complex&, float&);
-    //friend Complex& operator-(Complex&, float&);
 
 };
 
@@ -59,13 +57,13 @@ Complex operator-(float l, Complex r)
 
 
 
-int main5() {
+int main() {
     Complex X(5, 5);
     Complex Y(2, 8);
     Complex W;
     Complex D = X - Y;
     cout << D << endl;
-    W = X - 9;
+    W =  9-X;
     cout << W << endl;
     Complex Z;
     cin >> Z;

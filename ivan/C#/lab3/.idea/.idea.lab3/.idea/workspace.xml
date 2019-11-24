@@ -1,12 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6cc258c7-b32f-440e-8e62-b8de9f4fc083" name="Default Changelist" comment="" />
+    <list default="true" id="6cc258c7-b32f-440e-8e62-b8de9f4fc083" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.lab3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab3/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.lab3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/bin/Debug/lab3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/bin/Debug/lab3.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/bin/Debug/lab3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/bin/Debug/lab3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/obj/Debug/lab3.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/obj/Debug/lab3.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/obj/Debug/lab3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/obj/Debug/lab3.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/obj/Debug/lab3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/obj/Debug/lab3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lub/.idea/.idea.lub/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lub/.idea/.idea.lub/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lub/.idea/.idea.lub/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lub/.idea/.idea.lub/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lub/lub2/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../lub/lub2/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lub/lub2/bin/Debug/lub2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../lub/lub2/bin/Debug/lub2.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lub/lub2/bin/Debug/lub2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../lub/lub2/bin/Debug/lub2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lub/lub2/obj/Debug/lub2.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../lub/lub2/obj/Debug/lub2.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lub/lub2/obj/Debug/lub2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../lub/lub2/obj/Debug/lub2.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lub/lub2/obj/Debug/lub2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../lub/lub2/obj/Debug/lub2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OC/out/production/OC/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../OC/out/production/OC/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OC/out/production/OC/com/company/OC.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../OC/out/production/OC/com/company/OC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/lab3.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/lab3.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/lab3.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/lab3.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/lab3.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/lab3.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/lab3.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/lab3.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/CMakeFiles/lab3.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/lab3.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/lab3/cmake-build-debug/lab3.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/test/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/test/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/test/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/test/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/lab3/Program.cs" root0="FORCE_HIGHLIGHTING" />
@@ -18,13 +57,20 @@
       </list>
     </option>
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1TtZ3B7OXtUDWd31mxFnTHRRs0g" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../lub" />
-    <property name="settings.editor.selected.configurable" value="preferences.CSharpInteractiveConfiguration" />
+    <property name="settings.editor.selected.configurable" value="preferences.build.unityPlugin" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -71,6 +117,9 @@
       <workItem from="1574281152355" duration="12724000" />
       <workItem from="1574327153728" duration="4357000" />
       <workItem from="1574352804468" duration="1060000" />
+      <workItem from="1574380897812" duration="412000" />
+      <workItem from="1574381778790" duration="134000" />
+      <workItem from="1574421737963" duration="1056000" />
     </task>
     <servers />
   </component>
@@ -79,6 +128,19 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
   </component>
@@ -91,5 +153,14 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="lab3" type="b2602c69:ProjectViewProjectNode" />
+        <item name="lab3" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
   </component>
 </project>

@@ -3,3 +3,8 @@
 /home/paket/C#/lub/lub2/obj/Debug/lub2.csprojAssemblyReference.cache
 /home/paket/C#/lub/lub2/obj/Debug/lub2.exe
 /home/paket/C#/lub/lub2/obj/Debug/lub2.pdb
+/home/paket/Project/labs5sem/ivan/C#/lub/lub2/bin/Debug/lub2.exe
+/home/paket/Project/labs5sem/ivan/C#/lub/lub2/bin/Debug/lub2.pdb
+/home/paket/Project/labs5sem/ivan/C#/lub/lub2/obj/Debug/lub2.csprojAssemblyReference.cache
+/home/paket/Project/labs5sem/ivan/C#/lub/lub2/obj/Debug/lub2.exe
+/home/paket/Project/labs5sem/ivan/C#/lub/lub2/obj/Debug/lub2.pdb

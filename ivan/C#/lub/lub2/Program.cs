@@ -11,6 +11,11 @@ namespace lub2
             {
                 Name = name;
             }
+
+            public Animals()
+            {
+                Name = null;
+            }
             public void PrintName()
             {
                 Console.Write("Name :");
@@ -27,6 +32,11 @@ namespace lub2
                  Color = color;
             }
 
+            public Mammals()
+            {
+                Color = null;
+            }
+
             public virtual void PrintColor()
             {
                 Console.Write("Color :");
@@ -41,6 +51,11 @@ namespace lub2
             {
                 Year = year;
             }
+
+            public Horses()
+            {
+                Year = 0;
+            }
             public void PrintYear()
             {
                 Console.Write("Age :");
@@ -53,6 +68,11 @@ namespace lub2
             public Fish(string name, string live) : base(name)
             {
                 WhereLive = live;
+            }
+
+            public Fish()
+            {
+                WhereLive = null;
             }
             public void PrintWhereLive()
             {
@@ -67,6 +87,11 @@ namespace lub2
             {
                 Markwool = mark;
             }
+
+            public Spiders()
+            {
+                Markwool = null;
+            }
             public void PrintMarkwool()
             {
                 Console.Write("Silkiness :");
@@ -79,6 +104,11 @@ namespace lub2
             public Dogs(string name,string color, string breed) : base(name, color)
             {
                 Breed = breed;
+            }
+
+            public Dogs()
+            {
+                Breed = null;
             }
             public Dogs(string name,string breed):base(name,"None")
             {
@@ -103,6 +133,11 @@ namespace lub2
             {
                 Tooth = tooth;
             }
+
+            public Crocodile()
+            {
+                Tooth = 0;
+            }
             
             public void PrintTooth()
             {
@@ -119,7 +154,7 @@ namespace lub2
             Dogs.PrintColor();
             Dogs.PrintBreed();
             Console.WriteLine(("").PadRight(24, '_'));
-            var Dogs1 = new Dogs("Spi", "Red","Pikingese");
+            var Dogs1 = new Dogs();
             Dogs1.PrintName();
             Dogs1.PrintColor();
             Dogs1.PrintBreed();
