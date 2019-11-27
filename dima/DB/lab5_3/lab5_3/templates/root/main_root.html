@@ -6,11 +6,20 @@
 {% block title %}Root{% endblock %}
 
 {% block content %}
-
     <div class="btn-group center-block" role="group" aria-label="Basic example">
-        {% for table in tables %}
-            <button type="button" class="btn btn-secondary">{{ table }}</button>
-        {% endfor %}
+        <a href="http://127.0.0.1:8000/root/components" class="btn btn-secondary">components</a>
+        <a href="http://127.0.0.1:8000/root/brands" class="btn btn-secondary">brands</a>
+        <a href="http://127.0.0.1:8000/root/stock" class="btn btn-secondary">stock</a>
+        <a href="http://127.0.0.1:8000/root/stocks" class="btn btn-secondary">stocks</a>
+        <a href="http://127.0.0.1:8000/root/workers" class="btn btn-secondary">workers</a>
+        <a href="http://127.0.0.1:8000/root/positions" class="btn btn-secondary">positions</a>
+        <a href="http://127.0.0.1:8000/root/orders" class="btn btn-secondary">orders</a>
+        <a href="http://127.0.0.1:8000/root/clients" class="btn btn-secondary">clients</a>
+        <a href="http://127.0.0.1:8000/root/basket" class="btn btn-secondary">basket</a>
     </div>
+
+    {% block tables %}
+
+    {% endblock %}
 
 {% endblock %}

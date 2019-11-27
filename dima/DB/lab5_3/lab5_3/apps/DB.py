@@ -43,18 +43,81 @@ class DB():
 
     def show_components(self):
         with self.conn.cursor() as cursor:
-            tables = ['components', 'brands']
-            columns = [tables[0] + '.' + 'id', 'name', 'purchase_price', 'selling_price', 'clock', 'cores',
-                       'threads', 'clock_memory', 'bus_width', 'memory', 'timing']
             stmt = sql.SQL('SELECT components.id, components.name, purchase_price, selling_price, clock, cores, threads,'
                            ' clock_memory, bus_width, memory, timing, brands.name '
-                           'FROM components INNER JOIN brands ON components.id_brand = brands.id')
+                           'FROM components INNER JOIN brands ON components.id_brand = brands.id;')
 
             cursor.execute(stmt)
-            return [('id', 'name', 'purchase_price', 'selling_price', 'clock', 'cores', 'threads', 'clock_memory', 'bus_width', 'memory', 'timing', 'brand')] + cursor.fetchall()
+            return [('id', 'name', 'purchase price', 'selling price', 'clock', 'cores', 'threads', 'clock_memory', 'bus width', 'memory', 'timing', 'brand')] + cursor.fetchall()
+
+    def show_brands(self):
+        with self.conn.cursor() as cursor:
+            stmt = sql.SQL('SELECT * '
+                           'FROM brands;')
+
+            cursor.execute(stmt)
+            return [('id', 'name')] + cursor.fetchall()
+
+    def show_stocks(self):
+        with self.conn.cursor() as cursor:
+            stmt = sql.SQL('SELECT stocks.id, stocks.name, inn, ogrn, stocks.address, date_create, workers.name '
+                           'FROM stocks INNER JOIN workers ON stocks.id_storekeeper= workers.id;')
+
+            cursor.execute(stmt)
+            return [('id', 'name', 'inn', 'ogrn', 'address', 'date create', 'storekeeper')] + cursor.fetchall()
+
+    def show_stock(self):
+        with self.conn.cursor() as cursor:
+            stmt = sql.SQL('SELECT stock.id, components.name, stocks.name, stocks.address, balance '
+                           'FROM (stock INNER JOIN components ON components.id = stock.id_component)'
+                           'INNER JOIN stocks ON stock.id_stock = stocks.id;')
+
+            cursor.execute(stmt)
+            return [('id', 'component name', 'stock name', 'stock address', 'balance')] + cursor.fetchall()
+
+    def show_clients(self):
+        with self.conn.cursor() as cursor:
+            stmt = sql.SQL('SELECT id, name, phone_number, discount_card, login, password '
+                           'FROM clients;')
+
+            cursor.execute(stmt)
+            return [('id', 'name', 'phone number', 'discount_card', 'login', 'password')] + cursor.fetchall()
+
+    def show_workers(self):
+        with self.conn.cursor() as cursor:
+            stmt = sql.SQL('SELECT workers.id, workers.name, login, password, address, phone_number, positions.name, email, date_employment '
+                           'FROM workers INNER JOIN positions ON workers.id_position = positions.id;')
+
+            cursor.execute(stmt)
+            return [('id', 'name', 'login', 'password', 'address', 'phone_number', 'positions name', 'email', 'date employment')] + cursor.fetchall()
+
+    def show_positions(self):
+        with self.conn.cursor() as cursor:
+            stmt = sql.SQL('SELECT * '
+                           'FROM positions;')
+
+            cursor.execute(stmt)
+            return [('id', 'name')] + cursor.fetchall()
+
+    def show_orders(self):
+        with self.conn.cursor() as cursor:
+            stmt = sql.SQL('SELECT orders.id, date_order, workers.name, discount '
+                           'FROM orders INNER JOIN workers ON orders.id_manager = workers.id;')
+
+            cursor.execute(stmt)
+            return [('id', 'date order', 'manager name', 'discount')] + cursor.fetchall()
+
+    def show_basket(self):
+        with self.conn.cursor() as cursor:
+            stmt = sql.SQL('SELECT basket.id, components.name, quantity, clients.name, id_order '
+                           'FROM (basket INNER JOIN components ON components.id = basket.id_component)'
+                           'INNER JOIN clients ON basket.id_client = clients.id;')
+
+            cursor.execute(stmt)
+            return [('id', 'compoent name', 'quantity', 'client name', 'order id')] + cursor.fetchall()
 
 a = DB('a', 'a')
 scripts = None
 if __name__ == '__main__':
-
-    print(a.show_components())
+    a = DB('admin', 'admin')
+    print(a.show_basket())

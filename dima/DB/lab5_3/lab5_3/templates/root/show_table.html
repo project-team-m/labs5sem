@@ -1,16 +1,16 @@
-{% extends 'base.html' %}
+{% extends 'root/main_root.html' %}
 {% block static %}
     {% load static %}
     <link rel="stylesheet" href="{% static 'root/style.css' %}">
 {% endblock %}
 {% block title %}{{ tittle }}{% endblock %}
 
-{% block content %}
+{% block tables %}
 
     <table class="table table-inverse">
         <thead>
         <tr>
-            {% for i in titlles %}
+            {% for i in tittles %}
                 <th>{{ i }}</th>
             {% endfor %}
         </tr>

@@ -1,3 +1,5 @@
+--add crt db 2column log pas
+
 INSERT INTO brands
 VALUES
 ('ASUS'),
