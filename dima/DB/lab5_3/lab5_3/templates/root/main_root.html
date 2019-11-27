@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block static %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'root/style.css' %}">
+{% endblock %}
+{% block title %}Root{% endblock %}
+
+{% block content %}
+
+    <div class="btn-group center-block" role="group" aria-label="Basic example">
+        {% for table in tables %}
+            <button type="button" class="btn btn-secondary">{{ table }}</button>
+        {% endfor %}
+    </div>
+
+{% endblock %}

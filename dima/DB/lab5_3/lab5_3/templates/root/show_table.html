@@ -3,23 +3,23 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'root/style.css' %}">
 {% endblock %}
-{% block title %}Components{% endblock %}
+{% block title %}{{ tittle }}{% endblock %}
 
 {% block content %}
 
     <table class="table table-inverse">
         <thead>
         <tr>
-            {% for name in names %}
-                <th>{{ name }}</th>
+            {% for i in titlles %}
+                <th>{{ i }}</th>
             {% endfor %}
         </tr>
         </thead>
         <tbody>
-        {% for component in components %}
+        {% for string in strings %}
             <tr>
-                {% for name in component %}
-                    <td>{{ name }}</td>
+                {% for i in string %}
+                    <td>{{ i }}</td>
                 {% endfor %}
             </tr>
         {% endfor %}

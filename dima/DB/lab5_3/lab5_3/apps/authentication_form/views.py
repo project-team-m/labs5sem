@@ -1,11 +1,16 @@
 from django.shortcuts import render
-from django.http import Http404, HttpResponseRedirect, HttpResponse
+from django.http import Http404, HttpResponseRedirect
 from django.urls import reverse
+from lab5_3.apps import DB
+
+scripts = None
 
 def index(request):
-    return render(request, 'authentication_form/main_form.html')
+    return render(request, 'authentication_form/main_form.html', {'scripts': DB.scripts})
 
 def check_user(request):
-    a = (request.POST['login'], request.POST['password'],)
-    print(a)
-    return HttpResponse('ok')
+    DB.a = DB.DB(request.POST['login'], request.POST['password'], )
+    if DB.a.login:
+        return HttpResponseRedirect(reverse('root:show_tables'))
+    DB.scripts = 'wrong password or login'
+    return HttpResponseRedirect(reverse('main_form:index'))

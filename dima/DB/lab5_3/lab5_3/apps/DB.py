@@ -1,6 +1,8 @@
 import psycopg2
 from psycopg2 import sql
 
+tables = ['components', 'brands', 'stock', 'stocks', 'workers', 'positions', 'orders', 'clients', 'basket']
+
 class DB():
     def __init__(self, login, password):
         self.conn = psycopg2.connect(dbname='dima_lab5', user='user_1',
@@ -51,6 +53,8 @@ class DB():
             cursor.execute(stmt)
             return [('id', 'name', 'purchase_price', 'selling_price', 'clock', 'cores', 'threads', 'clock_memory', 'bus_width', 'memory', 'timing', 'brand')] + cursor.fetchall()
 
+a = DB('a', 'a')
+scripts = None
 if __name__ == '__main__':
-    a = DB('admin', 'admin')
+
     print(a.show_components())

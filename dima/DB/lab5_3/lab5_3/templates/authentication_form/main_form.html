@@ -35,3 +35,10 @@
 
     </form>
 {% endblock %}
+{% block scripts %}
+    {% if scripts %}
+        <script>
+            alert('{{ scripts }}');
+        </script>
+    {% endif %}
+{% endblock %}
