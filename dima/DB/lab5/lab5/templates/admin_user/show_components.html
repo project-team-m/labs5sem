@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block static %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'admin_user/style.css' %}">
+{% endblock %}
+{% block title %}Components{% endblock %}
+
+{% block content %}
+
+    <table class="table">
+        <thead class="thead-inverse">
+        <tr>
+            {% for name in components %}
+                <th>{{ name }}</th>
+            {% endfor %}
+        </tr>
+        </thead>
+        <tbody>
+        {% for component in components[1:] %}
+            <tr>
+                {% for foo in component %}
+                    <th>{{ foo }}</th>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

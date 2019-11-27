@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block static %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'root/style.css' %}">
+{% endblock %}
+{% block title %}Components{% endblock %}
+
+{% block content %}
+
+    <table class="table table-inverse">
+        <thead>
+        <tr>
+            {% for name in names %}
+                <th>{{ name }}</th>
+            {% endfor %}
+        </tr>
+        </thead>
+        <tbody>
+        {% for component in components %}
+            <tr>
+                {% for name in component %}
+                    <td>{{ name }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
