@@ -18,9 +18,14 @@
         <tbody>
         {% for string in strings %}
             <tr>
-                {% for i in string %}
-                    <td>{{ i }}</td>
-                {% endfor %}
+                <form class="">
+                    {% for i in string %}
+                        <td class="">
+                            <input type="text" class="" id="inputPassword" size="{{ i|length }}" value="{{ i }}">
+                        </td>
+                    {% endfor %}
+                    <td><button type="submit" class="btn btn-primary mb-2">Change</button></td>
+                </form>
             </tr>
         {% endfor %}
         </tbody>
