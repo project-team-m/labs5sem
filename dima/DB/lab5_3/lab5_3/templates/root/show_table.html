@@ -18,17 +18,46 @@
         <tbody>
         {% for string in strings %}
             <tr>
-                <form class="">
-                    {% for i in string %}
-                        <td class="">
-                            <input type="text" class="" id="inputPassword" size="{{ i|length }}" value="{{ i }}">
-                        </td>
+                <form action="{{ link }}" method="POST" class="dn" style="display: none">
+                    {% csrf_token %}
+                    {% for i, j in string %}
+                        {% if j|length > 0 %}
+                            <td><input type="text" name="{{ i }}" class="form-control-plaintext" id="exampleInputPassword1" value="{{ j }}"></td>
+                        {% else %}
+                            <td><input type="text" name="{{ i }}" class="form-control-plaintext" id="exampleInputPassword1" size="2" value="{{ j }}"></td>
+                        {% endif %}
                     {% endfor %}
-                    <td><button type="submit" class="btn btn-primary mb-2">Change</button></td>
+                    <td>
+                        <button type="submit" class="btn btn-primary mb-2" >Change</button>
+                    </td>
                 </form>
             </tr>
         {% endfor %}
+            <tr>
+                <form action="{{ link }}" method="POST" class="dn" style="display: none">
+                    {% csrf_token %}
+                    {% for i,j in last %}
+                        {% if j|length > 0 %}
+                            <td><input type="text" name="{{ i }}"  class="form-control-plaintext" id="exampleInputPassword1"></td>
+                        {% else %}
+                            <td><input type="text" name="{{ i }}"  class="form-control-plaintext" id="exampleInputPassword1" size="2"></td>
+                        {% endif %}
+
+                    {% endfor %}
+                    <td>
+                        <button type="submit" class="btn btn-primary mb-2">Add</button>
+                    </td>
+                </form>
+            </tr>
         </tbody>
     </table>
 
+{% endblock %}
+
+{% block scripts %}
+    {% if scripts == 'incorrect input' %}
+        <script>
+            alert('{{ scripts }}');
+        </script>
+    {% endif %}
 {% endblock %}
