@@ -16,19 +16,27 @@
         </tr>
         </thead>
         <tbody>
+        {% if strings %}
         {% for string in strings %}
             <tr>
                 <form action="{{ link }}" method="POST" class="dn" style="display: none">
                     {% csrf_token %}
                     {% for i, j in string %}
                         {% if j|length > 0 %}
-                            <td><input type="text" name="{{ i }}" class="form-control-plaintext" id="exampleInputPassword1" value="{{ j }}"></td>
+                            <td>
+                                <input type="text" name="{{ i }}" class="form-control-plaintext" id="exampleInputPassword1" value="{{ j }}">
+                                <input type="hidden" name="{{ i }}_old"  id="exampleInputPassword1" value="{{ j }}">
+                            </td>
                         {% else %}
-                            <td><input type="text" name="{{ i }}" class="form-control-plaintext" id="exampleInputPassword1" size="2" value="{{ j }}"></td>
+                            <td>
+                                <input type="text" name="{{ i }}" class="form-control-plaintext" id="exampleInputPassword1" size="2" value="{{ j }}">
+                                <input type="hidden" name="{{ i }}_old"  id="exampleInputPassword1" value="{{ j }}">
+                            </td>
                         {% endif %}
                     {% endfor %}
                     <td>
-                        <button type="submit" class="btn btn-primary mb-2" >Change</button>
+                        <input type="submit" class="btn btn-primary" name="_edit" value="Change">
+                        <input type="submit" class="btn btn-danger" name="_del" value="Delete">
                     </td>
                 </form>
             </tr>
@@ -36,19 +44,41 @@
             <tr>
                 <form action="{{ link }}" method="POST" class="dn" style="display: none">
                     {% csrf_token %}
-                    {% for i,j in last %}
+                    {% for i, j in last %}
                         {% if j|length > 0 %}
-                            <td><input type="text" name="{{ i }}"  class="form-control-plaintext" id="exampleInputPassword1"></td>
+                            <td>
+                                <input type="text" name="{{ i }}"  class="form-control-plaintext" id="exampleInputPassword1">
+                                <input type="hidden" name="{{ i }}_old"  id="exampleInputPassword1" value="{{ i }}">
+                            </td>
                         {% else %}
-                            <td><input type="text" name="{{ i }}"  class="form-control-plaintext" id="exampleInputPassword1" size="2"></td>
+                            <td>
+                                <input type="text" name="{{ i }}"  class="form-control-plaintext" id="exampleInputPassword1" size="2">
+                                <input type="hidden" name="{{ i }}_old"  id="exampleInputPassword1" value="{{ i }}">
+                            </td>
                         {% endif %}
 
                     {% endfor %}
                     <td>
-                        <button type="submit" class="btn btn-primary mb-2">Add</button>
+                        <input type="submit" class="btn btn-primary" name="_edit" value="Add">
                     </td>
                 </form>
             </tr>
+        {% else %}
+            <tr>
+                <form action="{{ link }}" method="POST" class="dn" style="display: none">
+                    {% csrf_token %}
+                    {% for i in tittles %}
+                            <td>
+                                <input type="text" name="{{ i }}"  class="form-control-plaintext" id="exampleInputPassword1">
+                                <input type="hidden" name="{{ i }}_old"  id="exampleInputPassword1" value="{{ i }}">
+                            </td>
+                    {% endfor %}
+                    <td>
+                        <input type="submit" class="btn btn-primary" name="_edit" value="Add">
+                    </td>
+                </form>
+            </tr>
+        {% endif %}
         </tbody>
     </table>
 

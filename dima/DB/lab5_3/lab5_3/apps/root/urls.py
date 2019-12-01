@@ -14,5 +14,13 @@ urlpatterns = [
     path('positions/', views.show_positions, name='positions'),
     path('basket/', views.show_basket, name='basket'),
     path('orders/', views.show_orders, name='orders'),
-    path('enter_components/', views.enter_components, name='enter_components')
+    path('enter_components/', views.enter_components, name='enter_components'),
+    path('enter_brands/', views.enter_brands, name='enter_brands'),
+    path('enter_stocks/', views.enter_stocks, name='enter_stocks'),
+    path('enter_stock/', views.enter_stock, name='enter_stock'),
+    path('enter_workers/', views.enter_workers, name='enter_workers'),
+    path('enter_positions/', views.enter_positions, name='enter_positions'),
+    path('enter_orders/', views.enter_orders, name='enter_orders'),
+    path('enter_basket/', views.enter_basket, name='enter_basket'),
+    path('enter_clients/', views.enter_clients, name='enter_clients')
 ]

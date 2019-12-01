@@ -41,6 +41,10 @@ class DB():
         if not self.login:
             self.conn = None
 
+    def rollback(self):
+        with self.conn.cursor() as cursor:
+            cursor.execute('rollback;')
+
     def trans(self, args, show):
         mass = [args]
         for i in range(len(show)):
@@ -66,6 +70,20 @@ class DB():
 
         return args_new, mass_new
 
+    def crt_update(self, args, mass, table):
+        string = 'UPDATE {} SET {} = {}'.format(table, args[0], mass[0])
+        for i in range(1, len(args)):
+            if mass[i]:
+                try:
+                    string += ', {} = {}'.format(args[i], int(mass[i]))
+                except:
+                    string += ", {} = '{}'".format(args[i], mass[i])
+            else:
+                string += ', {} = null'.format(args[i])
+        string += ' WHERE id={};'.format(mass[-1])
+
+        return string
+
     def show_components(self):
         with self.conn.cursor() as cursor:
             stmt = sql.SQL('SELECT id, name, purchase_price, selling_price, clock, cores, threads,'
@@ -76,17 +94,26 @@ class DB():
             return self.trans(('id', 'name', 'purchase price', 'selling price', 'clock', 'cores', 'threads', 'clock memory', 'bus width', 'memory', 'timing', 'id brand'),
                                cursor.fetchall())
 
-    def add_component(self, mass):
+    def enter_component(self, mass):
         with self.conn.cursor() as cursor:
             args = ['id', 'name', 'purchase_price',
                     'selling_price', 'clock', 'cores', 'threads',
                     'clock_memory', 'bus_width', 'memory', 'timing', 'id_brand']
-            args, mass = self.end_res_add(args, mass)
-            stmt = sql.SQL('INSERT INTO components({}) VALUES ({}) ;').format(
+            if mass[-1] == 'id':
+                stmt = sql.SQL('INSERT INTO components({}) VALUES ({}) ;').format(
                     sql.SQL(',').join(map(sql.Identifier, args)),
-                    sql.SQL(',').join(map(sql.Literal, mass)))
-            print(str(stmt))
+                    sql.SQL(',').join(map(sql.Literal, mass[:12])))
+            else:
+                stmt = self.crt_update(args, mass, 'components')
             cursor.execute(stmt)
+            #self.conn.commit()
+
+    def del_string(self, old, table):
+        with self.conn.cursor() as cursor:
+            stmt = "DELETE FROM {} WHERE id = {} ;".format(table, old)
+
+            cursor.execute(stmt)
+            # self.conn.commit()
 
     def show_brands(self):
         with self.conn.cursor() as cursor:
@@ -122,7 +149,7 @@ class DB():
 
     def show_workers(self):
         with self.conn.cursor() as cursor:
-            stmt = sql.SQL('SELECT id, name, login, password, address, phone_number, id positions, email, date_employment '
+            stmt = sql.SQL('SELECT id, name, login, password, address, phone_number, id_position, email, date_employment '
                            'FROM workers ;')
 
             cursor.execute(stmt)
@@ -151,6 +178,109 @@ class DB():
 
             cursor.execute(stmt)
             return self.trans(('id', 'id component', 'quantity', 'id client', 'id order'), cursor.fetchall())
+
+    def enter_brands(self, mass):
+        with self.conn.cursor() as cursor:
+            args = ['id', 'name']
+            if mass[-1] == 'id':
+                stmt = sql.SQL('INSERT INTO brands({}) VALUES ({}) ;').format(
+                    sql.SQL(',').join(map(sql.Identifier, args)),
+                    sql.SQL(',').join(map(sql.Literal, mass[:2])))
+            else:
+                stmt = self.crt_update(args, mass, 'brands')
+            cursor.execute(stmt)
+            #self.conn.commit()
+
+    def enter_stock(self, mass):
+        with self.conn.cursor() as cursor:
+            args = ['id', 'id_component', 'id_stock',
+                    'balance']
+            if mass[-1] == 'id':
+                stmt = sql.SQL('INSERT INTO stock({}) VALUES ({}) ;').format(
+                    sql.SQL(',').join(map(sql.Identifier, args)),
+                    sql.SQL(',').join(map(sql.Literal, mass[:4])))
+            else:
+                stmt = self.crt_update(args, mass, 'stock')
+            cursor.execute(stmt)
+            #self.conn.commit()
+
+    def enter_stocks(self, mass):
+        with self.conn.cursor() as cursor:
+            args = ['id', 'name', 'inn',
+                    'ogrn', 'address', 'date_create', 'id_storekeeper']
+            if mass[-1] == 'id':
+                stmt = sql.SQL('INSERT INTO stocks({}) VALUES ({}) ;').format(
+                    sql.SQL(',').join(map(sql.Identifier, args)),
+                    sql.SQL(',').join(map(sql.Literal, mass[:7])))
+            else:
+                stmt = self.crt_update(args, mass, 'stocks')
+            cursor.execute(stmt)
+            #self.conn.commit()
+
+    def enter_orders(self, mass):
+        with self.conn.cursor() as cursor:
+            args = ['id', 'date_order', 'id_manager',
+                    'discount']
+            if mass[-1] == 'id':
+                stmt = sql.SQL('INSERT INTO orders({}) VALUES ({}) ;').format(
+                    sql.SQL(',').join(map(sql.Identifier, args)),
+                    sql.SQL(',').join(map(sql.Literal, mass[:4])))
+            else:
+                stmt = self.crt_update(args, mass, 'orders')
+            cursor.execute(stmt)
+            #self.conn.commit()
+
+    def enter_positions(self, mass):
+        with self.conn.cursor() as cursor:
+            args = ['id', 'name']
+            if mass[-1] == 'id':
+                stmt = sql.SQL('INSERT INTO positions({}) VALUES ({}) ;').format(
+                    sql.SQL(',').join(map(sql.Identifier, args)),
+                    sql.SQL(',').join(map(sql.Literal, mass[:2])))
+            else:
+                stmt = self.crt_update(args, mass, 'positions')
+            cursor.execute(stmt)
+            #self.conn.commit()
+
+    def enter_workers(self, mass):
+        with self.conn.cursor() as cursor:
+            args = ['id', 'name', 'login',
+                    'password', 'address', 'phone_number', 'id_position',
+                    'email', 'date_employment']
+            if mass[-1] == 'id':
+                stmt = sql.SQL('INSERT INTO workers({}) VALUES ({}) ;').format(
+                    sql.SQL(',').join(map(sql.Identifier, args)),
+                    sql.SQL(',').join(map(sql.Literal, mass[:9])))
+            else:
+                stmt = self.crt_update(args, mass, 'workers')
+            cursor.execute(stmt)
+            #self.conn.commit()
+
+    def enter_clients(self, mass):
+        with self.conn.cursor() as cursor:
+            args = ['id', 'name', 'phone_number',
+                    'discount_card', 'login', 'password']
+            if mass[-1] == 'id':
+                stmt = sql.SQL('INSERT INTO clients({}) VALUES ({}) ;').format(
+                    sql.SQL(',').join(map(sql.Identifier, args)),
+                    sql.SQL(',').join(map(sql.Literal, mass[:6])))
+            else:
+                stmt = self.crt_update(args, mass, 'clients')
+            cursor.execute(stmt)
+            #self.conn.commit()
+
+    def enter_basket(self, mass):
+        with self.conn.cursor() as cursor:
+            args = ['id', 'id_component', 'quantity',
+                    'id_client', 'id_order']
+            if mass[-1] == 'id':
+                stmt = sql.SQL('INSERT INTO basket({}) VALUES ({}) ;').format(
+                    sql.SQL(',').join(map(sql.Identifier, args)),
+                    sql.SQL(',').join(map(sql.Literal, mass[:5])))
+            else:
+                stmt = self.crt_update(args, mass, 'basket')
+            cursor.execute(stmt)
+            #self.conn.commit()
 
 a = DB('a', 'a')
 scripts = None
