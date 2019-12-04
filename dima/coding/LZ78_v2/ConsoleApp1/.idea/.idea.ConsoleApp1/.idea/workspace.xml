@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52810567-954e-4f3a-aab0-3271e4cd3e42" name="Default Changelist" comment="" />
+    <list default="true" id="52810567-954e-4f3a-aab0-3271e4cd3e42" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Hemming_dop/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Hemming_dop/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Hemming_dop/bin/Debug/Hemming.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Hemming_dop/bin/Debug/Hemming.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Hemming_dop/bin/Debug/Hemming.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Hemming_dop/bin/Debug/Hemming.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Hemming_dop/obj/Debug/Hemming.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Hemming_dop/obj/Debug/Hemming.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Hemming_dop/obj/Debug/Hemming.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Hemming_dop/obj/Debug/Hemming.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ConsoleApp1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConsoleApp1/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ConsoleApp1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConsoleApp1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/obj/ConsoleApp1.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/obj/ConsoleApp1.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/obj/ConsoleApp1.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/obj/ConsoleApp1.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/obj/ConsoleApp1.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/obj/ConsoleApp1.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/obj/project.packagespec.json" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/ConsoleApp1/Program.cs" root0="FORCE_HIGHLIGHTING" />
@@ -20,6 +36,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1Ttv9YgMeuglG1QF7dHxtZWdMFm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
@@ -71,6 +88,7 @@
       <workItem from="1574976316362" duration="352000" />
       <workItem from="1574976837622" duration="2454000" />
       <workItem from="1575022018335" duration="1806000" />
+      <workItem from="1575035216704" duration="199000" />
     </task>
     <servers />
   </component>
@@ -79,6 +97,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
   </component>
