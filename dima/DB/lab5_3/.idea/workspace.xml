@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b96cb1dc-aef5-4f03-8482-59a8b74bf990" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab5_3/apps/DB.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab5_3/apps/DB.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab5_3/apps/root/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab5_3/apps/root/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab5_3/apps/root/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab5_3/apps/root/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab5_3/static/authentication_form/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab5_3/static/root/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab5_3/templates/root/main_root.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab5_3/templates/root/main_root.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab5_3/templates/root/show_table.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab5_3/templates/root/show_table.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +117,7 @@
       <option name="presentableId" value="Default" />
       <updated>1574862906387</updated>
       <workItem from="1574862908392" duration="1998000" />
-      <workItem from="1574875315340" duration="9265000" />
+      <workItem from="1574875315340" duration="9844000" />
     </task>
     <servers />
   </component>
