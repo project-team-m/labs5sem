@@ -2,7 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b96cb1dc-aef5-4f03-8482-59a8b74bf990" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/../lab4/create_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4/create_db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4/filling_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4/filling_db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../coding/Hemming_dop/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../coding/Hemming_dop/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../coding/Hemming_dop/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../coding/Hemming_dop/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../coding/Hemming_dop/bin/Debug/Hemming.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../coding/Hemming_dop/bin/Debug/Hemming.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../coding/Hemming_dop/bin/Debug/Hemming.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../coding/Hemming_dop/bin/Debug/Hemming.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../coding/Hemming_dop/obj/Debug/Hemming.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../coding/Hemming_dop/obj/Debug/Hemming.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../coding/Hemming_dop/obj/Debug/Hemming.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../coding/Hemming_dop/obj/Debug/Hemming.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../coding/LZ78_v2/ConsoleApp1/.idea/.idea.ConsoleApp1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../coding/LZ78_v2/ConsoleApp1/.idea/.idea.ConsoleApp1/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../coding/LZ78_v2/ConsoleApp1/.idea/.idea.ConsoleApp1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../coding/LZ78_v2/ConsoleApp1/.idea/.idea.ConsoleApp1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../coding/LZ78_v2/ConsoleApp1/ConsoleApp1/obj/ConsoleApp1.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../coding/LZ78_v2/ConsoleApp1/ConsoleApp1/obj/ConsoleApp1.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../coding/LZ78_v2/ConsoleApp1/ConsoleApp1/obj/ConsoleApp1.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../coding/LZ78_v2/ConsoleApp1/ConsoleApp1/obj/ConsoleApp1.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../coding/LZ78_v2/ConsoleApp1/ConsoleApp1/obj/ConsoleApp1.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../../coding/LZ78_v2/ConsoleApp1/ConsoleApp1/obj/ConsoleApp1.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../coding/LZ78_v2/ConsoleApp1/ConsoleApp1/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../coding/LZ78_v2/ConsoleApp1/ConsoleApp1/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../coding/LZ78_v2/ConsoleApp1/ConsoleApp1/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../coding/LZ78_v2/ConsoleApp1/ConsoleApp1/obj/project.packagespec.json" afterDir="false" />
+>>>>>>> ce3c4a8d34f9f7d8d2931e43e3839defdcfcae0a
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +135,14 @@
       <option name="presentableId" value="Default" />
       <updated>1574862906387</updated>
       <workItem from="1574862908392" duration="1998000" />
+<<<<<<< HEAD
       <workItem from="1574875315340" duration="9844000" />
+=======
+      <workItem from="1574875315340" duration="9265000" />
+      <workItem from="1574946691441" duration="4562000" />
+      <workItem from="1575105339950" duration="2765000" />
+      <workItem from="1575196009462" duration="20571000" />
+>>>>>>> ce3c4a8d34f9f7d8d2931e43e3839defdcfcae0a
     </task>
     <servers />
   </component>
@@ -138,6 +163,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lab5_3$DB.coverage" NAME="DB Coverage Results" MODIFIED="1574884574632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab5_3/apps/root" />
+    <SUITE FILE_PATH="coverage/lab5_3$DB.coverage" NAME="DB Coverage Results" MODIFIED="1575207948475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab5_3/apps/root" />
   </component>
 </project>
