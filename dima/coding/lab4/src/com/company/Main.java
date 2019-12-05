@@ -27,9 +27,6 @@ class hemming {
         for (int i = 8; i < 16; i++) {
             res[i] = s[i - 8];
         }
-        /*for (int i = 0; i < 21; i++) {
-            System.out.print(Hemming(res)[0][i]);
-        }*/
         return Hemming(res)[0];
     }
 
@@ -43,8 +40,6 @@ class hemming {
                 code[j] = res[j - i * 21];
             }
         }
-        /*System.out.println(code.length / 21);
-        System.out.println(code.length / 21);*/
 
         if (code.length != (s.length() / 2) * 21) {
             char[] tmp = new char[8];
@@ -103,7 +98,7 @@ class hemming {
                 for (int j = i * 21; j < i * 21 + 21; j++) {
                     word[j - i * 21] = hem[j];
                 }
-                char[] res = convert_from_word(prov(word));
+                char[] res = convert_from_word(prov(word, i * 21));
                 response[i * 2] = res[0];
                 response[i * 2 + 1] = res[1];
             }
@@ -180,15 +175,8 @@ class hemming {
         return think_hemming(new_str);
     }
 
-    char[] prov(char[] s) {
+    char[] prov(char[] s, int pos) {
         char[][] word = think_hemming(s);
-
-        /*for (int i = 0; i < word.length; i++) {
-            for (int j = 0; j < word[i].length; j++) {
-                System.out.print(word[i][j] + " ");
-            }
-            System.out.println();
-        }*/
 
         if (word[1][21] != '0' || word[2][21] != '0' || word[3][21] != '0' ||
                 word[4][21] != '0' || word[5][21] != '0') {
@@ -204,7 +192,7 @@ class hemming {
             } else {
                 word[0][mistake - 1] = '0';
             }
-            System.out.println("Error in " + mistake + " position.");
+            System.out.println("Error in " + (mistake + pos) + " position.");
         }
         return word[0];
     }
@@ -227,53 +215,20 @@ public class Main {
 
     public static void main(String[] args) {
         hemming a = new hemming();
-        /*char[] st = {'0', '1', '0', '0', '0', '1', '0', '0', '0', '0', '1', '1', '1', '1', '0', '1'};
-        for (int i = 0; i < a.Hemming(st).length; i++) {
-            for (int j = 0; j < a.Hemming(st)[i].length; j++) {
-                System.out.print(a.Hemming(st)[i][j] + " ");
-            }
-            System.out.println();
-        }
-
-        System.out.println();
-
-        char[] st2 = {'1', '0', '0', '1', '1', '0', '0', '0', '0', '1', '0', '0', '0', '0', '1', '0', '1', '1', '1', '0', '1'};
-
-        for (int i = 0; i < a.think_hemming(st2).length; i++) {
-            for (int j = 0; j < a.think_hemming(st2)[i].length; j++) {
-                System.out.print(a.think_hemming(st2)[i][j] + " ");
-            }
-            System.out.println();
-        }
-
-        for (int i = 0; i < a.back_hemming(a.think_hemming(st2)).length; i++) {
-            System.out.print(a.back_hemming(a.think_hemming(st2))[i]);
-        }
-
-        char[] st = {'0', '1', '0', '0', '0', '1', '0', '0'};
-
-        System.out.print(a.convert_from_byte(st));
-
-        for (int i = 0; i < a.convert_to_words("abcd").length; i++) {
-            System.out.print(a.convert_to_words("abcd")[i]);
-        }*/
-
-        String st = "abcdef";
-        //char[] st = {'0', '1', '0', '0', '0', '1', '0', '0', '0', '0', '1', '1', '1', '1', '0', '1'};
-
-
+        /*String st = "habr";
         char[] b = a.convert_to_words(st);
 
-
-
-        //b[15] = '0';
+        for (int i = 0; i < b.length; i++) {
+            System.out.print(b[i]);
+        }
+        System.out.println();
 
         b[1] = '0';
-        b[24] = '0';
-        b[60] = '0';
+        b[2] = '1';*/
 
+        char[] st2 = {'0', '1', '0', '1', '1', '1', '0', '0', '0', '0', '1', '1', '0', '1', '1', '1', '0', '0', '1', '0', '0'};
 
-        char[] pr = a.decode(b);
+        char[] pr = a.decode(st2);
 
         for (int i = 0; i < pr.length; i++) {
             System.out.print(pr[i]);
