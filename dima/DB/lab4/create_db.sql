@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS components(
     bus_width INTEGER,
     memory INTEGER,
     timing INTEGER,
-    id_brand INTEGER REFERENCES brands(id)
+    id_brand INTEGER REFERENCES brands(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS clients(
@@ -34,10 +34,12 @@ CREATE TABLE IF NOT EXISTS positions(
 
 CREATE TABLE IF NOT EXISTS workers(
     id SERIAL PRIMARY KEY,
+    login VARCHAR(32) UNIQUE ,
+    password VARCHAR(32),
     name VARCHAR(30),
     address VARCHAR(50),
     phone_number VARCHAR(11),
-    id_position INTEGER REFERENCES positions(id),
+    id_position INTEGER REFERENCES positions(id) ON DELETE CASCADE ON UPDATE CASCADE,
     email VARCHAR(30),
     date_employment DATE
 );
@@ -49,27 +51,27 @@ CREATE TABLE IF NOT EXISTS stocks(
     ogrn INTEGER,
     address VARCHAR(50),
     date_create DATE,
-    id_storekeeper INTEGER REFERENCES workers(id)
+    id_storekeeper INTEGER REFERENCES workers(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS stock(
     id SERIAL PRIMARY KEY,
-    id_component INTEGER REFERENCES components(id),
-    id_stock INTEGER REFERENCES stocks(id),
+    id_component INTEGER REFERENCES components(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    id_stock INTEGER REFERENCES stocks(id) ON DELETE CASCADE ON UPDATE CASCADE,
     balance INTEGER
 );
 
 CREATE TABLE IF NOT EXISTS orders(
     id SERIAL PRIMARY KEY,
     date_order DATE,
-    id_manager INTEGER REFERENCES workers(id),
+    id_manager INTEGER REFERENCES workers(id) ON DELETE CASCADE ON UPDATE CASCADE,
     discount INTEGER
 );
 
 CREATE TABLE IF NOT EXISTS basket(
     id SERIAL PRIMARY KEY,
-    id_component INTEGER REFERENCES components(id),
+    id_component INTEGER REFERENCES components(id) ON DELETE CASCADE ON UPDATE CASCADE,
     quantity INTEGER,
-    id_client INTEGER REFERENCES clients(id),
-    id_order INTEGER REFERENCES orders(id)
+    id_client INTEGER REFERENCES clients(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    id_order INTEGER REFERENCES orders(id) ON DELETE CASCADE ON UPDATE CASCADE
 );

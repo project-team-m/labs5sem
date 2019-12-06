@@ -79,8 +79,20 @@
                 </form>
             </tr>
         {% endif %}
+            <tr>
+                <form action="{{ link2 }}" method="POST" class="dn" style="display: none">
+                    {% csrf_token %}
+                    <td>
+                        <input type="text" name="search" class="form-control-plaintext" id="exampleInputPassword1">
+                    </td>
+                    <td>
+                        <input type="submit" class="btn btn-primary" name="_search" value="Search">
+                    </td>
+                </form>
+            </tr>
         </tbody>
     </table>
+
 
 {% endblock %}
 

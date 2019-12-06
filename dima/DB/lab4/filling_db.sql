@@ -1,6 +1,6 @@
 --add crt db 2column log pas
 
-INSERT INTO brands
+INSERT INTO brands(name)
 VALUES
 ('ASUS'),
 ('CORSAIR'),
@@ -34,13 +34,15 @@ VALUES
 INSERT INTO positions(name)
 VALUES
 ('manager'),
-('storekeeper');
+('storekeeper'),
+('director');
 
-INSERT INTO workers(name, address, phone_number, id_position, email, date_employment)
+INSERT INTO workers(name, login, password, address, phone_number, id_position, email, date_employment)
 VALUES
-('Evgeniya', 'kash 2', '89854785442', 1, 'aaa@aaa.a', '2005-Jan-12'),
-('Anatoly', 'hgw 7', '89547831456', 2, 'ccc@ccc.c', '2004-Dec-27'),
-('Segrey', 'adrg 56', '89547831868', 2, 'bbb@bbb.b', '2004-Dec-26');
+('Evgeniya', 'evgeniya', 'evgeniya', 'kash 2', '89854785442', 1, 'aaa@aaa.a', '2005-Jan-12'),
+('Anatoly', 'anatoly', 'anatoly', 'hgw 7', '89547831456', 2, 'ccc@ccc.c', '2004-Dec-27'),
+('Segrey', 'segrey', 'segrey', 'adrg 56', '89547831868', 2, 'bbb@bbb.b', '2004-Dec-26'),
+('Genady', 'admin', 'admin', 'prd 72', '89546435468', 3, 'eee@eee.e', '2004-Sep-1');
 
 INSERT INTO stocks(name, inn, ogrn, address, date_create, id_storekeeper)
 VALUES

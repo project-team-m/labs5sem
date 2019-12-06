@@ -94,6 +94,16 @@ class DB():
             return self.trans(('id', 'name', 'purchase price', 'selling price', 'clock', 'cores', 'threads', 'clock memory', 'bus width', 'memory', 'timing', 'id brand'),
                                cursor.fetchall())
 
+    def search_component(self, dig):
+        with self.conn.cursor() as cursor:
+            stmt = sql.SQL('SELECT id, name, purchase_price, selling_price, clock, cores, threads,'
+                           ' clock_memory, bus_width, memory, timing, id_brand '
+                           'FROM components WHERE id = {};'.format(dig))
+
+            cursor.execute(stmt)
+            return self.trans(('id', 'name', 'purchase price', 'selling price', 'clock', 'cores', 'threads', 'clock memory', 'bus width', 'memory', 'timing', 'id brand'),
+                               cursor.fetchall())
+
     def enter_component(self, mass):
         with self.conn.cursor() as cursor:
             args = ['id', 'name', 'purchase_price',
@@ -119,6 +129,14 @@ class DB():
         with self.conn.cursor() as cursor:
             stmt = sql.SQL('SELECT * '
                            'FROM brands;')
+
+            cursor.execute(stmt)
+            return self.trans(('id', 'name'), cursor.fetchall())
+
+    def search_brands(self, dig):
+        with self.conn.cursor() as cursor:
+            stmt = sql.SQL('SELECT * '
+                           'FROM brands WHERE id = {};'.format(dig))
 
             cursor.execute(stmt)
             return self.trans(('id', 'name'), cursor.fetchall())

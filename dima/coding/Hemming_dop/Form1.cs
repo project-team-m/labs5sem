@@ -97,7 +97,7 @@ namespace Hemming
             else
             {
                 int count1 = 0, pos1 = -1;
-
+                int[] sin = new int[21];
                 for (int i = index * 21, j = 0; j < s.Length; i++, j++)
                 {
                     if (s[j] != textBox2.Text[i])
@@ -106,6 +106,12 @@ namespace Hemming
                         pos1 = i;
                     }
                 }
+
+                foreach (var VARIABLE in sin)
+                {
+                    Console.Write(VARIABLE);
+                }
+                Console.WriteLine();
 
                 if (count1 > 1)
                 {
@@ -161,6 +167,7 @@ namespace Hemming
                 }
                 else if (check[0] == 1)
                 {
+                    //Console.Out.WriteLine(check[1]);
                     MessageBox.Show($" Был изменен  {check[1]} бит  ");
 
                     foreach (var i in this.array)
@@ -283,7 +290,7 @@ namespace Hemming
             {
                 coder += i;
             }
-
+            //Console.WriteLine(coder);
             return coder;
         }
 

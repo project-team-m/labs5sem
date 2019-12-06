@@ -15,8 +15,10 @@ def show_components(request):
         save = DB.scripts
         DB.scripts = None
         link = 'http://127.0.0.1:8000/root/enter_components/'
+        link2 = 'http://127.0.0.1:8000/root/enter_components_s/'
         return render(request, 'root/show_table.html',
-                      {'tittles': DB.a.show_components()[0], 'strings': DB.a.show_components()[1:], 'link': link, 'last': DB.a.show_components()[-1], 'scripts': save})
+                      {'tittles': DB.a.show_components()[0], 'strings': DB.a.show_components()[1:], 'link': link,
+                       'link2': link2, 'last': DB.a.show_components()[-1], 'scripts': save})
     DB.scripts = 'wrong password or login'
     return HttpResponseRedirect(reverse('main_form:index'))
 
@@ -25,8 +27,9 @@ def show_brands(request):
         save = DB.scripts
         DB.scripts = None
         link = 'http://127.0.0.1:8000/root/enter_brands/'
+        link2 = 'http://127.0.0.1:8000/root/enter_brands_s/'
         return render(request, 'root/show_table.html',
-                      {'tittles': DB.a.show_brands()[0], 'strings': DB.a.show_brands()[1:], 'link': link, 'last': DB.a.show_brands()[-1], 'scripts': save})
+                      {'tittles': DB.a.show_brands()[0], 'strings': DB.a.show_brands()[1:], 'link': link, 'link2': link2, 'last': DB.a.show_brands()[-1], 'scripts': save})
     DB.scripts = 'wrong password or login'
     return HttpResponseRedirect(reverse('main_form:index'))
 
@@ -283,5 +286,39 @@ def enter_orders(request):
         else:
             DB.a.del_string(request.POST['id_old'], 'orders')
         return HttpResponseRedirect(reverse('root:orders'))
+    DB.scripts = 'wrong password or login'
+    return HttpResponseRedirect(reverse('main_form:index'))
+
+def enter_components_s(request):
+    if DB.a.login and DB.a.lvl == 3:
+        if '_search' in request.POST:
+            save = DB.scripts
+            DB.scripts = None
+            link = 'http://127.0.0.1:8000/root/enter_components/'
+            link2 = 'http://127.0.0.1:8000/root/enter_components_s/'
+            if request.POST['search']:
+                return render(request, 'root/show_table.html',
+                              {'tittles': DB.a.search_component(request.POST['search'])[0], 'strings': DB.a.search_component(request.POST['search'])[1:], 'link': link,
+                               'link2': link2, 'last': DB.a.search_component(request.POST['search'])[-1], 'scripts': save})
+            else:
+                return render(request, 'root/show_table.html',
+                              {'tittles': DB.a.show_components()[0], 'strings': DB.a.show_components()[1:],
+                               'link': link,
+                               'link2': link2, 'last': DB.a.show_components()[-1], 'scripts': save})
+    DB.scripts = 'wrong password or login'
+    return HttpResponseRedirect(reverse('main_form:index'))
+
+def enter_brands_s(request):
+    if DB.a.login and DB.a.lvl == 3:
+        save = DB.scripts
+        DB.scripts = None
+        link = 'http://127.0.0.1:8000/root/enter_brands/'
+        link2 = 'http://127.0.0.1:8000/root/enter_brands_s/'
+        if request.POST['search']:
+            return render(request, 'root/show_table.html',
+                          {'tittles': DB.a.search_brands(request.POST['search'])[0], 'strings': DB.a.search_brands(request.POST['search'])[1:], 'link': link, 'link2': link2, 'last': DB.a.search_brands(request.POST['search'])[-1], 'scripts': save})
+        else:
+            return render(request, 'root/show_table.html',
+                          {'tittles': DB.a.show_brands()[0], 'strings': DB.a.show_brands()[1:], 'link': link, 'last': DB.a.show_brands()[-1], 'scripts': save})
     DB.scripts = 'wrong password or login'
     return HttpResponseRedirect(reverse('main_form:index'))

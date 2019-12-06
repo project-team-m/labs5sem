@@ -75,19 +75,19 @@ INSERT INTO Culture_parameters(id, name_of_culture, type_of_culture)
 VALUES ('1', 'Пшеница', 'Продовол');
 
 INSERT INTO Waybill ( id, culture_id, analysis_id, weight, data)
-VALUES ('1', '1', '1', '700', '25.12.1999');
+VALUES ('1', '1', '1', '700', '2005-Jan-12');
 
 INSERT INTO Waybill ( id, culture_id, analysis_id, weight, data)
-VALUES ('2', '1', '2', '700', '25.09.2005');
+VALUES ('2', '1', '2', '700', '2005-Jan-12');
 
 INSERT INTO Waybill ( id, culture_id, analysis_id, weight, data)
-VALUES ('3', '1', '3', '500', '25.10.2000');
+VALUES ('3', '1', '3', '500', '2005-Jan-12');
 
 INSERT INTO Waybill ( id, culture_id, analysis_id, weight, data)
-VALUES ('4', '1', '4', '400', '25.10.1925');
+VALUES ('4', '1', '4', '400', '2005-Jan-12');
 
 INSERT INTO Waybill ( id, culture_id, analysis_id, weight, data)
-VALUES ('5', '1', '5', '330', '16.10.1999');
+VALUES ('5', '1', '5', '330', '2005-Jan-12');
 
 INSERT INTO Organization (id, name_organization, inn, ogrn, delivery_id, addresses_id)
 VALUES ('1','ОАО Колхоз','28110044','10264008', '1', '2');
