@@ -27,7 +27,7 @@ namespace lab3
         {
             if (vec1.vector == null || vec2.vector == null)
             {
-                Console.WriteLine("Один или оба вектора не существует");
+                Console.WriteLine("One or both vectors in not exist");
                 return false;
             }
             if (vec1.vector.Length == vec2.vector.Length) return true;
@@ -38,10 +38,10 @@ namespace lab3
         {
             if (vec1.vector == null || vec2.vector == null)
             {
-                Console.WriteLine("Один или оба вектора не существует");
+                Console.WriteLine("One or both vectors in not exist");
                 return false;
             }
-            if (vec1.vector.Length != vec2.vector.Length ) return true;
+            if (vec1.vector.Length != vec2.vector.Length) return true;
             return false;
         }
 
@@ -49,16 +49,16 @@ namespace lab3
         {
             try
             {
-                Vector tmp = new Vector(vec1.vector.Length);
-                Console.Write("Сложение ");
+                Vector new_vector = new Vector(vec1.vector.Length);
+                Console.Write("Addition ");
                 Console.WriteLine();
                 for (int i = 0; i < vec1.vector.Length || i < vec2.vector.Length; i++)
-                    tmp.vector[i] = vec1.vector[i] + vec2.vector[i];
-                return tmp;
+                    new_vector.vector[i] = vec1.vector[i] + vec2.vector[i];
+                return new_vector;
             }
-            catch 
+            catch
             {
-                Console.WriteLine("Длины векторов не равны, сложение невозможно");
+                Console.WriteLine("Vector lengths are not equal, addition impossible");
                 return null;
             }
         }
@@ -67,16 +67,16 @@ namespace lab3
         {
             try
             {
-                Vector tmp = new Vector(vec1.vector.Length);
-                Console.Write("Вычитание ");
+                Vector new_vector = new Vector(vec1.vector.Length);
+                Console.Write("Subtraction ");
                 Console.WriteLine();
                 for (int i = 0; i < vec1.vector.Length || i < vec2.vector.Length; i++)
-                    tmp.vector[i] = vec1.vector[i] - vec2.vector[i];
-                return tmp;
+                    new_vector.vector[i] = vec1.vector[i] - vec2.vector[i];
+                return new_vector;
             }
-            catch (IndexOutOfRangeException)
+            catch
             {
-                Console.WriteLine("Длины векторов не равны, сложение невозможно");
+                Console.WriteLine("Vector lengths are not equal, addition impossible");
                 return null;
             }
         }
@@ -85,16 +85,16 @@ namespace lab3
         {
             try
             {
-                Vector tmp = new Vector(vec1.vector.Length);
-                Console.Write("Умножение ");
+                Vector new_vector = new Vector(vec1.vector.Length);
+                Console.Write("Multiplication ");
                 Console.WriteLine();
                 for (int i = 0; i < vec1.vector.Length || i < vec2.vector.Length; i++)
-                    tmp.vector[i] = vec1.vector[i] * vec2.vector[i];
-                return tmp;
+                    new_vector.vector[i] = vec1.vector[i] * vec2.vector[i];
+                return new_vector;
             }
-            catch (IndexOutOfRangeException)
+            catch
             {
-                Console.WriteLine("Длины векторов не равны, сложение невозможно");
+                Console.WriteLine("Vector lengths are not equal, addition impossible");
                 return null;
             }
         }
@@ -102,43 +102,45 @@ namespace lab3
         public void output()
         {
             for (int i = 0; i < vector.Length; i++)
-                Console.Write("{0, 4}", vector[i]); 
-            Console.WriteLine();    
+                Console.Write("{0, 4}", vector[i]);
+            Console.WriteLine();
         }
     }
   internal class Program
   {
-      public static int c = 1;
         public static int[] add(int n)
         {
-            int[] tmp2 = new int[n];
+            int[] tmp = new int[n];
             for (int i = 0; i < n; i++)
             {
-                Console.Write($"Введите значения для вектора {c}: ");
-                tmp2[i] = Convert.ToInt32(Console.ReadLine());
+                Console.Write($"Enter the value of the vector:");
+                tmp[i] = Convert.ToInt32(Console.ReadLine());
             }
-            c++;
-            return tmp2;
+            return tmp;
         }
         public static void Main(string[] args)
         {
-            string a = "-";
-            Console.Write("Введите размер векторов их (2)");
+            Console.WriteLine("Enter the length vector");
             Console.WriteLine();
             int k1= Convert.ToInt32(Console.ReadLine()), k2 = Convert.ToInt32(Console.ReadLine());
             Vector vec1 = new Vector(add(k1)), vec2 = new Vector(add(k2)), tmp;
             Console.WriteLine();
-            Console.WriteLine("Заданные вектора: ");
-            Console.WriteLine(("").PadRight(24, '-'));
+            Console.WriteLine("Value vectors: ");
             vec1.output();
             vec2.output();
-            Console.WriteLine(("").PadRight(24, '-'));
-            tmp = vec1 + vec2;
-            tmp.output();
-            tmp = vec1 - vec2;
-            tmp.output();
-            tmp = vec1 * vec2;
-            tmp.output();
+            try
+            {
+                tmp = vec1 + vec2;
+                tmp.output();
+                tmp = vec1 - vec2;
+                tmp.output();
+                tmp = vec1 * vec2;
+                tmp.output();
+            }
+            catch
+            {
+                Console.WriteLine("Error");
+            }
         }
     }
 }
