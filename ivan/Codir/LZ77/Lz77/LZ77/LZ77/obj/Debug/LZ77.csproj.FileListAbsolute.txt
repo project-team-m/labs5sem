@@ -1,0 +1,5 @@
+/home/paket/Project/labs5sem/ivan/Codir/LZ77/Lz77/LZ77/LZ77/bin/Debug/LZ77.exe
+/home/paket/Project/labs5sem/ivan/Codir/LZ77/Lz77/LZ77/LZ77/bin/Debug/LZ77.pdb
+/home/paket/Project/labs5sem/ivan/Codir/LZ77/Lz77/LZ77/LZ77/obj/Debug/LZ77.csprojAssemblyReference.cache
+/home/paket/Project/labs5sem/ivan/Codir/LZ77/Lz77/LZ77/LZ77/obj/Debug/LZ77.exe
+/home/paket/Project/labs5sem/ivan/Codir/LZ77/Lz77/LZ77/LZ77/obj/Debug/LZ77.pdb
