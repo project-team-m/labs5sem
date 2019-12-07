@@ -269,18 +269,24 @@ public:
 int main()
 {
     tree a;
-    a.add(8, "djawk");
-    a.add(3, "dawda");
-    a.add(10, "hgfh");
-    a.add(3, "dawda");
-    a.add(1, "hgfh");
-    a.add(4, "dawda");
-    a.add(7, "hgfh");
+    a.add(40, "djawk");
+    a.add(20, "dawda");
+    a.add(60, "hgfh");
+    a.add(10, "dawda");
+    a.add(30, "hgfh");
+    a.add(50, "dawda");
+    a.add(70, "hgfh");
+    a.add(5, "dawda");
+    a.add(15, "dawda");
+    a.add(25, "dawda");
+    a.add(35, "dawda");
+    a.add(45, "dawda");
+    a.add(55, "dawda");
+    a.add(65, "dawda");
+    a.add(75, "dawda");
     a.get_show();
 
-    a.del(4);
-
-    a.find(8);
+    a.del(20);
 
     a.get_show();
     return 0;
