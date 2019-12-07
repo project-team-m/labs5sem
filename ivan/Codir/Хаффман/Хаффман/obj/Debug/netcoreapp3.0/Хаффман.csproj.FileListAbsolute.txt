@@ -1,0 +1,11 @@
+D:\source\repos\Хаффман\Хаффман\bin\Debug\netcoreapp3.0\Хаффман.exe
+D:\source\repos\Хаффман\Хаффман\bin\Debug\netcoreapp3.0\Хаффман.deps.json
+D:\source\repos\Хаффман\Хаффман\bin\Debug\netcoreapp3.0\Хаффман.runtimeconfig.json
+D:\source\repos\Хаффман\Хаффман\bin\Debug\netcoreapp3.0\Хаффман.runtimeconfig.dev.json
+D:\source\repos\Хаффман\Хаффман\bin\Debug\netcoreapp3.0\Хаффман.dll
+D:\source\repos\Хаффман\Хаффман\bin\Debug\netcoreapp3.0\Хаффман.pdb
+D:\source\repos\Хаффман\Хаффман\obj\Debug\netcoreapp3.0\Хаффман.csprojAssemblyReference.cache
+D:\source\repos\Хаффман\Хаффман\obj\Debug\netcoreapp3.0\Хаффман.AssemblyInfoInputs.cache
+D:\source\repos\Хаффман\Хаффман\obj\Debug\netcoreapp3.0\Хаффман.AssemblyInfo.cs
+D:\source\repos\Хаффман\Хаффман\obj\Debug\netcoreapp3.0\Хаффман.dll
+D:\source\repos\Хаффман\Хаффман\obj\Debug\netcoreapp3.0\Хаффман.pdb

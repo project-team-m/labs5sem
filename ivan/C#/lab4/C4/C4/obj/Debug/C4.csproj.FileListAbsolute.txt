@@ -1,0 +1,5 @@
+/home/paket/Project/labs5sem/ivan/C#/lab4/C4/C4/bin/Debug/C4.exe
+/home/paket/Project/labs5sem/ivan/C#/lab4/C4/C4/bin/Debug/C4.pdb
+/home/paket/Project/labs5sem/ivan/C#/lab4/C4/C4/obj/Debug/C4.csprojAssemblyReference.cache
+/home/paket/Project/labs5sem/ivan/C#/lab4/C4/C4/obj/Debug/C4.exe
+/home/paket/Project/labs5sem/ivan/C#/lab4/C4/C4/obj/Debug/C4.pdb
