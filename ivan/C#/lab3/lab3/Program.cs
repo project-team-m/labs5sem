@@ -120,8 +120,7 @@ namespace lab3
         }
         public static void Main(string[] args)
         {
-            Console.WriteLine("Enter the length vector");
-            Console.WriteLine();
+            Console.Write("Enter the length vectors: ");
             int k1= Convert.ToInt32(Console.ReadLine()), k2 = Convert.ToInt32(Console.ReadLine());
             Vector vec1 = new Vector(add(k1)), vec2 = new Vector(add(k2)), tmp;
             Console.WriteLine();
