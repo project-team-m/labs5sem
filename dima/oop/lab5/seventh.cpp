@@ -16,7 +16,6 @@ class tree {
     };
 
 public:
-
     nodeTree* root;
 
     tree() :root(nullptr) {}
