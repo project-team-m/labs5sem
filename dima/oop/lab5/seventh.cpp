@@ -126,6 +126,24 @@ public:
             return parent(p->right, del_p, key);
         }
     }
+
+    nodeTree* f_p(nodeTree* p, int key, nodeTree* pred = nullptr) {
+        if (p == nullptr) {
+            return nullptr;
+        } else {
+            if (key == p->key) {
+                return pred;
+            } else {
+                if (key > p->key) {
+                    f_p(p->right, key, p);
+                } else {
+                    f_p(p->left, key, p);
+                }
+            }
+
+        }
+    }
+
     nodeTree* search(nodeTree* p, int key) {
         if (p == nullptr) {
             return nullptr;
@@ -155,75 +173,59 @@ public:
         }
     }
 
-    nodeTree* del(int key) {
+    void del(nodeTree *p, int key) {
         if (root == nullptr) {
             cout << "Tree is empty" << endl;
-            return nullptr;
         } else {
-            if (root->key == key) {
-                nodeTree* save = root;
-                delete root;
-                return save;
+            nodeTree *n = search(p, key);
+            nodeTree *pred = f_p(p, key);
+            if (n->left == nullptr && n->right == nullptr) {
+                if (pred->right == n) {
+                    pred->right = nullptr;
+                    delete n;
+                } else {
+                    pred->left = nullptr;
+                    delete n;
+                }
             } else {
-                nodeTree* pred = &find_pred(key, root, root)[0];
-                nodeTree* ptr = &find_pred(key, root, root)[1];
-                cout << pred->data << endl;
-                cout << ptr->data << endl;
+                if (n->left == nullptr) {
+                    if (pred->right == n) {
+                        pred->right = n->right;
+                        delete n;
+                    } else {
+                        pred->left = n->right;
+                        delete n;
+                    }
+                } else  if (n->right == nullptr){
+                    if (pred->right == n) {
+                        pred->right = n->left;
+                        delete n;
+                    } else {
+                        pred->left = n->left;
+                        delete n;
+                    }
+                } else {
+                    if (pred->right == n) {
+                        pred->right = n->right;
+                        nodeTree* el = n;
+                        while (el->left) {
+                            el = el->left;
+                        }
+                        el = n->left;
+                        delete n;
+                    } else {
+                        pred->left = n->right;
+                        nodeTree* el = n->right;
+                        while (el->left) {
+                            el = el->left;
+                        }
+                        el->left = n->left;
+                        delete n;
+                    }
+                }
             }
         }
     }
-
-    nodeTree* dele(int key) {
-        if (root->left == nullptr && root->right == nullptr) {
-            delete root;
-            return nullptr;
-        }
-
-        nodeTree* root_ = root;
-
-        nodeTree* del_p = search(root, key);
-        nodeTree* pd = parent(root, del_p, key);
-
-        nodeTree* ld = find_ld(del_p->right);
-
-        if (ld == nullptr) {
-            if (pd->left == del_p) {
-                pd->left = del_p->left;
-            }
-            else {
-                pd->right = del_p->right;
-            }
-
-            delete del_p;
-            return root;
-        }
-        nodeTree* pld = parent(root, ld, ld->key);
-
-        if (pd == del_p) {
-            pd = ld;
-            root_ = nullptr;
-        }
-        else if (pd->left == del_p) {
-            pd->left = ld;
-        }
-        else {
-            pd->right = ld;
-        }
-
-        if (pld->left == ld) {
-            pld->left = ld->right;
-            ld->left = del_p->left;
-            ld->right = del_p->right;
-        }
-        else {
-            pld->right = ld->right;
-            ld->left = del_p->left;
-        }
-
-        delete del_p;
-        return (root_ == nullptr) ? pd : root_;
-    }
-
 
     void show(nodeTree* t, int u)
     {
@@ -252,44 +254,43 @@ public:
         int  q, key;
         string data;
         do {
-            cout << "1. Добавить элемент." << endl;
-            cout << "2. Удалить элемент." << endl;
-            cout << "3. Найти элемент. " << endl;
-            cout << "4. Показать дерево. " << endl;
-            cout << "0. Закрыть. " << endl;
+            cout << "1. Add element." << endl;
+            cout << "2. Delete element." << endl;
+            cout << "3. Find element. " << endl;
+            cout << "4. Show tree. " << endl;
+            cout << "0. Exit. " << endl;
             cin >> q;
 
             switch (q)
             {
                 case 1:
-                    cout << "Введите ключ: ";
+                    cout << "Enter a key: ";
                     cin >> key;
-                    cout << "Введите значение: ";
+                    cout << "Enter a data: ";
                     cin >> data;
                     obj.add(key, data.c_str());
                     break;
 
                 case 2:
-                    cout << "Введите ключ: ";
+                    cout << "Enter a key: ";
                     cin >> key;
-                    obj.del(key);
+                    obj.del(obj.root, key);
                     break;
 
                 case 3:
                     if (obj.root != nullptr)
                     {
-                        cout << "Введите ключ: " << endl;
+                        cout << "Enter a key: " << endl;
                         cin >> key;
-                        system("cls");
                         obj.find(key);
                     }
                     else
                     {
-                        cout << "Пустое дерево." << endl;
+                        cout << "Tree is empty." << endl;
                     }
                     break;
                 case 4:
-                    cout << "Элементы дерева: " << endl;
+                    cout << "Tree: " << endl;
                     obj.show(obj.root, 0);
                     break;
 

@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6cc258c7-b32f-440e-8e62-b8de9f4fc083" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.lab3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab3/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.lab3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab3/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab3/bin/Debug/lab3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/bin/Debug/lab3.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab3/bin/Debug/lab3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/bin/Debug/lab3.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab3/obj/Debug/lab3.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/obj/Debug/lab3.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/obj/Debug/lab3.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/obj/Debug/lab3.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab3/obj/Debug/lab3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/obj/Debug/lab3.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab3/obj/Debug/lab3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/obj/Debug/lab3.pdb" afterDir="false" />
     </list>
@@ -95,6 +93,7 @@
       <workItem from="1574381778790" duration="134000" />
       <workItem from="1574421737963" duration="1056000" />
       <workItem from="1575624213242" duration="1079000" />
+      <workItem from="1575631320467" duration="880000" />
     </task>
     <servers />
   </component>
