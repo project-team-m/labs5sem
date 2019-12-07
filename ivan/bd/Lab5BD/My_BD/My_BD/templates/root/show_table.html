@@ -48,12 +48,12 @@
                     {% for i, j in last %}
                         {% if j|length > 0 %}
                             <td>
-                                <input type="text" name="{{ i }}"  class="form-control-plaintext" id="exampleInputPassword1">
+                                <input type="text" name="{{ i }}"  class="form-control" id="exampleInputPassword1" placeholder="{{ i }}">
                                 <input type="hidden" name="{{ i }}_old"  id="exampleInputPassword1" value="{{ i }}">
                             </td>
                         {% else %}
                             <td>
-                                <input type="text" name="{{ i }}"  class="form-control-plaintext" id="exampleInputPassword1" size="2">
+                                <input type="text" name="{{ i }}"  class="form-control" id="exampleInputPassword1" size="2" placeholder="{{ i }}">
                                 <input type="hidden" name="{{ i }}_old"  id="exampleInputPassword1" value="{{ i }}">
                             </td>
                         {% endif %}
@@ -61,7 +61,7 @@
                     {% endfor %}
                     <td>
                         <input type="hidden" name="table"  id="exampleInputPassword1" value="{{ table }}">
-                        <input type="submit" class="btn btn-primary" name="_edit" value="Add">
+                        <input type="submit" class="btn btn-primary" name="_add" value="Add">
                     </td>
                 </form>
             </tr>
@@ -69,26 +69,24 @@
             <tr>
                 <form action="{% url 'root:enter_table'%}" method="POST" class="dn" style="display: none">
                     {% csrf_token %}
-                    {% for i in tittles %}
+                    {% for i in titles %}
                             <td>
-                                <input type="text" name="{{ i }}"  class="form-control-plaintext" id="exampleInputPassword1">
+                                <input type="text" name="{{ i }}"  class="form-control" id="exampleInputPassword1" placeholder="{{ i }}">
                                 <input type="hidden" name="{{ i }}_old"  id="exampleInputPassword1" value="{{ i }}">
                             </td>
                     {% endfor %}
                     <td>
                         <input type="hidden" name="table"  id="exampleInputPassword1" value="{{ table }}">
-                        <input type="submit" class="btn btn-primary" name="_edit" value="Add">
+                        <input type="submit" class="btn btn-primary" name="_add" value="Add">
                     </td>
                 </form>
             </tr>
         {% endif %}
             <tr>
-                <form action="{% url 'root:enter_table'%}" method="POST" class="dn" style="display: none">
+                <form action="{% url 'root:show_table'%}" method="POST" class="dn" style="display: none; position: absolute">
                     {% csrf_token %}
-                    <td>
-                        <input type="text" name="search" class="form-control-plaintext" id="exampleInputPassword1">
-                    </td>
-                    <td>
+                    <td style="position: absolute; top: 0px; right: 0px;">
+                        <input type="text" name="search" class="form-control" size="2" id="exampleInputPassword1" placeholder="id">
                         <input type="hidden" name="table"  id="exampleInputPassword1" value="{{ table }}">
                         <input type="submit" class="btn btn-primary" name="_search" value="Search">
                     </td>

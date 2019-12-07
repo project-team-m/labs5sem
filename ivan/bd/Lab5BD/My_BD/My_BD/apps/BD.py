@@ -78,7 +78,8 @@ class BD():
         else:
             return arg
 
-    def crt_update(self, args, mass, table):
+    def crt_update(self, mass, table):
+        args = self.output_titles(table)
         string = 'UPDATE {} SET {} = {}'.format(table, args[0], mass[0])
         for i in range(1, len(args)):
             if mass[i]:
@@ -92,15 +93,43 @@ class BD():
 
         return string
 
+    def update(self, mass, table):
+        with self.conn.cursor() as cursor:
+            stmt = self.crt_update(mass, table)
+
+            cursor.execute(stmt)
+
     def del_string(self, old, table):
         with self.conn.cursor() as cursor:
             stmt = "DELETE FROM {} WHERE id = {} ;".format(table, old)
 
             cursor.execute(stmt)
 
+    def insert(self, mass, table):
+        with self.conn.cursor() as cursor:
+            stmt = sql.SQL('INSERT INTO {} VALUES ({}) ;').format(
+                sql.Identifier(table),
+                sql.SQL(',').join(map(sql.Literal, mass)))
+
+            print(stmt)
+
+            cursor.execute(stmt)
+
+    def search_component(self, table, dig):
+        with self.conn.cursor() as cursor:
+            stmt = sql.SQL('SELECT * FROM {} WHERE id = {};'.format(table, dig))
+            if dig:
+                cursor.execute(stmt)
+                return self.con(self.output_titles(table), cursor.fetchall())
+            else:
+                print(table)
+                return self.output_tables(table)
+
+
 link = None
+id = None
 a = BD('a', 'a')
 scripts = None
 if __name__ == '__main__':
-    a = BD('lab1', '0000')
+    a = BD('admin', 'admin')
     print(a.output_tables(table='addresses'))
