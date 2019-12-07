@@ -15,9 +15,55 @@ class tree {
         nodeTree * right = nullptr;
     };
 
-public:
     nodeTree* root;
 
+    nodeTree* f_p(nodeTree* p, int key, nodeTree* pred = nullptr) {
+        if (p == nullptr) {
+            return nullptr;
+        } else {
+            if (key == p->key) {
+                return pred;
+            } else {
+                if (key > p->key) {
+                    f_p(p->right, key, p);
+                } else {
+                    f_p(p->left, key, p);
+                }
+            }
+
+        }
+    }
+
+    nodeTree* search(nodeTree* el, int key) {
+        if (el == nullptr) {
+            return nullptr;
+        }
+
+        if (key == el->key) {
+            return el;
+        }
+        else if (key < el->key) {
+            return search(el->left, key);
+        }
+        else {
+            return search(el->right, key);
+        }
+    }
+
+    void show(nodeTree* t, int u)
+    {
+        if (t == nullptr) return;
+        else
+        {
+            show(t->left, ++u);
+            for (int i = 0; i < u; ++i) cout << "\t";
+            cout << t->key << endl;
+            u--;
+            show(t->right, ++u);
+        }
+    }
+
+public:
     tree() :root(nullptr) {}
 
 
@@ -100,84 +146,12 @@ public:
 
     }
 
-    nodeTree* find_ld(nodeTree* p) {
-        if (p == nullptr) {
-            return nullptr;
-        }
-        if (p->left != nullptr) {
-            return find_ld(p->left);
-        }
-        return p;
-    }
-
-    nodeTree* parent(nodeTree* p, nodeTree* del_p, int key) {
-        if (p == nullptr) {
-            return nullptr;
-        }
-        if (p->left == del_p || p->right == del_p || p == del_p) {
-            return p;
-        }
-
-        if (key < p->key) {
-            return parent(p->left, del_p, key);
-        }
-        else {
-            return parent(p->right, del_p, key);
-        }
-    }
-
-    nodeTree* f_p(nodeTree* p, int key, nodeTree* pred = nullptr) {
-        if (p == nullptr) {
-            return nullptr;
-        } else {
-            if (key == p->key) {
-                return pred;
-            } else {
-                if (key > p->key) {
-                    f_p(p->right, key, p);
-                } else {
-                    f_p(p->left, key, p);
-                }
-            }
-
-        }
-    }
-
-    nodeTree* search(nodeTree* p, int key) {
-        if (p == nullptr) {
-            return nullptr;
-        }
-
-        if (key == p->key) {
-            return p;
-        }
-        else if (key < p->key) {
-            return search(p->left, key);
-        }
-        else {
-            return search(p->right, key);
-        }
-    }
-
-    nodeTree* find_pred(int key, nodeTree* ptr, nodeTree* pred) {
-        if (key == ptr->key) {
-            nodeTree* a[2] = {pred, ptr};
-            return *a;
-        } else {
-            if (key < ptr->key) {
-                return find_pred(key, ptr->left, ptr);
-            } else {
-                return find_pred(key, ptr->right, ptr);
-            }
-        }
-    }
-
-    void del(nodeTree *p, int key) {
+    void del(int key) {
         if (root == nullptr) {
             cout << "Tree is empty" << endl;
         } else {
-            nodeTree *n = search(p, key);
-            nodeTree *pred = f_p(p, key);
+            nodeTree *n = search(root, key);
+            nodeTree *pred = f_p(root, key);
             if (n->left == nullptr && n->right == nullptr) {
                 if (pred->right == n) {
                     pred->right = nullptr;
@@ -226,17 +200,8 @@ public:
         }
     }
 
-    void show(nodeTree* t, int u)
-    {
-        if (t == nullptr) return;
-        else
-        {
-            show(t->left, ++u);
-            for (int i = 0; i < u; ++i) cout << "\t";
-            cout << t->key << endl;
-            u--;
-            show(t->right, ++u);
-        }
+    void get_show() {
+        show(root, 0);
     }
 
 };
@@ -246,7 +211,7 @@ class menu5 {
     tree obj;
 
 public:
-
+/*
     void show()
     {
         int i = 0;
@@ -273,7 +238,7 @@ public:
                 case 2:
                     cout << "Enter a key: ";
                     cin >> key;
-                    obj.del(obj.root, key);
+                    obj.del(key);
                     break;
 
                 case 3:
@@ -298,12 +263,25 @@ public:
                     break;
             }
         } while (i != 3);
-    }
+    }*/
 };
 
 int main()
 {
-    menu5 a;
-    a.show();
+    tree a;
+    a.add(8, "djawk");
+    a.add(3, "dawda");
+    a.add(10, "hgfh");
+    a.add(3, "dawda");
+    a.add(1, "hgfh");
+    a.add(4, "dawda");
+    a.add(7, "hgfh");
+    a.get_show();
+
+    a.del(4);
+
+    a.find(8);
+
+    a.get_show();
     return 0;
 }
