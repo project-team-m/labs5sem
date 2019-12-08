@@ -1,4 +1,4 @@
-# Install script for directory: /home/dekeyel/Projects/labs5sem/dima/oop/lab5
+# Install script for directory: /home/paket/Project/labs5sem/dima/oop/lab5
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

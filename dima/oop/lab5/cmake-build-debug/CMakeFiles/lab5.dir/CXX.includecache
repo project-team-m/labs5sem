@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/dekeyel/Projects/labs5sem/dima/oop/lab5/seventh.cpp
+/home/paket/Project/labs5sem/dima/oop/lab5/seventh.cpp
 seventh.h
-/home/dekeyel/Projects/labs5sem/dima/oop/lab5/seventh.h
+/home/paket/Project/labs5sem/dima/oop/lab5/seventh.h
 iostream
 -
 stdlib.h
@@ -16,5 +16,5 @@ stdlib.h
 string.h
 -
 
-/home/dekeyel/Projects/labs5sem/dima/oop/lab5/seventh.h
+/home/paket/Project/labs5sem/dima/oop/lab5/seventh.h
 

@@ -17,7 +17,6 @@ class tree {
 
 public:
     nodeTree* root;
-
     tree() :root(nullptr) {}
 
 
@@ -54,7 +53,7 @@ public:
                         help = help->right;
                     }
                 }
-                else if (key < help->key)
+                else if (key <= help->key)
                 {
                     if (help->left == nullptr)
                     {
