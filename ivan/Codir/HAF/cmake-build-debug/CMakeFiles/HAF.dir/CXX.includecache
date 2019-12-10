@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/paket/Project/labs5sem/ivan/Codir/HAF/main.cpp
+iostream
+-
+vector
+-
+map
+-
+list
+-
+fstream
+-
+

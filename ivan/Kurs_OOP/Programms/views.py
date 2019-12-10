@@ -8,6 +8,7 @@ class Catalog():
         self.way = self.CATALOG
         self.files = []
 
+
     def notEmpty(self):
         if os.path.exists(self.way):
             print(os.path.exists(self.way))
