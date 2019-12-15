@@ -57,10 +57,19 @@ class DB():
                 beautiful_mass[i].append([new_mass[j], mass_table[i][j]])
         return beautiful_mass
 
+    def create_nice_search(self, titles, args):
+        string = "cast({} AS VARCHAR) LIKE '%{}%'".format(titles[0], args[0])
+        for i in range(1, len(titles)):
+            if args[i]:
+                string = "{} AND  cast({} AS VARCHAR) LIKE '%{}%'".format(string, titles[i], args[i])
+
+        return string
+
     def get_tables(self):
         with self.conn.cursor() as cursor:
             stmt = sql.SQL("SELECT table_name FROM information_schema.tables"
-                           " WHERE table_schema NOT IN ('information_schema','pg_catalog');")
+                           " WHERE table_schema NOT IN ('information_schema','pg_catalog') AND "
+                           "table_name NOT LIKE '%_old';")
 
             cursor.execute(stmt)
             return self.beautiful_change(cursor.fetchall())
@@ -99,10 +108,19 @@ class DB():
 
             cursor.execute(stmt)
 
-    def search_component(self, table, dig):
+    def search_component(self, table, args):
+        prov = False
+        for i in args:
+            if a != '':
+                prov = True
+
         with self.conn.cursor() as cursor:
-            stmt = sql.SQL('SELECT * FROM {} WHERE id = {};'.format(table, dig))
-            if dig:
+            stmt = sql.SQL('SELECT * FROM {} WHERE {};'.format(table,
+                                                               self.create_nice_search(args=args,
+                                                                                       titles=self.output_titles(table)
+                                                                                       )
+                                                               ))
+            if prov:
                 cursor.execute(stmt)
                 return self.con(self.output_titles(table), cursor.fetchall())
             else:

@@ -1,12 +1,12 @@
 CREATE TABLE IF NOT EXISTS brands_old(
-    id SERIAL PRIMARY KEY,
+    id INTEGER,
     name VARCHAR (30),
     operation VARCHAR,
     date_operation DATE DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS components_old(
-    id SERIAL PRIMARY KEY,
+    id INTEGER,
     name VARCHAR(30),
     purchase_price INTEGER,
     selling_price INTEGER,
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS components_old(
 );
 
 CREATE TABLE IF NOT EXISTS clients_old(
-    id SERIAL PRIMARY KEY,
+    id INTEGER,
     name VARCHAR(30),
     phone_number VARCHAR(11),
     discount_card VARCHAR(9),
@@ -34,14 +34,14 @@ CREATE TABLE IF NOT EXISTS clients_old(
 );
 
 CREATE TABLE IF NOT EXISTS positions_old(
-    id SERIAL PRIMARY KEY,
+    id INTEGER,
     name VARCHAR(30),
     operation VARCHAR,
     date_operation DATE DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS workers_old(
-    id SERIAL PRIMARY KEY,
+    id INTEGER,
     login VARCHAR(32) UNIQUE ,
     password VARCHAR(32),
     name VARCHAR(30),
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS workers_old(
 );
 
 CREATE TABLE IF NOT EXISTS stocks_old(
-    id SERIAL PRIMARY KEY,
+    id INTEGER,
     name VARCHAR(30),
     inn INTEGER,
     ogrn INTEGER,
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS stocks_old(
 );
 
 CREATE TABLE IF NOT EXISTS stock_old(
-    id SERIAL PRIMARY KEY,
+    id INTEGER,
     id_component INTEGER,
     id_stock INTEGER,
     balance INTEGER,
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS stock_old(
 );
 
 CREATE TABLE IF NOT EXISTS orders_old(
-    id SERIAL PRIMARY KEY,
+    id INTEGER,
     date_order DATE,
     id_manager INTEGER,
     discount INTEGER,
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS orders_old(
 );
 
 CREATE TABLE IF NOT EXISTS basket_old(
-    id SERIAL PRIMARY KEY,
+    id INTEGER,
     id_component INTEGER,
     quantity INTEGER,
     id_client INTEGER,

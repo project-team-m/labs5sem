@@ -21,7 +21,7 @@
         {% if strings %}
             {% for string in strings %}
                 <tr>
-                    <form action="{% url 'root:enter_table' %}" method="POST" class="dn" style="display: none">
+                    <form action="{% url 'root:show_table' %}" method="POST" class="dn" style="display: none">
                         {% csrf_token %}
                         {% for i, j in string %}
                             {% if j|length > 0 %}
@@ -46,7 +46,7 @@
                 </tr>
             {% endfor %}
             <tr>
-                <form action="{% url 'root:enter_table' %}" method="POST" class="dn" style="display: none">
+                <form action="{% url 'root:show_table' %}" method="POST" class="dn" style="display: none">
                     {% csrf_token %}
                     {% for i, j in last %}
                         {% if j|length > 0 %}
@@ -73,7 +73,7 @@
             </tr>
         {% else %}
             <tr>
-                <form action="{% url 'root:enter_table' %}" method="POST" class="dn" style="display: none">
+                <form action="{% url 'root:show_table' %}" method="POST" class="dn" style="display: none">
                     {% csrf_token %}
                     {% for i in titles %}
                         <td>
