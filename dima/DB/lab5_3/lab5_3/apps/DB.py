@@ -88,6 +88,7 @@ class DB():
 
             return self.con(self.output_titles(table), cursor.fetchall())
 
+
     def update(self, mass, table):
         with self.conn.cursor() as cursor:
             stmt = self.crt_update(mass, table)
@@ -149,6 +150,7 @@ class DB():
 
 a = DB('a', 'a')
 scripts = None
+link = None
 if __name__ == '__main__':
     a = DB('admin', 'admin')
     print(a.output_titles('brands'))

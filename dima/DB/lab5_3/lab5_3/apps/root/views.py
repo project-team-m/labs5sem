@@ -24,6 +24,46 @@ def show_components(request):
     DB.scripts = 'wrong password or login'
     return HttpResponseRedirect(reverse('main_form:index'))
 
+def show_table_old(request):
+    if DB.a.login and DB.a.lvl == 3:
+        save = DB.scripts
+        DB.scripts = None
+        if 'table' in request.POST:
+            DB.link = request.POST['table']
+        if 'link' in request.POST:
+            link = request.POST['link']
+        else:
+            link = DB.link
+            DB.link = None
+        DB.link = link
+        if '_apply' in request.POST:
+            print(request.POST['operation'] == 'INSERT')
+            if request.POST['operation'] == 'INSERT':
+                DB.a.del_string(request.POST['id'], request.POST['table'])
+            elif request.POST['operation'] == 'DELETE':
+                mass = []
+                m = DB.a.output_titles(request.POST['table'])
+                for i in request.POST:
+                    if i in m:
+                        mass.append(request.POST[i])
+                DB.a.insert(mass, request.POST['table'])
+            elif request.POST['operation'] == 'UPDATE':
+                mass = []
+                m = DB.a.output_titles(request.POST['table'])
+                for i in request.POST:
+                    if i in m:
+                        mass.append(request.POST[i])
+                mass.append(request.POST['id'])
+                DB.a.update(mass, request.POST['table'])
+            return HttpResponseRedirect(reverse('root:show_table'))
+        else:
+            return render(request, 'root/backups.html',
+                          {'tables': DB.a.get_tables(),
+                           'table': link,
+                           'titles': DB.a.output_titles('{}_old'.format(link)),
+                           'strings': DB.a.output_tables('{}_old'.format(link)), 'scripts': save})
+    DB.scripts = 'wrong password or login'
+    return HttpResponseRedirect(reverse('main_form:index'))
 
 def show_table(request):
     if DB.a.login and DB.a.lvl == 3:
