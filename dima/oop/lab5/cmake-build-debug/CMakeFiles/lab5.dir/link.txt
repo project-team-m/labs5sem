@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/lab5.dir/main.cpp.o CMakeFiles/lab5.dir/first.cpp.o CMakeFiles/lab5.dir/third.cpp.o CMakeFiles/lab5.dir/fifth.cpp.o CMakeFiles/lab5.dir/seventh.cpp.o  -o lab5 

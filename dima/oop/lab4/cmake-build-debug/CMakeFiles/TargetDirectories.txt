@@ -1,3 +1,0 @@
-/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/CMakeFiles/lab4.dir
-/home/paket/Project/labs5sem/dima/oop/lab4/cmake-build-debug/CMakeFiles/edit_cache.dir
