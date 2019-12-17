@@ -87,6 +87,12 @@
 		<Unit filename="/home/paket/Project/labs5sem/ivan/Codir/HAF/main.cpp">
 			<Option target="HAF"/>
 		</Unit>
+		<Unit filename="/home/paket/Project/labs5sem/ivan/Codir/HAF/main2.cpp">
+			<Option target="HAF"/>
+		</Unit>
+		<Unit filename="/home/paket/Project/labs5sem/ivan/Codir/HAF/main2.h">
+			<Option target="HAF"/>
+		</Unit>
 		<Unit filename="/home/paket/Project/labs5sem/ivan/Codir/HAF/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

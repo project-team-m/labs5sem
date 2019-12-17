@@ -3,3 +3,5 @@
 
 CMakeFiles/HAF.dir/main.cpp.o: ../main.cpp
 
+CMakeFiles/HAF.dir/main2.cpp.o: ../main2.cpp
+

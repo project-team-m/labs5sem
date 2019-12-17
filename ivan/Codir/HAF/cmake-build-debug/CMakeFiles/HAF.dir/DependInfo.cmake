@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/paket/Project/labs5sem/ivan/Codir/HAF/main.cpp" "/home/paket/Project/labs5sem/ivan/Codir/HAF/cmake-build-debug/CMakeFiles/HAF.dir/main.cpp.o"
+  "/home/paket/Project/labs5sem/ivan/Codir/HAF/main2.cpp" "/home/paket/Project/labs5sem/ivan/Codir/HAF/cmake-build-debug/CMakeFiles/HAF.dir/main2.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

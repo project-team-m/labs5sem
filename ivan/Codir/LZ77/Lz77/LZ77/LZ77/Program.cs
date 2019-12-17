@@ -83,16 +83,6 @@ namespace LZ77
         {
             string outp = "";
             List<(int, int, char)> list = new List<(int, int, char)>();
-            //for (int i = 0; i < text.Length; i+=7)
-            //{
-            //    int sm = 0;
-            //    int kol = 0;
-            //    char s;
-            //    sm = Convert.ToInt32(Convert.ToString(text[i + 1]));
-            //    kol = Convert.ToInt32(Convert.ToString(text[i + 3]));
-            //    s = text[i + 5];
-            //    list.Add((sm, kol, s));
-            //}
             int sm = 0;
             int kol = 0;
             char s;
@@ -152,52 +142,36 @@ namespace LZ77
 
             do
             {
-                Console.WriteLine("1. Закодировать");
-                Console.WriteLine("2. Декодировать");
+                Console.WriteLine("1. Cod");
+                Console.WriteLine("2. Decod");
                 Console.WriteLine();
-                Console.WriteLine("0. Выход");
+                Console.WriteLine("0. Exit");
                 c = Console.ReadKey();
-                Console.Clear();
 
                 if (c.Key == ConsoleKey.D1)
                 {
                     string txt;
-                    StreamReader file = new StreamReader(new FileStream("info.txt", FileMode.Open, FileAccess.Read));
+                    StreamReader file = new StreamReader(new FileStream("text.txt", FileMode.Open, FileAccess.Read));
                     txt = file.ReadToEnd();
-                    StreamWriter file2 = new StreamWriter(new FileStream("outpu.txt", FileMode.Create, FileAccess.Write));
+                    StreamWriter file2 = new StreamWriter(new FileStream("code.txt", FileMode.Create, FileAccess.Write));
                     file2.Write(Kod(txt));
                     file2.Close();
-                    Console.WriteLine("Результат записан в файл outpu");
+                    Console.WriteLine("Результат записан в файл code");
                     ConsoleKeyInfo h = Console.ReadKey();
-                    Console.Clear();
                 }
 
                 if (c.Key == ConsoleKey.D2)
                 {
                     string txt;
-                    StreamReader file = new StreamReader(new FileStream("outpu.txt", FileMode.Open, FileAccess.Read));
+                    StreamReader file = new StreamReader(new FileStream("code.txt", FileMode.Open, FileAccess.Read));
                     txt = file.ReadToEnd();
-                    StreamWriter file2 = new StreamWriter(new FileStream("outpu2.txt", FileMode.Create, FileAccess.Write));
+                    StreamWriter file2 =
+                        new StreamWriter(new FileStream("decode.txt", FileMode.Create, FileAccess.Write));
                     file2.Write(Dekod(txt));
                     file2.Close();
-                    Console.WriteLine("Резульат записан в файл outpu2");
+                    Console.WriteLine("Результат записан в файл decode");
                     ConsoleKeyInfo h = Console.ReadKey();
-                    Console.Clear();
                 }
-
-                //if (c.Key == ConsoleKey.D3)
-                //{
-                //    string txt;
-                //    StreamReader file = new StreamReader(new FileStream("inp.txt", FileMode.Open, FileAccess.Read));
-                //    txt = file.ReadToEnd();
-                //    Console.WriteLine(txt.Length);
-                //    StreamReader file2 = new StreamReader(new FileStream("outpu.txt", FileMode.Open, FileAccess.Read));
-                //    txt = file2.ReadToEnd();
-                //    for (int i = 0; i < txt.Length; i++)
-                //        Console.WriteLine(txt[i] + "   " + i);
-                //    ConsoleKeyInfo h = Console.ReadKey();
-                //    Console.Clear();
-                //}
 
             } while (c.Key != ConsoleKey.D0);
         }
