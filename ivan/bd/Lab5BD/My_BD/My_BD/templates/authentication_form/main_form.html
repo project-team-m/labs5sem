@@ -7,7 +7,7 @@
 
 {% block content %}
 
-    <form action="{% url 'main_form:check_user'%}" method="POST">
+    <form action="{% url 'main_form:index'%}" method="POST">
 
         {% csrf_token %}
 
@@ -34,4 +34,11 @@
 
 
     </form>
+{% endblock %}
+{% block scripts %}
+    {% if scripts == 'wrong password or login' %}
+        <script>
+            alert('{{ scripts }}');
+        </script>
+    {% endif %}
 {% endblock %}

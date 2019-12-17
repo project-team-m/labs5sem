@@ -74,22 +74,21 @@ class BD():
 
     def change_to_norm_none(self, arg):
         if arg.lower() == 'none' or arg.lower() == 'null' or arg == '':
-            return None
+            return 'null'
         else:
-            return arg
+            try:
+                return int(arg)
+            except:
+                return "'{}'".format(arg)
 
     def crt_update(self, mass, table):
         args = self.output_titles(table)
         string = 'UPDATE {} SET {} = {}'.format(table, args[0], mass[0])
         for i in range(1, len(args)):
-            if mass[i]:
-                try:
-                    string += ', {} = {}'.format(args[i], int(mass[i]))
-                except:
-                    string += ", {} = '{}'".format(args[i], mass[i])
-            else:
-                string += ', {} = null'.format(args[i])
+            string += ', {} = {}'.format(args[i], self.change_to_norm_none(mass[i]))
         string += ' WHERE id={};'.format(mass[-1])
+
+        print(string)
 
         return string
 
@@ -111,20 +110,42 @@ class BD():
                 sql.Identifier(table),
                 sql.SQL(',').join(map(sql.Literal, mass)))
 
-            print(stmt)
-
             cursor.execute(stmt)
 
-    def search_component(self, table, dig):
+    def create_nice_search(self, titles, args):
+        string = "cast({} AS VARCHAR) LIKE '%{}%'".format(titles[0], args[0])
+        for i in range(1, len(titles)):
+            if args[i]:
+                string = "{} AND  cast({} AS VARCHAR) LIKE '%{}%'".format(string, titles[i], args[i])
+
+        return string
+
+    def search_component(self, table, args):
+        prov = False
+        for i in args:
+            if a != '':
+                prov = True
+
         with self.conn.cursor() as cursor:
-            stmt = sql.SQL('SELECT * FROM {} WHERE id = {};'.format(table, dig))
-            if dig:
+            stmt = sql.SQL('SELECT * FROM {} WHERE {};'.format(table,
+                                                               self.create_nice_search(args=args,
+                                                                                       titles=self.output_titles(table)
+                                                                                       )
+                                                               ))
+            if prov:
                 cursor.execute(stmt)
                 return self.con(self.output_titles(table), cursor.fetchall())
             else:
-                print(table)
                 return self.output_tables(table)
 
+    def get_tables(self):
+        with self.conn.cursor() as cursor:
+            stmt = sql.SQL("SELECT table_name FROM information_schema.tables "
+                           "WHERE table_schema NOT IN ('information_schema','pg_catalog') AND "
+                           "table_name NOT LIKE '%_old'; ")
+
+            cursor.execute(stmt)
+            return self.beautiful_change(cursor.fetchall())
 
 link = None
 id = None
