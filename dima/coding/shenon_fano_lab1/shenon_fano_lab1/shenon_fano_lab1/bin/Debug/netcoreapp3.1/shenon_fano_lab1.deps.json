@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "shenon_fano_lab1/1.0.0": {
+        "runtime": {
+          "shenon_fano_lab1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "shenon_fano_lab1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

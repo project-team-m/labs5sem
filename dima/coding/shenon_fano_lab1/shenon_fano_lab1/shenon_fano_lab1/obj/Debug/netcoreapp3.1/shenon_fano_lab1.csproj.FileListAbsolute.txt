@@ -1,0 +1,11 @@
+D:\Projects\labs5sem\dima\coding\shenon_fano_lab1\shenon_fano_lab1\shenon_fano_lab1\bin\Debug\netcoreapp3.1\shenon_fano_lab1.exe
+D:\Projects\labs5sem\dima\coding\shenon_fano_lab1\shenon_fano_lab1\shenon_fano_lab1\bin\Debug\netcoreapp3.1\shenon_fano_lab1.deps.json
+D:\Projects\labs5sem\dima\coding\shenon_fano_lab1\shenon_fano_lab1\shenon_fano_lab1\bin\Debug\netcoreapp3.1\shenon_fano_lab1.runtimeconfig.json
+D:\Projects\labs5sem\dima\coding\shenon_fano_lab1\shenon_fano_lab1\shenon_fano_lab1\bin\Debug\netcoreapp3.1\shenon_fano_lab1.runtimeconfig.dev.json
+D:\Projects\labs5sem\dima\coding\shenon_fano_lab1\shenon_fano_lab1\shenon_fano_lab1\bin\Debug\netcoreapp3.1\shenon_fano_lab1.dll
+D:\Projects\labs5sem\dima\coding\shenon_fano_lab1\shenon_fano_lab1\shenon_fano_lab1\bin\Debug\netcoreapp3.1\shenon_fano_lab1.pdb
+D:\Projects\labs5sem\dima\coding\shenon_fano_lab1\shenon_fano_lab1\shenon_fano_lab1\obj\Debug\netcoreapp3.1\shenon_fano_lab1.csprojAssemblyReference.cache
+D:\Projects\labs5sem\dima\coding\shenon_fano_lab1\shenon_fano_lab1\shenon_fano_lab1\obj\Debug\netcoreapp3.1\shenon_fano_lab1.AssemblyInfoInputs.cache
+D:\Projects\labs5sem\dima\coding\shenon_fano_lab1\shenon_fano_lab1\shenon_fano_lab1\obj\Debug\netcoreapp3.1\shenon_fano_lab1.AssemblyInfo.cs
+D:\Projects\labs5sem\dima\coding\shenon_fano_lab1\shenon_fano_lab1\shenon_fano_lab1\obj\Debug\netcoreapp3.1\shenon_fano_lab1.dll
+D:\Projects\labs5sem\dima\coding\shenon_fano_lab1\shenon_fano_lab1\shenon_fano_lab1\obj\Debug\netcoreapp3.1\shenon_fano_lab1.pdb

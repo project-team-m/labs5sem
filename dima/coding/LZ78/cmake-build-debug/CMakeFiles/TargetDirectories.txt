@@ -1,0 +1,3 @@
+D:/Projects/labs5sem/dima/coding/LZ78/cmake-build-debug/CMakeFiles/LZ78.dir
+D:/Projects/labs5sem/dima/coding/LZ78/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Projects/labs5sem/dima/coding/LZ78/cmake-build-debug/CMakeFiles/rebuild_cache.dir
