@@ -103,9 +103,9 @@ class DB():
 
     def insert(self, mass, table):
         with self.conn.cursor() as cursor:
-            stmt = sql.SQL('INSERT INTO {} VALUES ({}) ;').format(
-                sql.Identifier(table),
-                sql.SQL(',').join(map(sql.Literal, mass)))
+            stmt = self.crt_insert(mass, table)
+
+            print(stmt)
 
             cursor.execute(stmt)
 
@@ -143,7 +143,15 @@ class DB():
             string += ', {} = {}'.format(args[i], self.change_to_norm_none(mass[i]))
         string += ' WHERE id={};'.format(mass[-1])
 
-        print(string)
+        return string
+
+    def crt_insert(self, mass, table):
+        args = self.output_titles(table)
+        string = 'INSERT INTO {} VALUES ('.format(table, args[0], mass[0])
+        for i in range(len(args) - 1):
+            string = '{} {},'.format(string, self.change_to_norm_none(mass[i]))
+
+        string = '{} {});'.format(string, self.change_to_norm_none(mass[i]))
 
         return string
 

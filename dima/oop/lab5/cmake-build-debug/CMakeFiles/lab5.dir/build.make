@@ -43,10 +43,10 @@ RM = /snap/clion/98/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/paket/Project/labs5sem/dima/oop/lab5
+CMAKE_SOURCE_DIR = /home/dekeyel/Projects/labs5sem/dima/oop/lab5
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug
+CMAKE_BINARY_DIR = /home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/lab5.dir/depend.make
@@ -59,68 +59,68 @@ include CMakeFiles/lab5.dir/flags.make
 
 CMakeFiles/lab5.dir/main.cpp.o: CMakeFiles/lab5.dir/flags.make
 CMakeFiles/lab5.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab5.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/main.cpp.o -c /home/paket/Project/labs5sem/dima/oop/lab5/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab5.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/main.cpp.o -c /home/dekeyel/Projects/labs5sem/dima/oop/lab5/main.cpp
 
 CMakeFiles/lab5.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab5.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/paket/Project/labs5sem/dima/oop/lab5/main.cpp > CMakeFiles/lab5.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dekeyel/Projects/labs5sem/dima/oop/lab5/main.cpp > CMakeFiles/lab5.dir/main.cpp.i
 
 CMakeFiles/lab5.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/paket/Project/labs5sem/dima/oop/lab5/main.cpp -o CMakeFiles/lab5.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dekeyel/Projects/labs5sem/dima/oop/lab5/main.cpp -o CMakeFiles/lab5.dir/main.cpp.s
 
 CMakeFiles/lab5.dir/first.cpp.o: CMakeFiles/lab5.dir/flags.make
 CMakeFiles/lab5.dir/first.cpp.o: ../first.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab5.dir/first.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/first.cpp.o -c /home/paket/Project/labs5sem/dima/oop/lab5/first.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab5.dir/first.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/first.cpp.o -c /home/dekeyel/Projects/labs5sem/dima/oop/lab5/first.cpp
 
 CMakeFiles/lab5.dir/first.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab5.dir/first.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/paket/Project/labs5sem/dima/oop/lab5/first.cpp > CMakeFiles/lab5.dir/first.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dekeyel/Projects/labs5sem/dima/oop/lab5/first.cpp > CMakeFiles/lab5.dir/first.cpp.i
 
 CMakeFiles/lab5.dir/first.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/first.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/paket/Project/labs5sem/dima/oop/lab5/first.cpp -o CMakeFiles/lab5.dir/first.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dekeyel/Projects/labs5sem/dima/oop/lab5/first.cpp -o CMakeFiles/lab5.dir/first.cpp.s
 
 CMakeFiles/lab5.dir/third.cpp.o: CMakeFiles/lab5.dir/flags.make
 CMakeFiles/lab5.dir/third.cpp.o: ../third.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lab5.dir/third.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/third.cpp.o -c /home/paket/Project/labs5sem/dima/oop/lab5/third.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lab5.dir/third.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/third.cpp.o -c /home/dekeyel/Projects/labs5sem/dima/oop/lab5/third.cpp
 
 CMakeFiles/lab5.dir/third.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab5.dir/third.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/paket/Project/labs5sem/dima/oop/lab5/third.cpp > CMakeFiles/lab5.dir/third.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dekeyel/Projects/labs5sem/dima/oop/lab5/third.cpp > CMakeFiles/lab5.dir/third.cpp.i
 
 CMakeFiles/lab5.dir/third.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/third.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/paket/Project/labs5sem/dima/oop/lab5/third.cpp -o CMakeFiles/lab5.dir/third.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dekeyel/Projects/labs5sem/dima/oop/lab5/third.cpp -o CMakeFiles/lab5.dir/third.cpp.s
 
 CMakeFiles/lab5.dir/fifth.cpp.o: CMakeFiles/lab5.dir/flags.make
 CMakeFiles/lab5.dir/fifth.cpp.o: ../fifth.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lab5.dir/fifth.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/fifth.cpp.o -c /home/paket/Project/labs5sem/dima/oop/lab5/fifth.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lab5.dir/fifth.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/fifth.cpp.o -c /home/dekeyel/Projects/labs5sem/dima/oop/lab5/fifth.cpp
 
 CMakeFiles/lab5.dir/fifth.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab5.dir/fifth.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/paket/Project/labs5sem/dima/oop/lab5/fifth.cpp > CMakeFiles/lab5.dir/fifth.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dekeyel/Projects/labs5sem/dima/oop/lab5/fifth.cpp > CMakeFiles/lab5.dir/fifth.cpp.i
 
 CMakeFiles/lab5.dir/fifth.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/fifth.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/paket/Project/labs5sem/dima/oop/lab5/fifth.cpp -o CMakeFiles/lab5.dir/fifth.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dekeyel/Projects/labs5sem/dima/oop/lab5/fifth.cpp -o CMakeFiles/lab5.dir/fifth.cpp.s
 
 CMakeFiles/lab5.dir/seventh.cpp.o: CMakeFiles/lab5.dir/flags.make
 CMakeFiles/lab5.dir/seventh.cpp.o: ../seventh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lab5.dir/seventh.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/seventh.cpp.o -c /home/paket/Project/labs5sem/dima/oop/lab5/seventh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lab5.dir/seventh.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/seventh.cpp.o -c /home/dekeyel/Projects/labs5sem/dima/oop/lab5/seventh.cpp
 
 CMakeFiles/lab5.dir/seventh.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab5.dir/seventh.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/paket/Project/labs5sem/dima/oop/lab5/seventh.cpp > CMakeFiles/lab5.dir/seventh.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dekeyel/Projects/labs5sem/dima/oop/lab5/seventh.cpp > CMakeFiles/lab5.dir/seventh.cpp.i
 
 CMakeFiles/lab5.dir/seventh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/seventh.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/paket/Project/labs5sem/dima/oop/lab5/seventh.cpp -o CMakeFiles/lab5.dir/seventh.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dekeyel/Projects/labs5sem/dima/oop/lab5/seventh.cpp -o CMakeFiles/lab5.dir/seventh.cpp.s
 
 # Object files for target lab5
 lab5_OBJECTS = \
@@ -140,7 +140,7 @@ lab5: CMakeFiles/lab5.dir/fifth.cpp.o
 lab5: CMakeFiles/lab5.dir/seventh.cpp.o
 lab5: CMakeFiles/lab5.dir/build.make
 lab5: CMakeFiles/lab5.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable lab5"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable lab5"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lab5.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +153,6 @@ CMakeFiles/lab5.dir/clean:
 .PHONY : CMakeFiles/lab5.dir/clean
 
 CMakeFiles/lab5.dir/depend:
-	cd /home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/paket/Project/labs5sem/dima/oop/lab5 /home/paket/Project/labs5sem/dima/oop/lab5 /home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug /home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug /home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles/lab5.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dekeyel/Projects/labs5sem/dima/oop/lab5 /home/dekeyel/Projects/labs5sem/dima/oop/lab5 /home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug /home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug /home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles/lab5.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lab5.dir/depend
 
