@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/HAF.dir/main.cpp.o  -o HAF 
+/usr/bin/c++  -g   CMakeFiles/HAF.dir/main.cpp.o CMakeFiles/HAF.dir/main2.cpp.o  -o HAF 

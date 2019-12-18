@@ -3,7 +3,7 @@ from psycopg2 import sql
 
 class DB():
     def __init__(self, login, password):
-        self.conn = psycopg2.connect(dbname='dima_lab5', user='user_1',
+        self.conn = psycopg2.connect(dbname='ivan_lab5', user='user_1',
                                 password='password', host='62.109.15.226')
 
         self.login = None

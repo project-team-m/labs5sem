@@ -68,17 +68,7 @@ void print(Node *root, unsigned k=0){
 
     }
 
-void outTable(){
-    for( map<char,vector<bool> >::iterator itr=table.begin(); itr!=table.end(); ++itr)
-    {
-        cout<< itr->first << " ";
-        for (auto i = itr->second; i < itr->second.size(); i++) {
-            cout<< code[i];
-        }
-        cout << endl;
-    }
 
-}
 
 int main (int argc, char *argv[])
 {
@@ -129,7 +119,7 @@ int main (int argc, char *argv[])
 
     f.clear(); f.seekg(0); // перемещаем указатель снова в начало файла
 
-    ofstream g("output.txt", ios::out | ios::binary);
+    ofstream g("2.txt", ios::out | ios::binary);
 
     int count=0; char buf=0;
     while (!f.eof())
@@ -147,8 +137,8 @@ int main (int argc, char *argv[])
 
 ///// считывание из файла output.txt и преобразование обратно
 
-    ifstream F("output.txt", ios::in | ios::binary);
-    ofstream D("decode.txt", ios::out | ios::binary);
+    ifstream F("2.txt", ios::in | ios::binary);
+    ofstream D("3.txt", ios::out | ios::binary);
 
     setlocale(LC_ALL,"Russian"); // чтоб русские символы отображались в командной строке
 
@@ -168,7 +158,6 @@ int main (int argc, char *argv[])
 
     //outCount(m);
     //print(root);
-    outTable();
 
     return 0;
 }

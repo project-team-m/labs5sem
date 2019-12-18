@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/HAF.dir/main.cpp.o"
+  "CMakeFiles/HAF.dir/main2.cpp.o"
   "HAF"
   "HAF.pdb"
 )
