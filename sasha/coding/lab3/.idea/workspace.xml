@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="166efde0-9ebc-4763-822b-91b8e49699d4" name="Default Changelist" comment="" />
+    <list default="true" id="166efde0-9ebc-4763-822b-91b8e49699d4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../dima/C#/lab5/.idea/.idea.lab5/riderModule.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dima/C#/Л4/.idea/.idea.Л4/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dima/C#/Л4/.idea/.idea.Л4/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dima/C#/Л4/Л4/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dima/C#/Л4/Л4/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dima/C#/Л4/Л4/bin/Debug/Л4.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dima/C#/Л4/Л4/bin/Debug/Л4.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dima/C#/Л4/Л4/bin/Debug/Л4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dima/C#/Л4/Л4/bin/Debug/Л4.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dima/C#/Л4/Л4/obj/Debug/Л4.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dima/C#/Л4/Л4/obj/Debug/Л4.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dima/C#/Л4/Л4/obj/Debug/Л4.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dima/C#/Л4/Л4/obj/Debug/Л4.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dima/C#/Л4/Л4/obj/Debug/Л4.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dima/C#/Л4/Л4/obj/Debug/Л4.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dima/C#/Л4/Л4/obj/Debug/Л4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dima/C#/Л4/Л4/obj/Debug/Л4.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dima/C#/Л6/.idea/.idea.Л6/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dima/C#/Л6/.idea/.idea.Л6/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dima/C#/Л6/Л6/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dima/C#/Л6/Л6/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dima/C#/Л6/Л6/bin/Debug/Л6.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dima/C#/Л6/Л6/bin/Debug/Л6.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dima/C#/Л6/Л6/bin/Debug/Л6.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dima/C#/Л6/Л6/bin/Debug/Л6.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dima/C#/Л6/Л6/obj/Debug/Л6.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dima/C#/Л6/Л6/obj/Debug/Л6.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dima/C#/Л6/Л6/obj/Debug/Л6.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dima/C#/Л6/Л6/obj/Debug/Л6.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dima/C#/Л6/Л6/obj/Debug/Л6.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dima/C#/Л6/Л6/obj/Debug/Л6.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dima/C#/Л6/Л6/obj/Debug/Л6.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dima/C#/Л6/Л6/obj/Debug/Л6.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dima/oop/lab6/cmake-build-debug/CMakeFiles/lab6.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dima/oop/lab6/cmake-build-debug/CMakeFiles/lab6.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dima/oop/lab6/first.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dima/oop/lab6/first.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../dima/oop/lab6/second.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../dima/oop/lab6/second.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ivan/C#/lab4/C4/.idea/.idea.C4/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ivan/C#/lab4/C4/.idea/.idea.C4/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ivan/C#/lab4/C4/C4/obj/Debug/C4.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ivan/C#/lab4/C4/C4/obj/Debug/C4.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kodirov_lab3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/file1.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,13 +42,21 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
   <component name="ProjectId" id="1TFwZEkXxJAd1RvBq28g9Ans5zO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -77,10 +113,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573069204198</updated>
+      <workItem from="1576751332680" duration="428000" />
+      <workItem from="1576751771426" duration="65000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="801" y="408" width="308" height="214" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576751357109">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="801" y="408" width="308" height="214" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1576751357109" />
+    <state x="743" y="274" width="424" height="482" key="FileChooserDialogImpl" timestamp="1576751818691">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="743" y="274" width="424" height="482" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1576751818691" />
     <state width="1644" height="266" key="GridCell.Tab.0.bottom" timestamp="1576338616616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -97,5 +146,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1644" height="266" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576338616616" />
+    <state x="269" y="118" width="1372" height="794" key="new project wizard" timestamp="1576751834561">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="269" y="118" width="1372" height="794" key="new project wizard/0.0.1920.1032@0.0.1920.1032" timestamp="1576751834561" />
   </component>
 </project>

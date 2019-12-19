@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dekeyel/Projects/labs5sem/dima/oop/lab6/second.cpp
+iostream
+-
+fstream
+-
+stdlib.h
+-
+math.h
+-
+string
+-
+

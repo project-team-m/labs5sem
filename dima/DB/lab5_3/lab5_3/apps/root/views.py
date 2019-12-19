@@ -37,7 +37,6 @@ def show_table_old(request):
             DB.link = None
         DB.link = link
         if '_apply' in request.POST:
-            print(request.POST['operation'] == 'INSERT')
             if request.POST['operation'] == 'INSERT':
                 DB.a.del_string(request.POST['id'], request.POST['table'])
             elif request.POST['operation'] == 'DELETE':
@@ -136,6 +135,14 @@ def show_table(request):
 def enter_table(request):
     if DB.a.login and DB.a.lvl == 3:
 
+        return HttpResponseRedirect(reverse('root:show_table'))
+
+    DB.scripts = 'wrong password or login'
+    return HttpResponseRedirect(reverse('main_form:index'))
+
+def back_num(request):
+    if DB.a.login and DB.a.lvl == 3:
+        DB.a.back_num(request.POST['num'], request.POST['table'])
         return HttpResponseRedirect(reverse('root:show_table'))
 
     DB.scripts = 'wrong password or login'

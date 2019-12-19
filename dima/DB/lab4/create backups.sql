@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS brands_old(
     id INTEGER,
     name VARCHAR (30),
     operation VARCHAR,
-    date_operation DATE DEFAULT now()
+    date_operation timestamp DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS components_old(
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS components_old(
     timing INTEGER,
     id_brand INTEGER,
     operation VARCHAR,
-    date_operation DATE DEFAULT now()
+    date_operation timestamp DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS clients_old(
@@ -30,14 +30,14 @@ CREATE TABLE IF NOT EXISTS clients_old(
     login VARCHAR(32),
     password VARCHAR(32),
     operation VARCHAR,
-    date_operation DATE DEFAULT now()
+    date_operation timestamp DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS positions_old(
     id INTEGER,
     name VARCHAR(30),
     operation VARCHAR,
-    date_operation DATE DEFAULT now()
+    date_operation timestamp DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS workers_old(
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS workers_old(
     email VARCHAR(30),
     date_employment DATE,
     operation VARCHAR,
-    date_operation DATE DEFAULT now()
+    date_operation timestamp DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS stocks_old(
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS stocks_old(
     date_create DATE,
     id_storekeeper INTEGER,
     operation VARCHAR,
-    date_operation DATE DEFAULT now()
+    date_operation timestamp DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS stock_old(
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS stock_old(
     id_stock INTEGER,
     balance INTEGER,
     operation VARCHAR,
-    date_operation DATE DEFAULT now()
+    date_operation timestamp DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS orders_old(
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS orders_old(
     id_manager INTEGER,
     discount INTEGER,
     operation VARCHAR,
-    date_operation DATE DEFAULT now()
+    date_operation timestamp DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS basket_old(
@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS basket_old(
     id_client INTEGER,
     id_order INTEGER,
     operation VARCHAR,
-    date_operation DATE DEFAULT now()
+    date_operation timestamp DEFAULT now()
 );
 
 CREATE OR REPLACE FUNCTION basket_backup() RETURNS TRIGGER AS

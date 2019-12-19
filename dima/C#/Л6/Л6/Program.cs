@@ -13,12 +13,20 @@ namespace Л6
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите 3 аргумента: путь к файлу, начальную кодировку, конечную кодировку Например: \nD:\\Desktop\\1.txt\nutf-8\nwindows-1251");
-            string p = Console.ReadLine();
-            string o = Console.ReadLine();
-            string n = Console.ReadLine();
-            var from = Encoding.GetEncoding(o);
-            var to = Encoding.GetEncoding(n);
+            try
+            {
+                Console.WriteLine(
+                    "Введите 3 аргумента: путь к файлу, начальную кодировку, конечную кодировку Например: \nD:\\Desktop\\1.txt\nutf-8\nwindows-1251");
+                string p = Console.ReadLine();
+                string o = Console.ReadLine();
+                string n = Console.ReadLine();
+                var from = Encoding.GetEncoding(o);
+                var to = Encoding.GetEncoding(n);
+            }
+            catch
+            {
+                
+            }
 
             RecodeFile(p, from, to);
         }

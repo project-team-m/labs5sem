@@ -1,12 +1,18 @@
-D:\Documents\5 семестр\.Net\Л4\Л4\bin\Debug\Л4.exe.config
-D:\Documents\5 семестр\.Net\Л4\Л4\bin\Debug\Л4.exe
-D:\Documents\5 семестр\.Net\Л4\Л4\bin\Debug\Л4.pdb
-D:\Documents\5 семестр\.Net\Л4\Л4\obj\Debug\Л4.csprojAssemblyReference.cache
-D:\Documents\5 семестр\.Net\Л4\Л4\obj\Debug\Л4.exe
-D:\Documents\5 семестр\.Net\Л4\Л4\obj\Debug\Л4.pdb
-D:\Projects\labs5sem\dima\C#\Л4\Л4\bin\Debug\Л4.exe.config
-D:\Projects\labs5sem\dima\C#\Л4\Л4\bin\Debug\Л4.exe
-D:\Projects\labs5sem\dima\C#\Л4\Л4\bin\Debug\Л4.pdb
-D:\Projects\labs5sem\dima\C#\Л4\Л4\obj\Debug\Л4.csprojAssemblyReference.cache
-D:\Projects\labs5sem\dima\C#\Л4\Л4\obj\Debug\Л4.exe
-D:\Projects\labs5sem\dima\C#\Л4\Л4\obj\Debug\Л4.pdb
+D:/Documents/5 семестр/.Net/Л4/Л4/bin/Debug/Л4.exe.config
+D:/Documents/5 семестр/.Net/Л4/Л4/bin/Debug/Л4.exe
+D:/Documents/5 семестр/.Net/Л4/Л4/bin/Debug/Л4.pdb
+D:/Documents/5 семестр/.Net/Л4/Л4/obj/Debug/Л4.csprojAssemblyReference.cache
+D:/Documents/5 семестр/.Net/Л4/Л4/obj/Debug/Л4.exe
+D:/Documents/5 семестр/.Net/Л4/Л4/obj/Debug/Л4.pdb
+D:/Projects/labs5sem/dima/C#/Л4/Л4/bin/Debug/Л4.exe.config
+D:/Projects/labs5sem/dima/C#/Л4/Л4/bin/Debug/Л4.exe
+D:/Projects/labs5sem/dima/C#/Л4/Л4/bin/Debug/Л4.pdb
+D:/Projects/labs5sem/dima/C#/Л4/Л4/obj/Debug/Л4.csprojAssemblyReference.cache
+D:/Projects/labs5sem/dima/C#/Л4/Л4/obj/Debug/Л4.exe
+D:/Projects/labs5sem/dima/C#/Л4/Л4/obj/Debug/Л4.pdb
+/home/dekeyel/Projects/labs5sem/dima/C#/Л4/Л4/bin/Debug/Л4.exe.config
+/home/dekeyel/Projects/labs5sem/dima/C#/Л4/Л4/bin/Debug/Л4.exe
+/home/dekeyel/Projects/labs5sem/dima/C#/Л4/Л4/bin/Debug/Л4.pdb
+/home/dekeyel/Projects/labs5sem/dima/C#/Л4/Л4/obj/Debug/Л4.csprojAssemblyReference.cache
+/home/dekeyel/Projects/labs5sem/dima/C#/Л4/Л4/obj/Debug/Л4.exe
+/home/dekeyel/Projects/labs5sem/dima/C#/Л4/Л4/obj/Debug/Л4.pdb

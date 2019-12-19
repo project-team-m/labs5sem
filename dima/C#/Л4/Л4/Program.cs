@@ -9,42 +9,37 @@ namespace Л4
         {
             MotherBoard m = new MotherBoard();
             Printer p = new Printer(m,100,16,"HP 2035");
-            //p.Connect();
+            p.Connect();
             p.Send();
-            Console.Read();
         }
     }
-    interface IUSBBus
+    interface A
     {
         double MaxSpeed();
         byte Send();
     }
-    interface ISata
+    interface B
     {
         double MaxSpeed();
+        double Size();
         byte Send();
     }
-    interface INetwork
-    {
-        double MaxSpeed();
-        byte Send();
-    }
-    interface IInnerBus
+    interface C
     {
         double MaxSpeed();
         byte Send();
     }
 
-    class MotherBoard : IInnerBus, ISata, INetwork
+    class MotherBoard : A
     {
         private double maxspeed;
-        public byte byteforsend;
+        public byte cashe;
         public List<string> Apply = new List<string>();
-        public List<IInnerBus> Inner = new List<IInnerBus>();
+        public List<A> Inner = new List<A>();
 
         public MotherBoard(double x = 100, byte y = 1)
         {
-            this.byteforsend = y;
+            this.cashe = y;
             this.maxspeed = x;
         }
         public double MaxSpeed()
@@ -54,7 +49,7 @@ namespace Л4
 
         public byte Send()
         {
-            return byteforsend;
+            return cashe;
         }
 
         public void show()
@@ -76,25 +71,27 @@ namespace Л4
         }
     }
 
-    class HardDisk : IInnerBus, IUSBBus
+    class HardDisk : B
     {
         private double maxspeed;
-        private byte byteforsend;
+        private byte cashe;
         private string name;
+        private double size;
         public MotherBoard obj;
-        public HardDisk(MotherBoard obj, double x = 100, byte y = 0, string name = "HardDisk")
+        public HardDisk(MotherBoard obj, double x = 100, byte y = 0, string name = "HardDisk", double s = 0)
         {
-            this.byteforsend = y;
-            this.maxspeed = x;
+            cashe = y;
+            maxspeed = x;
+            size = s;
             this.obj = obj;
             this.name = name;
         }
         public MotherBoard Connect()
         {
-            this.obj.Apply.Add(this.name);
+            obj.Apply.Add(this.name);
             try
             {
-                this.obj.Inner.Add(this);
+                obj.Inner.Add(this);
             }
             catch (Exception e) { Console.WriteLine("Нельзя занести,не наследует нужный интерфейс"); }
             return obj;
@@ -108,28 +105,27 @@ namespace Л4
         {
             if (obj.Apply.Contains(this.name))
             {
-                Connect().byteforsend = this.byteforsend;
-                Console.WriteLine("Был отправлен байт: " + Connect().byteforsend);
-                return Connect().byteforsend;
+                Connect().cashe = this.cashe;
+                Console.WriteLine("Был отправлен байт: " + Connect().cashe);
+                return Connect().cashe;
             }
             else
             {
                 Console.WriteLine("Устройсво не подключено к материнке,байт не был отправлен ");
-                return this.byteforsend;
+                return this.cashe;
             }
 
         }
     }
-
-    class Printer : IInnerBus, IUSBBus, INetwork
+    class Printer : Bus
     {
         private double maxspeed;
-        private byte byteforsend;
+        private byte cashe;
         private string name;
         public MotherBoard obj;
         public Printer(MotherBoard obj, double x = 100, byte y = 16, string name = "Printer")
         {
-            this.byteforsend = y;
+            this.cashe = y;
             this.maxspeed = x;
             this.obj = obj;
             this.name = name;
@@ -153,14 +149,14 @@ namespace Л4
         {
             if (obj.Apply.Contains(this.name))
             {
-                Connect().byteforsend = this.byteforsend;
-                Console.WriteLine("Был отправлен байт: " + Connect().byteforsend);
-                return Connect().byteforsend;
+                Connect().cashe = this.cashe;
+                Console.WriteLine("Был отправлен байт: " + Connect().cashe);
+                return Connect().cashe;
             }
             else
             {
                 Console.WriteLine("Устройсво не подключено к материнской плате, байт не был отправлен ");
-                return this.byteforsend;
+                return this.cashe;
             }
 
         }

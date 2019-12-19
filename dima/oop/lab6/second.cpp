@@ -180,7 +180,6 @@ public:
 };
 
 int main() {
-    /*
     Line L;
     L.show();
     L.file_recording("line.txt");
@@ -196,8 +195,8 @@ int main() {
     O.show();
     O.file_recording("oval.txt");
     O.show_file("oval.txt");
-    */
     Picture P;
     P.show();
+    return 0;
 }
 
