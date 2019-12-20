@@ -225,7 +225,7 @@ public:
     }
 };
 
-class Queue2 : public List {
+class Queue2 : private List {
     nodelist *first;
 public:
     using List::isEmpty;
@@ -277,9 +277,10 @@ public:
     virtual void ProcessMenuItem(int number) = 0;
 };
 
-class ListMenu : public Menu {
+class ListMenu : private Menu {
     List objList;
 public:
+    using Menu::ProcessMenu;
     void ProcessMenuItem(int number) {
 
         switch (number) {
