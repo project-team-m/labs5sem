@@ -27,7 +27,7 @@ protected:
 
     nodelist *first;
 public:
-    nodelist *first2;
+    //nodelist *first2;
 
     ~List() {
         del();
@@ -278,9 +278,10 @@ public:
     virtual void ProcessMenuItem(int number) = 0;
 };
 
-class ListMenu : public Menu {
+class ListMenu : private Menu {
     List objList;
 public:
+    using Menu::ProcessMenu;
     void ProcessMenuItem(int number) {
 
         switch (number) {
