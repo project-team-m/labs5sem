@@ -26,7 +26,7 @@ class List {
 
     nodelist *first;
 public:
-    nodelist *first2;
+    //nodelist *first2;
 
     ~List() {
         del();
