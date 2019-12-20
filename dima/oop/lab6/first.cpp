@@ -5,7 +5,8 @@
 using namespace std;
 
 class List {
-    protected:class nodelist {
+protected:
+    class nodelist {
     public:
         int key;
         int data;
@@ -223,9 +224,9 @@ public:
         objList.pop(1);
         return n;
     }
-};
+}
 
-class Queue2 : public List {
+class Queue2 : private List {
     nodelist *first;
 public:
     using List::isEmpty;
@@ -245,7 +246,7 @@ public:
 
 class Menu {
 public:
-    vector<string> menu_item;
+    vector <string> menu_item;
 
     Menu() {
         menu_item.push_back("Show");

@@ -32,6 +32,9 @@ VALUES ('5', 'Петров', 'Василий', 'Васильевич', 'м', '+7
 INSERT INTO Employee(id, person_id, name_position, login, password)
 VALUES ('1', '1', 'Лаборант' , 'ves1', '0000' );
 
+INSERT INTO Employee(id, person_id, name_position, login, password)
+VALUES ('4', '3', 'Директор' , 'direct', 'direct' );
+
 INSERT INTO Employee(id, person_id, name_position)
 VALUES ('2', '2', 'Весовщик');
 

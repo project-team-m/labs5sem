@@ -40,19 +40,9 @@ class BD():
             if not self.login:
                 self.conn = None
 
-    def output_titles(self, table):
+    def rollback(self):
         with self.conn.cursor() as cursor:
-            stmt = sql.SQL("SELECT column_name FROM information_schema.columns WHERE table_name = '{}';".format(table))
-            cursor.execute(stmt)
-
-            return self.beautiful_change(cursor.fetchall())
-
-    def output_tables(self, table):
-        with self.conn.cursor() as cursor:
-            stmt = sql.SQL('SELECT * FROM {};'.format(table))
-            cursor.execute(stmt)
-
-            return self.con(self.output_titles(table), cursor.fetchall())
+            cursor.execute('rollback;')
 
     def beautiful_change(self, mass):
         new_mass = []
@@ -68,33 +58,43 @@ class BD():
                 beautiful_mass[i].append([new_mass[j], mass_table[i][j]])
         return beautiful_mass
 
-    def rollback(self):
-        with self.conn.cursor() as cursor:
-            cursor.execute('rollback;')
-
-    def change_to_norm_none(self, arg):
-        if arg.lower() == 'none' or arg.lower() == 'null' or arg == '':
-            return 'null'
-        else:
-            try:
-                return int(arg)
-            except:
-                return "'{}'".format(arg)
-
-    def crt_update(self, mass, table):
-        args = self.output_titles(table)
-        string = 'UPDATE {} SET {} = {}'.format(table, args[0], mass[0])
-        for i in range(1, len(args)):
-            string += ', {} = {}'.format(args[i], self.change_to_norm_none(mass[i]))
-        string += ' WHERE id={};'.format(mass[-1])
-
-        print(string)
+    def create_nice_search(self, titles, args):
+        string = "cast({} AS VARCHAR) LIKE '%{}%'".format(titles[0], args[0])
+        for i in range(1, len(titles)):
+            if args[i]:
+                string = "{} AND  cast({} AS VARCHAR) LIKE '%{}%'".format(string, titles[i], args[i])
 
         return string
+
+    def get_tables(self):
+        with self.conn.cursor() as cursor:
+            stmt = sql.SQL("SELECT table_name FROM information_schema.tables"
+                           " WHERE table_schema NOT IN ('information_schema','pg_catalog') AND "
+                           "table_name NOT LIKE '%_old';")
+
+            cursor.execute(stmt)
+            return self.beautiful_change(cursor.fetchall())
+
+    def output_titles(self, table):
+        with self.conn.cursor() as cursor:
+            stmt = sql.SQL("SELECT column_name FROM information_schema.columns WHERE table_name = '{}';".format(table))
+            cursor.execute(stmt)
+
+            return self.beautiful_change(cursor.fetchall())
+
+    def output_tables(self, table):
+        with self.conn.cursor() as cursor:
+            stmt = sql.SQL('SELECT * FROM {};'.format(table))
+            cursor.execute(stmt)
+
+            return self.con(self.output_titles(table), cursor.fetchall())
+
 
     def update(self, mass, table):
         with self.conn.cursor() as cursor:
             stmt = self.crt_update(mass, table)
+
+            print(stmt)
 
             cursor.execute(stmt)
 
@@ -106,19 +106,11 @@ class BD():
 
     def insert(self, mass, table):
         with self.conn.cursor() as cursor:
-            stmt = sql.SQL('INSERT INTO {} VALUES ({}) ;').format(
-                sql.Identifier(table),
-                sql.SQL(',').join(map(sql.Literal, mass)))
+            stmt = self.crt_insert(mass, table)
+
+            print(stmt)
 
             cursor.execute(stmt)
-
-    def create_nice_search(self, titles, args):
-        string = "cast({} AS VARCHAR) LIKE '%{}%'".format(titles[0], args[0])
-        for i in range(1, len(titles)):
-            if args[i]:
-                string = "{} AND  cast({} AS VARCHAR) LIKE '%{}%'".format(string, titles[i], args[i])
-
-        return string
 
     def search_component(self, table, args):
         prov = False
@@ -138,15 +130,33 @@ class BD():
             else:
                 return self.output_tables(table)
 
-    def get_tables(self):
-        with self.conn.cursor() as cursor:
-            stmt = sql.SQL("SELECT table_name FROM information_schema.tables "
-                           "WHERE table_schema NOT IN ('information_schema','pg_catalog') AND "
-                           "table_name NOT LIKE '%_old'; ")
+    def change_to_norm_none(self, arg):
+        if arg.lower() == 'none' or arg.lower() == 'null' or arg == '':
+            return 'null'
+        else:
+            try:
+                return int(arg)
+            except:
+                return "'{}'".format(arg)
 
-            cursor.execute(stmt)
-            return self.beautiful_change(cursor.fetchall())
+    def crt_update(self, mass, table):
+        args = self.output_titles(table)
+        string = 'UPDATE {} SET {} = {}'.format(table, args[0], mass[0])
+        for i in range(1, len(args)):
+            string += ', {} = {}'.format(args[i], self.change_to_norm_none(mass[i]))
+        string += ' WHERE id={};'.format(mass[-1])
 
+        return string
+
+    def crt_insert(self, mass, table):
+        args = self.output_titles(table)
+        string = 'INSERT INTO {} VALUES ('.format(table, args[0], mass[0])
+        for i in range(len(args)-1):
+            string = '{} {},'.format(string, self.change_to_norm_none(mass[i]))
+
+        string = '{} {});'.format(string, self.change_to_norm_none(mass[i+1]))
+
+        return string
 link = None
 id = None
 a = BD('a', 'a')

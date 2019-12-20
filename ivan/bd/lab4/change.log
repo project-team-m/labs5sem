@@ -84,6 +84,7 @@ FOREIGN KEY (analysis_id) REFERENCES Laboratory_analysis ON DELETE CASCADE ON UP
 );
 
 CREATE TABLE IF NOT EXISTS Stock(
+id serial PRIMARY KEY,
 waybill_id INTEGER,
 FOREIGN KEY (waybill_id) REFERENCES Waybill (id) ON DELETE CASCADE ON UPDATE CASCADE,
 cargo_weight INTEGER,

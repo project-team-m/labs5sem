@@ -1,3 +1,0 @@
-D:/source/git/labs5sem/dima/oop/lab4/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-D:/source/git/labs5sem/dima/oop/lab4/out/build/x64-Debug/CMakeFiles/lab4.dir
-D:/source/git/labs5sem/dima/oop/lab4/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

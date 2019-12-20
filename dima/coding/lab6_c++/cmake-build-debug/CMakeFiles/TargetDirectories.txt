@@ -1,3 +1,0 @@
-/home/dekeyel/Projects/labs5sem/dima/coding/lab6_c++/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/dekeyel/Projects/labs5sem/dima/coding/lab6_c++/cmake-build-debug/CMakeFiles/lab6_c__.dir
-/home/dekeyel/Projects/labs5sem/dima/coding/lab6_c++/cmake-build-debug/CMakeFiles/edit_cache.dir

@@ -92,6 +92,7 @@ date_operation DATE DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS Stock_old(
+id INTEGER,
 waybill_id INTEGER,
 cargo_weight INTEGER,
 silo_number INTEGER,

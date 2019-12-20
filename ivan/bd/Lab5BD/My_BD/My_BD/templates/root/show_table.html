@@ -35,19 +35,37 @@
                             {% csrf_token %}
                             {% for i, j in string %}
                                 {% if j|length > 0 %}
-                                    <td>
-                                        <input type="text" name="{{ i }}" class="form-control-plaintext"
-                                               value="{{ j }}">
-                                        <input type="hidden" name="{{ i }}_old" id="exampleInputPassword1"
-                                               value="{{ j }}">
-                                    </td>
+                                    {% if i == "waybill_id" %}
+                                        <td>
+                                            <input type="text" name="{{ i }}" class="form-control-plaintext"
+                                                   value="{{ j }}">
+                                            <input type="hidden" name="id_old" id="exampleInputPassword1"
+                                                   value="{{ j }}">
+                                        </td>
+                                    {% else %}
+                                        <td>
+                                            <input type="text" name="{{ i }}" class="form-control-plaintext"
+                                                   value="{{ j }}">
+                                            <input type="hidden" name="{{ i }}_old" id="exampleInputPassword1"
+                                                   value="{{ j }}">
+                                        </td>
+                                    {% endif %}
                                 {% else %}
-                                    <td style="width: 120px">
-                                        <input type="text" name="{{ i }}" class="form-control-plaintext" size="2"
-                                               value="{{ j }}">
-                                        <input type="hidden" name="{{ i }}_old" id="exampleInputPassword1"
-                                               value="{{ j }}">
-                                    </td>
+                                    {% if i == "waybill_id" %}
+                                        <td>
+                                            <input type="text" name="{{ i }}" class="form-control-plaintext"
+                                                   value="{{ j }}">
+                                            <input type="hidden" name="id_old" id="exampleInputPassword1"
+                                                   value="{{ j }}">
+                                        </td>
+                                    {% else %}
+                                        <td style="width: 120px">
+                                            <input type="text" name="{{ i }}" class="form-control-plaintext" size="2"
+                                                   value="{{ j }}">
+                                            <input type="hidden" name="{{ i }}_old" id="exampleInputPassword1"
+                                                   value="{{ j }}">
+                                        </td>
+                                    {% endif %}
                                 {% endif %}
                             {% endfor %}
                             <td>
