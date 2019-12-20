@@ -5,8 +5,7 @@
 using namespace std;
 
 class List {
-public:
-    class nodelist {
+    protected:class nodelist {
     public:
         int key;
         int data;
@@ -14,13 +13,28 @@ public:
         nodelist *next = nullptr;
     };
 
+    void del() {
+
+        nodelist *tmp = first;
+
+        while (first) {
+            tmp = first;
+            first = first->next;
+            delete[] tmp;
+        }
+    }
+
     nodelist *first;
+public:
+    nodelist *first2;
+
+    ~List() {
+        del();
+    }
 
     bool isEmpty() {
 
-        if (first == nullptr) return true;
-
-        else return false;
+        return first == nullptr;
     }
 
     int count() {
@@ -36,17 +50,6 @@ public:
             tmp = tmp->next;
         }
         return count;
-    }
-
-    void del() {
-
-        nodelist *tmp = first;
-
-        while (first) {
-            tmp = first;
-            first = first->next;
-            delete[] tmp;
-        }
     }
 
     int findData(int key) {
@@ -203,6 +206,10 @@ class Queue1 {
     List objList;
 
 public:
+    bool isEmpty() {
+        return objList.isEmpty();
+    }
+
     void show() {
         objList.show();
     }
@@ -219,6 +226,7 @@ public:
 };
 
 class Queue2 : public List {
+    nodelist *first;
 public:
     using List::isEmpty;
     using List::push;
@@ -324,7 +332,6 @@ public:
 };
 
 int main3() {
-    setlocale(LC_ALL, "rus");
 
     ListMenu M;
     M.ProcessMenu();
@@ -332,6 +339,5 @@ int main3() {
     //QueueMenu m;
     //m.ProcessMenu();
 
-    system("pause");
     return 0;
 }

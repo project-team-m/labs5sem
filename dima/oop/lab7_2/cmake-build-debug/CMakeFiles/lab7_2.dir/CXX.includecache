@@ -6,22 +6,10 @@
 
 #IncludeRegexTransform: 
 
-/home/dekeyel/Projects/labs5sem/dima/oop/lab6/first.cpp
+/home/dekeyel/Projects/labs5sem/dima/oop/lab7_2/2.cpp
 iostream
 -
 vector
--
-string
--
-
-/home/dekeyel/Projects/labs5sem/dima/oop/lab6/second.cpp
-iostream
--
-fstream
--
-stdlib.h
--
-math.h
 -
 string
 -

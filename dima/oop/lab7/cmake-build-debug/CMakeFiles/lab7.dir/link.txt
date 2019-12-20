@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/lab7.dir/main.cpp.o CMakeFiles/lab7.dir/7_2.cpp.o CMakeFiles/lab7.dir/7_3.cpp.o CMakeFiles/lab7.dir/7_4.cpp.o CMakeFiles/lab7.dir/7_5.cpp.o  -o lab7 
