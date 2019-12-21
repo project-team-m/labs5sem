@@ -9,10 +9,10 @@ class A {
 public:
     void Inc() { a++; }
     void tree() {
-        cout << "Íåñòàòè÷åñêèé ìåòîä êëàññà\n";
+        cout << "Nonstatic method" << endl;;
     }
     void operator()() {
-        cout << "Îïåðàòîð () êëàññà\n";
+        cout << "Operator () " << endl;;
     }
 };
 
@@ -29,11 +29,11 @@ public:
 
     void ShowMenu() {
         int a;
-        while (1) {
+        while (true) {
             for (int i = 0; i < menu.size(); ++i)
                 cout << i + 1 << ": " << menu[i].name << endl;
-            cout << "0: Âûõîä" << endl;
-            cout << "Âûáåðèòå ïóíêò ìåíþ: ";
+            cout << "0: Exit" << endl;
+            cout << "Enter a point menu: ";
             cin >> a;
             if (!a) return;
             if (a > menu.size()) continue;
@@ -48,14 +48,14 @@ public:
     }
 
     static void Two() {
-        cout << "Âûçâàíà ôóíêöèÿ êëàññà A\n";
+        cout << "Function of class A" << endl;;
         A m;
         m.Inc();
     }
 };
 
 void one() {
-    cout << "Âûçâàíà ôóíêöèÿ 1\n";
+    cout << "Function 1" << endl;;
 };
 
 
@@ -70,11 +70,11 @@ class Menu2 {
 public:
     void ShowMenu() {
         int a;
-        while (1) {
+        while (true) {
             for (int i = 0; i < menu.size(); ++i)
                 cout << i + 1 << ": " << menu[i].name << endl;
-            cout << "0: Âûõîä" << endl;
-            cout << "Âûáåðèòå ïóíêò ìåíþ: ";
+            cout << "0: Exit" << endl;
+            cout << "Enter a point menu: ";
             cin >> a;
             if (!a) return;
             if (a > menu.size()) continue;
@@ -90,18 +90,16 @@ public:
 
 };
 
-int main5() {
+int main4() {
 
     Menu <void> m;
-    m.PushItem("Ôóíêöèÿ 1", one);
-    m.PushItem("Ôóíêöèÿ êëàññà A", Menu<int>::Two);
+    m.PushItem("Function 1", one);
+    m.PushItem("Function of class A", Menu<int>::Two);
     m.ShowMenu();
 
     //Menu2 <A> m2;
-    //ñâÿçûûâàåì À ñ ìåòîäàìè tree (),íå èìåþùèõ ÿâíûõ àðãóìåíòîâ
-    //÷òîáû âûçâàòü íåñòàòè÷ ìåòîä êëàññà íóæåí îáúåêò ýòîãî êëàññà
-    //m2.PushItem("Íåñòàòè÷åñêèé ìåòîä", &A::tree);
-    //m2.PushItem("Îïåðàòîð ()", &A::operator());
+    //m2.PushItem("Nonstatic method", &A::tree);
+    //m2.PushItem("Operator ()", &A::operator());
     //m2.ShowMenu();
 
     return 0;
