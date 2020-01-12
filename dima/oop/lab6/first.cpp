@@ -5,8 +5,7 @@
 using namespace std;
 
 class List {
-protected:
-    class nodelist {
+protected:class nodelist {
     public:
         int key;
         int data;
@@ -27,7 +26,6 @@ protected:
 
     nodelist *first;
 public:
-    //nodelist *first2;
 
     ~List() {
         del();
@@ -282,6 +280,7 @@ class ListMenu : private Menu {
     List objList;
 public:
     using Menu::ProcessMenu;
+
     void ProcessMenuItem(int number) {
 
         switch (number) {

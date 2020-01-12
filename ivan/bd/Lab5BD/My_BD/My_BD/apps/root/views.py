@@ -138,6 +138,11 @@ def enter_table(request):
 
         return HttpResponseRedirect(reverse('root:show_table'))
 
+def back_num(request):
+    if BD.a.login and BD.a.lvl == 3:
+        BD.a.back_num(request.POST['num'], request.POST['table'])
+        return HttpResponseRedirect(reverse('root:show_table'))
+
     BD.scripts = 'wrong password or login'
     return HttpResponseRedirect(reverse('main_form:index'))
 

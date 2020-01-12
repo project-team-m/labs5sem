@@ -90,17 +90,17 @@ public:
 
 };
 
-int main4() {
+int main() {
 
-    Menu <void> m;
+    /*Menu <void> m;
     m.PushItem("Function 1", one);
     m.PushItem("Function of class A", Menu<int>::Two);
-    m.ShowMenu();
+    m.ShowMenu();*/
 
-    //Menu2 <A> m2;
-    //m2.PushItem("Nonstatic method", &A::tree);
-    //m2.PushItem("Operator ()", &A::operator());
-    //m2.ShowMenu();
+    Menu2 <A> m2;
+    m2.PushItem("Nonstatic method", &A::tree);
+    m2.PushItem("Operator ()", &A::operator());
+    m2.ShowMenu();
 
     return 0;
 };

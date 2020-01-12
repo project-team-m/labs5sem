@@ -6,7 +6,7 @@ house_number VARCHAR (30),
 apartment VARCHAR (30),
 indexx INTEGER,
 operation VARCHAR,
-date_operation DATE DEFAULT now()
+date_operation timestamp DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS Person_old(
@@ -19,7 +19,7 @@ number_phone VARCHAR (12),
 date_of_birth INTEGER,
 addresses_id INTEGER,
 operation VARCHAR,
-date_operation DATE DEFAULT now()
+date_operation timestamp DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS Employee_old(
@@ -29,14 +29,14 @@ password VARCHAR(32),
 person_id INTEGER,
 name_position VARCHAR (30),
 operation VARCHAR,
-date_operation DATE DEFAULT now()
+date_operation timestamp DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS GOST_old(
 id INTEGER,
 name_GOST VARCHAR (20),
 operation VARCHAR,
-date_operation DATE DEFAULT now()
+date_operation timestamp DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS Culture_parameters_old(
@@ -44,7 +44,7 @@ id INTEGER,
 name_of_culture VARCHAR (10),
 type_of_culture VARCHAR (10),
 operation VARCHAR,
-date_operation DATE DEFAULT now()
+date_operation timestamp DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS Delivery_old(
@@ -53,7 +53,7 @@ car_make VARCHAR (10),
 car_number VARCHAR (10),
 person_id INTEGER,
 operation VARCHAR,
-date_operation DATE DEFAULT now()
+date_operation timestamp DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS Organization_old(
@@ -64,7 +64,7 @@ ogrn INTEGER,
 addresses_id INTEGER,
 delivery_id INTEGER,
 operation VARCHAR,
-date_operation DATE DEFAULT now()
+date_operation timestamp DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS Laboratory_analysis_old(
@@ -77,7 +77,7 @@ final_class VARCHAR (10),
 gost_id INTEGER,
 employee_id INTEGER,
 operation VARCHAR,
-date_operation DATE DEFAULT now()
+date_operation timestamp DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS Waybill_old(
@@ -88,7 +88,7 @@ culture_id INTEGER,
 organization_id INTEGER,
 analysis_id INTEGER,
 operation VARCHAR,
-date_operation DATE DEFAULT now()
+date_operation timestamp DEFAULT now()
 );
 
 CREATE TABLE IF NOT EXISTS Stock_old(
@@ -99,7 +99,7 @@ silo_number INTEGER,
 residue INTEGER,
 total_capacity INTEGER,
 operation VARCHAR,
-date_operation DATE DEFAULT now()
+date_operation timestamp DEFAULT now()
 );
 
 CREATE OR REPLACE FUNCTION Addresses_backup() RETURNS TRIGGER AS

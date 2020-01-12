@@ -6,11 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/dekeyel/Projects/labs5sem/dima/oop/lab7_2/2.cpp
-iostream
--
-
-/home/dekeyel/Projects/labs5sem/dima/oop/lab7_2/5.cpp
+/home/paket/Project/labs5sem/dima/oop/lab7_2/5.cpp
 iostream
 -
 vector
