@@ -1,5 +1,6 @@
 import os, re
 
+
 # Класс котрый представляет из себя объект файла
 class File:
     # Конструктор инициализации файла
@@ -18,7 +19,7 @@ class File:
     # Возвращает содержимое файла
     def __str__(self):
         string = ''
-        with open(self.file_name, 'r') as lines:
+        with open('{}/{}'.format(self.way, self.file_name), 'r') as lines:
             for line in lines:
                 string = '{}{}'.format(string, line)
 
@@ -41,6 +42,7 @@ class Dir:
                 if tmp:
                     self._files.append(tmp)
 
+    # Возвращает массив имен файлов
     def get_files(self):
         mass = []
         for i in self._files:
@@ -54,23 +56,11 @@ class Dir:
         except:
             return None
 
-    # Выводит все файлы в дирректории
-    def show_all_files(self):
-        if self.way == '.':
-            way = 'текущей директории'
-        else:
-            way = 'директории {}'.format(self.way)
-        s = 'Объекты в {}:'.format(way)
-        if self.all_files:
-            for i in self.all_files:
-                s = '{} {}'.format(s, i)
-        else:
-            s = '{} {}'.format(s, 'Пусто')
-        return s
-
+    # Выводит файлы из дирректории
     def show(self, el):
         return self._files[el].__str__()
 
+    # Выводит все файлы из дирректории
     def __str__(self):
         string = "Файлы в папке {}: {}".format(self.way, self.all_files[0])
         for i in self.all_files[1:]:

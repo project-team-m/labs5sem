@@ -62,7 +62,6 @@ class PrintFile(Menu):
 
     # Дополняем функцию case из класса Menu
     def case(self, el):
-        print(Menu.case(self, el))
         if el == str(len(self._el) - 1):
             way = input('Укажите путь до файла: ')
 
@@ -107,15 +106,16 @@ class ChangeFind(PrintFile):
 
     def case(self, el):
         if el == str(len(self._el) - 1):
-            path = input('Укажите путь до файла: ')
+            way = input('Укажите путь до файла: ')
 
-            if len(path.split('/')) == 1:
-                tmp = File(path)
+            if len(way.split('/')) == 1:
+                tmp = File(way)
             else:
-                tmp = File(path.split('/')[-1], path[:(-1 * len(path.split('/')[-1])) - 1])
+                tmp = File(way.split('/')[-1], way[:(-1 * len(way.split('/')[-1])) - 1])
             if tmp:
                 text = input('Введите текст для поиска: ')
-                # Если пользователь указал путь до файла, который можно открыть, то будет выведена его кодировка
+                # Если пользователь указал путь до файла, который можно открыть, то будет предложено ввести текст который
+                # необходимо будет найти
                 find = Find.find(tmp.__str__(), text)
                 if find:
                     for i in find:
@@ -189,13 +189,13 @@ class MainMenu(Menu):
                 if Now_menu.case(input()):
                     break
         elif el == '3':
-            # Выводит названия всех файлов, в которых можно изменить кодировку, по пути, что указал пользователь
+            # Выводит названия всех файлов, с которыми можно взаимодействовать, по пути, что указал пользователь
             if Menu.dir:
                 print(Menu.dir.__str__())
             else:
                 print('Директория пуста или не выбрана.')
         elif el == '4':
-            # Изменяет кодировку файла
+            # Находит в файле текст
             Now_menu = ChangeFind()
             while True:
                 print(Now_menu)
@@ -204,7 +204,7 @@ class MainMenu(Menu):
 
         return Menu.case(self, el)
 
-    # Дополяем вывод на экран, для возможности выбора пункта меню
+    # Дополняем вывод на экран, для возможности выбора пункта меню
     def __str__(self):
         while True:
             print(Menu.__str__(self))
