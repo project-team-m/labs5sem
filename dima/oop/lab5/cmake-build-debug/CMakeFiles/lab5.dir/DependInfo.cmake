@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/paket/Project/labs5sem/dima/oop/lab5/fifth.cpp" "/home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles/lab5.dir/fifth.cpp.o"
-  "/home/paket/Project/labs5sem/dima/oop/lab5/first.cpp" "/home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles/lab5.dir/first.cpp.o"
-  "/home/paket/Project/labs5sem/dima/oop/lab5/main.cpp" "/home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles/lab5.dir/main.cpp.o"
-  "/home/paket/Project/labs5sem/dima/oop/lab5/seventh.cpp" "/home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles/lab5.dir/seventh.cpp.o"
-  "/home/paket/Project/labs5sem/dima/oop/lab5/third.cpp" "/home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles/lab5.dir/third.cpp.o"
+  "/home/dekeyel/Projects/labs5sem/dima/oop/lab5/fifth.cpp" "/home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles/lab5.dir/fifth.cpp.o"
+  "/home/dekeyel/Projects/labs5sem/dima/oop/lab5/first.cpp" "/home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles/lab5.dir/first.cpp.o"
+  "/home/dekeyel/Projects/labs5sem/dima/oop/lab5/main.cpp" "/home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles/lab5.dir/main.cpp.o"
+  "/home/dekeyel/Projects/labs5sem/dima/oop/lab5/seventh.cpp" "/home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles/lab5.dir/seventh.cpp.o"
+  "/home/dekeyel/Projects/labs5sem/dima/oop/lab5/third.cpp" "/home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles/lab5.dir/third.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

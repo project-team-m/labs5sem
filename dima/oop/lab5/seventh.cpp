@@ -16,6 +16,8 @@ class tree {
     };
 
     nodeTree* root;
+<<<<<<< HEAD
+=======
 
     nodeTree* f_p(nodeTree* p, int key, nodeTree* pred = nullptr) {
         if (p == nullptr) {
@@ -64,13 +66,9 @@ class tree {
     }
 
 public:
+>>>>>>> a4b99b42d9ae9caf480f6160ce666c8e6225f5b4
     tree() :root(nullptr) {}
 
-    bool proverka()
-    {
-        if (root != nullptr) return true;
-        else return false;
-    }
 
     void add(int key, const char* data)
     {
@@ -105,7 +103,7 @@ public:
                         help = help->right;
                     }
                 }
-                else if (key < help->key)
+                else if (key <= help->key)
                 {
                     if (help->left == nullptr)
                     {
@@ -216,7 +214,7 @@ class menu5 {
     tree obj;
 
 public:
-
+/*
     void show()
     {
         int i = 0;
@@ -229,6 +227,7 @@ public:
             cout << "4. Show tree. " << endl;
             cout << "0. Exit. " << endl;
             cin >> q;
+
             switch (q)
             {
                 case 1:
@@ -238,13 +237,15 @@ public:
                     cin >> data;
                     obj.add(key, data.c_str());
                     break;
+
                 case 2:
                     cout << "Enter a key: ";
                     cin >> key;
                     obj.del(key);
                     break;
+
                 case 3:
-                    if (obj.proverka())
+                    if (obj.root != nullptr)
                     {
                         cout << "Enter a key: " << endl;
                         cin >> key;
@@ -257,20 +258,39 @@ public:
                     break;
                 case 4:
                     cout << "Tree: " << endl;
-                    obj.get_show();
+                    obj.show(obj.root, 0);
                     break;
+
                 case 0:
                     i = 3;
                     break;
             }
         } while (i != 3);
-    }
+    }*/
 };
 
 int main()
-
 {
-    menu5 a;
-    a.show();
+    tree a;
+    a.add(40, "djawk");
+    a.add(20, "dawda");
+    a.add(60, "hgfh");
+    a.add(10, "dawda");
+    a.add(30, "hgfh");
+    a.add(50, "dawda");
+    a.add(70, "hgfh");
+    a.add(5, "dawda");
+    a.add(15, "dawda");
+    a.add(25, "dawda");
+    a.add(35, "dawda");
+    a.add(45, "dawda");
+    a.add(55, "dawda");
+    a.add(65, "dawda");
+    a.add(75, "dawda");
+    a.get_show();
+
+    a.del(20);
+
+    a.get_show();
     return 0;
 }

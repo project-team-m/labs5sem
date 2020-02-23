@@ -42,7 +42,7 @@ T Max(T x, T y)
 }
 
 
-int main1()
+int main()
 {
     MyClass obj1(1), obj2(2);
 

@@ -1,3 +1,3 @@
-/home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles/lab5.dir
-/home/paket/Project/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles/lab5.dir
+/home/dekeyel/Projects/labs5sem/dima/oop/lab5/cmake-build-debug/CMakeFiles/edit_cache.dir

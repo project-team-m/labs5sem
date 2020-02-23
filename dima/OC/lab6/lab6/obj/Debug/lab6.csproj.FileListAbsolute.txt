@@ -1,0 +1,5 @@
+/home/dekeyel/Projects/labs5sem/dima/OC/lab6/lab6/bin/Debug/lab6.exe
+/home/dekeyel/Projects/labs5sem/dima/OC/lab6/lab6/bin/Debug/lab6.pdb
+/home/dekeyel/Projects/labs5sem/dima/OC/lab6/lab6/obj/Debug/lab6.csprojAssemblyReference.cache
+/home/dekeyel/Projects/labs5sem/dima/OC/lab6/lab6/obj/Debug/lab6.exe
+/home/dekeyel/Projects/labs5sem/dima/OC/lab6/lab6/obj/Debug/lab6.pdb

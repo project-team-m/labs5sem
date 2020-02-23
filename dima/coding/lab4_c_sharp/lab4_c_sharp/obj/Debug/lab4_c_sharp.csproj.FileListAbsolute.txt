@@ -1,0 +1,5 @@
+/home/dekeyel/Projects/labs5sem/dima/coding/lab4_c_sharp/lab4_c_sharp/bin/Debug/lab4_c_sharp.exe
+/home/dekeyel/Projects/labs5sem/dima/coding/lab4_c_sharp/lab4_c_sharp/bin/Debug/lab4_c_sharp.pdb
+/home/dekeyel/Projects/labs5sem/dima/coding/lab4_c_sharp/lab4_c_sharp/obj/Debug/lab4_c_sharp.csprojAssemblyReference.cache
+/home/dekeyel/Projects/labs5sem/dima/coding/lab4_c_sharp/lab4_c_sharp/obj/Debug/lab4_c_sharp.exe
+/home/dekeyel/Projects/labs5sem/dima/coding/lab4_c_sharp/lab4_c_sharp/obj/Debug/lab4_c_sharp.pdb

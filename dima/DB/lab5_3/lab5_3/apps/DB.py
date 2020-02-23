@@ -1,5 +1,15 @@
 import psycopg2
 from psycopg2 import sql
+import os
+import time
+
+def watch_dir():
+    res = {}
+    for i in os.listdir('dumps'):
+        tmp = time.ctime(os.path.getctime('dumps/{}'.format(i))).split()
+        res[i] = '{} {}/{}/{}'.format(tmp[3], tmp[2], tmp[1], tmp[4])
+
+    return res
 
 class DB():
     def __init__(self, login, password):
@@ -103,9 +113,9 @@ class DB():
 
     def insert(self, mass, table):
         with self.conn.cursor() as cursor:
-            stmt = sql.SQL('INSERT INTO {} VALUES ({}) ;').format(
-                sql.Identifier(table),
-                sql.SQL(',').join(map(sql.Literal, mass)))
+            stmt = self.crt_insert(mass, table)
+
+            print(stmt)
 
             cursor.execute(stmt)
 
@@ -143,14 +153,51 @@ class DB():
             string += ', {} = {}'.format(args[i], self.change_to_norm_none(mass[i]))
         string += ' WHERE id={};'.format(mass[-1])
 
-        print(string)
+        return string
+
+    def crt_insert(self, mass, table):
+        args = self.output_titles(table)
+        string = 'INSERT INTO {} VALUES ('.format(table, args[0], mass[0])
+        for i in range(len(args) - 1):
+            string = '{} {},'.format(string, self.change_to_norm_none(mass[i]))
+
+        string = '{} {});'.format(string, self.change_to_norm_none(mass[i+1]))
 
         return string
+
+    def back_num(self, num, table):
+        with self.conn.cursor() as cursor:
+            args = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='{}_old' AND COLUMN_NAME NOT IN ('date_operation')".format(table)
+            cursor.execute(args)
+            args = self.beautiful_change(cursor.fetchall())
+            string = "{}".format(args[0])
+            for i in args[1:]:
+                string += ', ' + i
+            stmt = "SELECT {} FROM {}_old ORDER BY date_operation DESC LIMIT {};".format(string, table, num)
+            cursor.execute(stmt)
+            for i in cursor.fetchall():
+                if i[-1] == 'INSERT':
+                    self.del_string(i[0], table)
+                elif i[-1] == 'DELETE':
+                    mass = []
+                    for j in i[:-1]:
+                        mass.append(str(j))
+                    self.insert(mass, table)
+                elif i[-1] == 'UPDATE':
+                    mass = []
+                    for j in i[:-1]:
+                        mass.append(str(j))
+                    self.update(mass + [i[0]], table)
+
+            print(cursor.fetchall())
+
 
 
 a = DB('a', 'a')
 scripts = None
 link = None
 if __name__ == '__main__':
-    a = DB('admin', 'admin')
-    print(a.output_titles('brands'))
+    #a = DB('admin', 'admin')
+    #a.back_num(15, 'components')
+
+    print(watch_dir())
