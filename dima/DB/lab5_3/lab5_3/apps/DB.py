@@ -3,6 +3,10 @@ from psycopg2 import sql
 import os
 import time
 
+def crt_brack_on_start():
+    myCmd = 'sh lab5_3/apps/dump.sh'
+    os.system(myCmd)
+
 def watch_dir():
     res = {}
     for i in os.listdir('dumps'):
@@ -13,41 +17,53 @@ def watch_dir():
 
 class DB():
     def __init__(self, login, password):
-        self.conn = psycopg2.connect(dbname='dima_lab5', user='user_1',
-                                password='password', host='62.109.15.226')
+        try:
+            self.conn = psycopg2.connect(dbname='dima_lab5', user='user_1',
+                                         password='password', host='62.109.15.226')
 
-        self.login = None
-        self.lvl = None
+            self.login = None
+            self.lvl = None
 
-        with self.conn.cursor() as cursor:
-            columns = ['id', 'login', 'password']
-            stmt = sql.SQL('SELECT {} FROM {}').format(
-                sql.SQL(',').join(map(sql.Identifier, columns)),
-                sql.Identifier('clients')
-            )
-
-            cursor.execute(stmt)
-            for row in cursor:
-                if login.lower() == row[1] and password == row[2]:
-                    self.login = login.lower()
-                    self.lvl = 0
-                    break
-
-            if not self.login:
-                columns = ['id', 'login', 'password', 'id_position']
+            with self.conn.cursor() as cursor:
+                columns = ['id', 'login', 'password']
                 stmt = sql.SQL('SELECT {} FROM {}').format(
                     sql.SQL(',').join(map(sql.Identifier, columns)),
-                    sql.Identifier('workers')
+                    sql.Identifier('clients')
                 )
 
                 cursor.execute(stmt)
-
                 for row in cursor:
                     if login.lower() == row[1] and password == row[2]:
-                        self.login = login
-                        self.lvl = row[3]
-        if not self.login:
-            self.conn = None
+                        self.login = login.lower()
+                        self.lvl = 0
+                        break
+
+                if not self.login:
+                    columns = ['id', 'login', 'password', 'id_position']
+                    stmt = sql.SQL('SELECT {} FROM {}').format(
+                        sql.SQL(',').join(map(sql.Identifier, columns)),
+                        sql.Identifier('workers')
+                    )
+
+                    cursor.execute(stmt)
+
+                    for row in cursor:
+                        if login.lower() == row[1] and password == row[2]:
+                            self.login = login
+                            self.lvl = row[3]
+            if not self.login:
+                self.conn = None
+        except:
+            self.restore('a')
+
+    def restore(self, name):
+        name = 'dumps/db_2020-02-23:15:09:08.dump'
+        myCmd = 'sh restore.sh {}'.format(name)
+
+        #myCmd = 'sh lab5_3/apps/restore.sh lab5_3/apps/dumps/{}'.format(name)
+        os.system(myCmd)
+
+
 
     def rollback(self):
         with self.conn.cursor() as cursor:
@@ -74,6 +90,14 @@ class DB():
                 string = "{} AND  cast({} AS VARCHAR) LIKE '%{}%'".format(string, titles[i], args[i])
 
         return string
+
+    def get_tables_all(self):
+        with self.conn.cursor() as cursor:
+            stmt = sql.SQL("SELECT table_name FROM information_schema.tables"
+                           " WHERE table_schema NOT IN ('information_schema','pg_catalog');")
+
+            cursor.execute(stmt)
+            return self.beautiful_change(cursor.fetchall())
 
     def get_tables(self):
         with self.conn.cursor() as cursor:
@@ -192,12 +216,12 @@ class DB():
             print(cursor.fetchall())
 
 
+#crt_brack_on_start()
 
 a = DB('a', 'a')
 scripts = None
 link = None
 if __name__ == '__main__':
-    #a = DB('admin', 'admin')
+    a = DB('admin', 'admin')
+    a.restore('a')
     #a.back_num(15, 'components')
-
-    print(watch_dir())
