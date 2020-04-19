@@ -5,6 +5,12 @@ from django.db import transaction
 from lab5_3.apps import DB
 
 
+'''
+в дампах есть кнопка создать бэкап
+в бэкапах лист лэкапов
+при нажатии на кнопку из инпута берётся значение дампа и проводится дамп
+'''
+
 def show_tables(request):
     if DB.a.login and DB.a.lvl == 3:
         return render(request, 'root/main_root.html', {'tables': DB.a.get_tables()})
@@ -61,6 +67,32 @@ def show_table_old(request):
                            'table': link,
                            'titles': DB.a.output_titles('{}_old'.format(link)),
                            'strings': DB.a.output_tables('{}_old'.format(link)), 'scripts': save})
+    DB.scripts = 'wrong password or login'
+    return HttpResponseRedirect(reverse('main_form:index'))
+
+def show_dumps(request):
+    if DB.a.login and DB.a.lvl == 3:
+        save = DB.scripts
+        DB.scripts = None
+        if 'table' in request.POST:
+            DB.link = request.POST['table']
+        if 'link' in request.POST:
+            link = request.POST['link']
+        else:
+            link = DB.link
+            DB.link = None
+        DB.link = link
+        if '_create_dumps' in request.POST:
+            DB.crt_brack_on_start()
+            return HttpResponseRedirect(reverse('root:show_dumps'))
+        elif '_restore' in request.POST:
+            del DB.a
+            DB.restore_db(request.POST['dump'])
+            DB.a = DB.DB('admin', 'admin')
+            return HttpResponseRedirect(reverse('root:show_dumps'))
+        else:
+            return render(request, 'root/dumps.html',
+                          {'strings': DB.watch_dir()})
     DB.scripts = 'wrong password or login'
     return HttpResponseRedirect(reverse('main_form:index'))
 

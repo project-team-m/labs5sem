@@ -2,16 +2,22 @@ import psycopg2
 from psycopg2 import sql
 import os
 import time
+import lab5_3.apps.config
 
 def crt_brack_on_start():
     myCmd = 'sh lab5_3/apps/dump.sh'
     os.system(myCmd)
 
+def restore_db(name):
+    myCmd = 'sh /home/dekeyel/Projects/Nout/labs5sem/dima/DB/lab5_3/lab5_3/apps/restore.sh /home/dekeyel/Projects/Nout/labs5sem/dima/DB/lab5_3/lab5_3/apps/dumps/{}'.format(name)
+    os.system(myCmd)
+
 def watch_dir():
-    res = {}
-    for i in os.listdir('dumps'):
-        tmp = time.ctime(os.path.getctime('dumps/{}'.format(i))).split()
-        res[i] = '{} {}/{}/{}'.format(tmp[3], tmp[2], tmp[1], tmp[4])
+    res = []
+
+    for i in sorted(os.listdir('lab5_3/apps/dumps')):
+        tmp = time.ctime(os.path.getctime('lab5_3/apps/dumps/{}'.format(i))).split()
+        res.append([i, '{}/{}/{} {}'.format(tmp[2], tmp[1], tmp[4], tmp[3])])
 
     return res
 
@@ -19,7 +25,7 @@ class DB():
     def __init__(self, login, password):
         try:
             self.conn = psycopg2.connect(dbname='dima_lab5', user='user_1',
-                                         password='password', host='62.109.15.226')
+                                         password='password', host=lab5_3.apps.config.host)
 
             self.login = None
             self.lvl = None
@@ -57,7 +63,7 @@ class DB():
             self.restore('a')
 
     def restore(self, name):
-        name = 'dumps/db_2020-02-23:15:09:08.dump'
+        name = 'dumps/db_2020-04-19:13:48:31.dump'
         myCmd = 'sh restore.sh {}'.format(name)
 
         #myCmd = 'sh lab5_3/apps/restore.sh lab5_3/apps/dumps/{}'.format(name)
@@ -220,8 +226,7 @@ class DB():
 
 a = DB('a', 'a')
 scripts = None
-link = None
+link = 'components'
 if __name__ == '__main__':
-    a = DB('admin', 'admin')
-    a.restore('a')
-    #a.back_num(15, 'components')
+    #a = DB('admin', 'admin')
+    restore_db('db_2020-04-19:13:48:31.dump')

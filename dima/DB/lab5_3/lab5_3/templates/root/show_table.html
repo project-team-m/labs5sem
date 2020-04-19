@@ -7,12 +7,22 @@
 
 {% block tables %}
 
-    <div style="position: absolute; top: 0px; right: 5px;">
+    <div style="position: absolute; top: 0; right: 5px;">
         <form action="{% url 'root:show_table_old' %}" method="POST">
             {% csrf_token %}
             <div>
                 <input type="hidden" name="table" id="exampleInputPassword1" value="{{ table }}">
                 <input type="submit" class="btn btn-danger" name="_backup" value="Backup">
+            </div>
+        </form>
+    </div>
+
+    <div style="position: absolute; top: 0; right: 85px;">
+        <form action="{% url 'root:show_dumps' %}" method="POST">
+            {% csrf_token %}
+            <div>
+                <input type="hidden" name="table" id="exampleInputPassword1" value="{{ table }}">
+                <input type="submit" class="btn btn-danger" name="_dump" value="Dumps">
             </div>
         </form>
     </div>
