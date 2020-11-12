@@ -4,13 +4,16 @@ import os
 import time
 import lab5_3.apps.config
 
+
 def crt_brack_on_start():
     myCmd = 'sh lab5_3/apps/dump.sh'
     os.system(myCmd)
 
+
 def restore_db(name):
-    myCmd = 'sh /home/dekeyel/Projects/Nout/labs5sem/dima/DB/lab5_3/lab5_3/apps/restore.sh /home/dekeyel/Projects/Nout/labs5sem/dima/DB/lab5_3/lab5_3/apps/dumps/{}'.format(name)
+    myCmd = 'sh lab5_3/apps/restore.sh lab5_3/apps/dumps/{}'.format(name)
     os.system(myCmd)
+
 
 def watch_dir():
     res = []
@@ -21,11 +24,13 @@ def watch_dir():
 
     return res
 
+
 class DB():
     def __init__(self, login, password):
         try:
             self.conn = psycopg2.connect(dbname='dima_lab5', user='user_1',
                                          password='password', host=lab5_3.apps.config.host)
+            self.conn.autocommit = True
 
             self.login = None
             self.lvl = None
@@ -57,19 +62,18 @@ class DB():
                         if login.lower() == row[1] and password == row[2]:
                             self.login = login
                             self.lvl = row[3]
+                            break
             if not self.login:
                 self.conn = None
         except:
             self.restore('a')
 
     def restore(self, name):
-        name = 'dumps/db_2020-04-19:13:48:31.dump'
+        # name = 'dumps/db_2020-04-19:13:48:31.dump'
         myCmd = 'sh restore.sh {}'.format(name)
 
         #myCmd = 'sh lab5_3/apps/restore.sh lab5_3/apps/dumps/{}'.format(name)
         os.system(myCmd)
-
-
 
     def rollback(self):
         with self.conn.cursor() as cursor:
@@ -106,13 +110,17 @@ class DB():
             return self.beautiful_change(cursor.fetchall())
 
     def get_tables(self):
-        with self.conn.cursor() as cursor:
-            stmt = sql.SQL("SELECT table_name FROM information_schema.tables"
-                           " WHERE table_schema NOT IN ('information_schema','pg_catalog') AND "
-                           "table_name NOT LIKE '%_old';")
+        if self.lvl == 3:
+            with self.conn.cursor() as cursor:
+                stmt = sql.SQL("SELECT table_name FROM information_schema.tables"
+                               " WHERE table_schema NOT IN ('information_schema','pg_catalog') AND "
+                               "table_name NOT LIKE '%_old';")
 
-            cursor.execute(stmt)
-            return self.beautiful_change(cursor.fetchall())
+                cursor.execute(stmt)
+                return self.beautiful_change(cursor.fetchall())
+
+        if self.lvl == 0:
+            return ['components', 'basket', 'stock', 'brands', 'orders']
 
     def output_titles(self, table):
         with self.conn.cursor() as cursor:
@@ -141,7 +149,17 @@ class DB():
 
             cursor.execute(stmt)
 
+    def get_need_user(self):
+        with self.conn.cursor() as cursor:
+            stmt = sql.SQL('SELECT id FROM clients WHERE login=\'{}\';'.format(self.login))
+            cursor.execute(stmt)
+
+            return cursor.fetchall()
+
     def insert(self, mass, table):
+        if self.lvl == 0:
+            id_ = self.get_need_user()[0][0]
+            mass[3] = str(id_)
         with self.conn.cursor() as cursor:
             stmt = self.crt_insert(mass, table)
 
