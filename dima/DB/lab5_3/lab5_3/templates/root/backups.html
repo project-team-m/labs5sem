@@ -53,16 +53,16 @@
                     </tr>
                 {% endfor %}
             </tbody>
-            <tr>
-                <form action="{% url 'root:back_num' %}" method="POST">
-                    {% csrf_token %}
-                    <td>
-                        <input type="text" name="num" class="form-control-plaintext">
-                        <input type="hidden" name="table" id="exampleInputPassword1" value="{{ table }}">
-                        <input type="submit" class="btn btn-primary" name="a" value="back">
-                    </td>
-                </form>
-            </tr>
+            {#  <tr>#}
+            {#    <form action="{% url 'root:back_num' %}" method="POST">#}
+            {#        {% csrf_token %}#}
+            {#        <td>#}
+            {#            <input type="text" name="num" class="form-control-plaintext">#}
+            {#            <input type="hidden" name="table" id="exampleInputPassword1" value="{{ table }}">#}
+            {#            <input type="submit" class="btn btn-primary" name="a" value="back">#}
+            {#        </td>#}
+            {#    </form>#}
+            {#</tr>#}
         </table>
     </div>
 {% endblock %}

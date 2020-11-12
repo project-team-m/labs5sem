@@ -120,7 +120,13 @@ class DB():
                 return self.beautiful_change(cursor.fetchall())
 
         if self.lvl == 0:
-            return ['components', 'basket', 'stock', 'brands', 'orders']
+            return ['components', 'basket', 'stock', 'brands']
+
+        if self.lvl == 1:
+            return ['components', 'stock', 'brands', 'orders', 'clients']
+
+        if self.lvl == 2:
+            return ['stock']
 
     def output_titles(self, table):
         with self.conn.cursor() as cursor:
@@ -130,6 +136,13 @@ class DB():
             return self.beautiful_change(cursor.fetchall())
 
     def output_tables(self, table):
+        if self.lvl == 0 and table == 'basket':
+            with self.conn.cursor() as cursor:
+                stmt = sql.SQL(
+                    "SELECT * FROM basket WHERE id_client = {};".format(self.get_need_user()[0][0]))
+                cursor.execute(stmt)
+
+                return self.con(self.output_titles(table), cursor.fetchall())
         with self.conn.cursor() as cursor:
             stmt = sql.SQL('SELECT * FROM {};'.format(table))
             cursor.execute(stmt)

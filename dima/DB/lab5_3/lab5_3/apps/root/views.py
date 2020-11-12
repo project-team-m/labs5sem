@@ -102,7 +102,9 @@ def show_table(request):
         DB.scripts = None
         if 'table' in request.POST:
             DB.link = request.POST['table']
-        if DB.a.lvl == 3 or ('_add' in request.POST and DB.link == 'basket'):
+        if DB.a.lvl == 3 or ('_add' in request.POST and DB.link == 'basket' and DB.a.lvl == 0)\
+                or (DB.link in ('brands', 'components', 'orders') and DB.a.lvl == 1)\
+                or (DB.link in ('stock',) and DB.a.lvl == 2):
             if '_del' in request.POST:
                 DB.a.del_string(request.POST['id_old'], request.POST['table'])
             elif '_edit' in request.POST:
